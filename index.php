@@ -2,6 +2,7 @@
 <html lang="fr">
 
 <?php
+include('config.php');
 // Get the URL of the current page : testing the protocol and get the URL
 if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') {
     $protocol = 'https';
@@ -11,6 +12,8 @@ else {
 }
 $globalUrl = $protocol . '://' . $_SERVER['HTTP_HOST'];
 $url = $protocol . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+
+$page = 'presentation';
 ?>
 
 <head>
@@ -60,6 +63,8 @@ $url = $protocol . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 </head>
 
 <body>
-
+    <?php
+        include('pages/components/header.php');
+    ?>
 </body>
 </html>

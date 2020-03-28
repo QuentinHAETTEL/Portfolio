@@ -97,6 +97,27 @@
 
 /***/ }),
 
+/***/ "./assets/scripts/menu.js":
+/*!********************************!*\
+  !*** ./assets/scripts/menu.js ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+window.addEventListener('DOMContentLoaded', function () {
+  // Script to manage the menu on small devices
+  var menuToggle = document.getElementById('menu-toggle');
+  var menu = document.getElementById('menu');
+
+  if (menuToggle && menu) {
+    menuToggle.addEventListener('click', function () {
+      menu.classList.toggle('hide');
+    });
+  }
+});
+
+/***/ }),
+
 /***/ "./assets/styles/main.scss":
 /*!*********************************!*\
   !*** ./assets/styles/main.scss ***!
@@ -109,13 +130,14 @@
 /***/ }),
 
 /***/ 0:
-/*!****************************************************************!*\
-  !*** multi ./assets/scripts/main.js ./assets/styles/main.scss ***!
-  \****************************************************************/
+/*!*****************************************************************************************!*\
+  !*** multi ./assets/scripts/main.js ./assets/scripts/menu.js ./assets/styles/main.scss ***!
+  \*****************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! C:\wamp64\www\portfolio\assets\scripts\main.js */"./assets/scripts/main.js");
+__webpack_require__(/*! C:\wamp64\www\portfolio\assets\scripts\menu.js */"./assets/scripts/menu.js");
 module.exports = __webpack_require__(/*! C:\wamp64\www\portfolio\assets\styles\main.scss */"./assets/styles/main.scss");
 
 

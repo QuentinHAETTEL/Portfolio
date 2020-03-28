@@ -1,0 +1,101 @@
+@use 'variables' as *;
+
+$topbarSize: 7px;
+
+//////////////////////////////////
+// ********** HEADER ********** //
+//////////////////////////////////
+
+header {
+    position: relative;
+}
+
+.header {
+    position: absolute;
+    top: $topbarSize;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    width: 100%;
+    height: 80px;
+    &__left {
+        position: relative;
+        height: 80px;
+        background-color: $light-gray;
+        &--logo {
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            display: block;
+            height: 100%;
+            z-index: 2;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    &__right {
+        position: absolute;
+        top: 80px;
+        width: 100%;
+        margin: 0;
+        padding: 50px 0 0 0;
+        background-color: $light-gray;
+        z-index: 1;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        top: -$topbarSize;
+        display: inline-block;
+        width: 100%;
+        height: $topbarSize;
+        background-color: $main-color;
+    }
+}
+
+.menu-toggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 60px;
+    padding: 40px 0 0 0;
+    font-size: 0.9em;
+    border: none;
+    background: url('../../assets/images/icons/menu.svg');
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.menu-item {
+    padding: 10px 0;
+    border-left: solid 5px transparent;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    list-style-type: none;
+    a,
+    a:hover,
+    a:focus,
+    a:active,
+    a:visited {
+        display: flex;
+        align-items: center;
+        padding: 0 25px;
+        color: $black;
+        img {
+            width: auto;
+            height: 35px;
+            margin-right: 25px;
+        }
+    }
+    &:hover {
+        background-color: $second-color;
+    }
+    &--active {
+        border-color: $main-color;
+    }
+}

@@ -111,7 +111,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
   if (menuToggle && menu) {
     menuToggle.addEventListener('click', function () {
-      menu.classList.toggle('hide');
+      menu.classList.toggle('mobile-hide');
     });
   }
 });

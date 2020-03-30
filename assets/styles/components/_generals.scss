@@ -18,6 +18,8 @@ a:visited {
     text-decoration: none;
 }
 
-.hide {
-    display: none;
+@media (max-width: 992px) {
+    .mobile-hide {
+        display: none;
+    }
 }

@@ -8,6 +8,7 @@ $topbarSize: 7px;
 
 header {
     position: relative;
+    height: #{80 + $topbarSize};
 }
 
 .header {
@@ -97,5 +98,45 @@ header {
     }
     &--active {
         border-color: $main-color;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .header {
+        flex-direction: row;
+        &__left {
+            width: 20%;
+        }
+        &__right {
+            position: relative;
+            top: 0;
+            display: flex;
+            justify-content: flex-end;
+            width: 80%;
+            padding-top: 0;
+        }
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .menu-item {
+        border-bottom: solid 5px transparent;
+        border-left: none;
+        a,
+        a:hover,
+        a:focus,
+        a:active,
+        a:visited {
+            flex-direction: column;
+            img {
+                margin-right: 0;
+            }
+        }
+        &--active {
+            border-color: $main-color;
+        }
     }
 }

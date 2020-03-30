@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', function () {
     const menu = document.getElementById('menu');
     if (menuToggle && menu) {
         menuToggle.addEventListener('click', function () {
-            menu.classList.toggle('hide');
+            menu.classList.toggle('mobile-hide');
         });
     }
 

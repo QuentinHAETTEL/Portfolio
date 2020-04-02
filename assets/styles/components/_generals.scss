@@ -23,3 +23,10 @@ a:visited {
         display: none;
     }
 }
+
+.separator {
+    display: block;
+    width: 50%;
+    height: 5px;
+    background-color: $main-color;
+}

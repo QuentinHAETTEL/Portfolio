@@ -50,3 +50,19 @@ $topbarSize: 5px;
         text-align: center;
     }
 }
+
+
+@media (min-width: 992px) {
+    .banner__content {
+        max-width: 600px;
+        height: 340px;
+        .banner__title--name {
+            margin-bottom: 20px;
+            font-size: 3em;
+        }
+        .banner__title--job {
+            margin-top: 20px;
+            font-size: 2.5em;
+        }
+    }
+}

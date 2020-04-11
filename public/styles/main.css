@@ -22,6 +22,10 @@
   font-weight: bold;
   font-style: normal;
 }
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -48,19 +52,39 @@ a:visited {
   background-color: #65b32e;
 }
 
+.title {
+  margin: 40px 0;
+  padding: 10px 0;
+  background-color: #65b32e;
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.box {
+  width: 90vw;
+  margin: 5vw;
+  padding: 15px 15%;
+  background-color: #f0f0f0;
+  border-left: solid 7px #65b32e;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
 header {
   position: relative;
   height: 87px;
 }
 
 .header {
-  position: absolute;
+  position: fixed;
   top: 7px;
   display: flex;
   flex-direction: column;
   justify-content: stretch;
   width: 100%;
   height: 80px;
+  z-index: 2;
 }
 .header__left {
   position: relative;
@@ -248,5 +272,33 @@ header {
   .banner__content .banner__title--job {
     margin-top: 20px;
     font-size: 2.5em;
+  }
+}
+.presentation {
+  height: calc(100vh - 87px);
+}
+.presentation__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.presentation__box--text {
+  text-align: center;
+}
+.presentation__box--text strong {
+  font-weight: normal;
+}
+.presentation__box--photo {
+  width: 150px;
+  height: 150px;
+  margin: 20px 0;
+  border: solid 4px #65b32e;
+  border-radius: 50%;
+}
+
+@media (min-width: 600px) {
+  .box {
+    padding: 15px 20%;
   }
 }

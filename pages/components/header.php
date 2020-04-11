@@ -8,7 +8,7 @@
         </div>
         <ul id="menu" class="header__right mobile-hide">
             <li class="menu-item<?php echo ($page == 'presentation') ? ' menu-item--active' : '' ?>">
-                <a href="<?php echo BASE_URL ?>" hreflang="fr">
+                <a href="<?php echo BASE_URL ?>#presentation" hreflang="fr">
                     <img src="<?php echo BASE_URL ?>assets/images/icons/presentation.svg" alt="Icône présentation" />
                     Présentation
                 </a>

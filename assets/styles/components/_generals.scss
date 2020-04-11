@@ -4,6 +4,10 @@
 // ********** GENERALS ********** //
 ////////////////////////////////////
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -29,4 +33,23 @@ a:visited {
     width: 50%;
     height: 5px;
     background-color: $main-color;
+}
+
+.title {
+    margin: 40px 0;
+    padding: 10px 0;
+    background-color: $main-color;
+    color: $white;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.box {
+    width: 90vw;
+    margin: 5vw;
+    padding: 15px 15%;
+    background-color: $light-gray;
+    border-left: solid 7px $main-color;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }

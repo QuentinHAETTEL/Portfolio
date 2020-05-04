@@ -7,7 +7,8 @@ Mix.manifest.refresh = _ => void 0;
 mix.js(
     [
         'assets/scripts/main.js',
-        'assets/scripts/menu.js'
+        'assets/scripts/menu.js',
+        'assets/scripts/collapse.js'
     ], 'public/scripts')
     .sass('assets/styles/main.scss', 'public/styles')
     .options({

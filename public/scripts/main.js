@@ -86,6 +86,37 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./assets/scripts/collapse.js":
+/*!************************************!*\
+  !*** ./assets/scripts/collapse.js ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+window.addEventListener('DOMContentLoaded', function () {
+  // Script to manage all collapse elements
+  var collapseToggles = document.querySelectorAll('[data-collapse]');
+
+  if (collapseToggles) {
+    collapseToggles.forEach(function (collapseToggle) {
+      collapseToggle.addEventListener('click', function () {
+        var dataId = collapseToggle.getAttribute('data-collapse');
+
+        if (dataId) {
+          var collapseItem = document.querySelector('[data-id="' + dataId + '"]');
+
+          if (collapseItem) {
+            collapseItem.classList.toggle('hide');
+            collapseToggle.classList.toggle('rotate180');
+          }
+        }
+      });
+    });
+  }
+});
+
+/***/ }),
+
 /***/ "./assets/scripts/main.js":
 /*!********************************!*\
   !*** ./assets/scripts/main.js ***!
@@ -130,14 +161,15 @@ window.addEventListener('DOMContentLoaded', function () {
 /***/ }),
 
 /***/ 0:
-/*!*****************************************************************************************!*\
-  !*** multi ./assets/scripts/main.js ./assets/scripts/menu.js ./assets/styles/main.scss ***!
-  \*****************************************************************************************/
+/*!**********************************************************************************************************************!*\
+  !*** multi ./assets/scripts/main.js ./assets/scripts/menu.js ./assets/scripts/collapse.js ./assets/styles/main.scss ***!
+  \**********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! C:\wamp64\www\portfolio\assets\scripts\main.js */"./assets/scripts/main.js");
 __webpack_require__(/*! C:\wamp64\www\portfolio\assets\scripts\menu.js */"./assets/scripts/menu.js");
+__webpack_require__(/*! C:\wamp64\www\portfolio\assets\scripts\collapse.js */"./assets/scripts/collapse.js");
 module.exports = __webpack_require__(/*! C:\wamp64\www\portfolio\assets\styles\main.scss */"./assets/styles/main.scss");
 
 

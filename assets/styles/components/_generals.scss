@@ -22,6 +22,16 @@ a:visited {
     text-decoration: none;
 }
 
+.hide {
+    height: 0;
+    overflow: hidden;
+}
+
+.rotate180 {
+    transform: rotate(180deg);
+    transition: transform 0.3s;
+}
+
 @media (max-width: 992px) {
     .mobile-hide {
         display: none;
@@ -32,6 +42,7 @@ a:visited {
     display: block;
     width: 50%;
     height: 5px;
+    margin: 0 auto;
     background-color: $main-color;
 }
 
@@ -54,4 +65,31 @@ a:visited {
     border-left: solid 7px $main-color;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+}
+
+.embed-box {
+    position: relative;
+    width: 75vw;
+    padding: 20px;
+    background-color: $white;
+    border: solid 1px $main-color;
+    border-left-width: 5px;
+    border-radius: 5px;
+}
+
+.embed-box-toggle {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.label {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 3px 10px;
+    border: solid 2px $main-color;
+    border-radius: 5px;
 }

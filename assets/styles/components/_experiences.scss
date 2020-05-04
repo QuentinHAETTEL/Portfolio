@@ -1,0 +1,90 @@
+@use 'variables' as *;
+
+.experiences {
+    height: calc(100vh - 87px);
+    &__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &--title {
+            margin-bottom: 0;
+            text-align: center;
+            font-size: 1.8em;
+        }
+        &--date {
+            margin-top: 0;
+            text-align: center;
+            font-size: 1.2em;
+        }
+        &--description {
+            text-align: center;
+        }
+    }
+}
+
+.experience {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__date {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 70px;
+        margin: 22px 0;
+        border: solid 3px $main-color;
+        border-radius: 50%;
+        background-color: $white;
+        &::before {
+            content: '';
+            position: absolute;
+            top: -40%;
+            width: 7px;
+            height: 40%;
+            background-color: $second-color;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -40%;
+            width: 7px;
+            height: 40%;
+            background-color: $second-color;
+        }
+    }
+    &__title {
+        margin: 0;
+        font-size: 1.1em;
+    }
+    &__caracteristics {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5px;
+        &--duration, &--location {
+            margin: 0;
+            font-size: 0.8em;
+            img {
+                width: 20px;
+                height: auto;
+            }
+        }
+    }
+    &__image {
+        width: 80px;
+        height: auto;
+    }
+    &__details {
+        &--title {
+            margin: 20px 0 0 0;
+            font-size: 0.9em;
+        }
+        &--content {
+            margin: 0 0 0 15px;
+            font-size: 0.8em;
+        }
+    }
+}

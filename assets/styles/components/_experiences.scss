@@ -24,36 +24,46 @@
 }
 
 .experience {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     &__date {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 70px;
-        height: 70px;
-        margin: 22px 0;
-        border: solid 3px $main-color;
-        border-radius: 50%;
-        background-color: $white;
-        &::before {
-            content: '';
-            position: absolute;
-            top: -40%;
+
+        &--before {
             width: 7px;
-            height: 40%;
+            height: 25px;
             background-color: $second-color;
         }
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: -40%;
+        &--item {
+
+        }
+        &--after {
             width: 7px;
-            height: 40%;
+            height: calc(100% - 95px);
             background-color: $second-color;
+        }
+    }
+    &__date {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-self: stretch;
+        &--before, &--after {
+            width: 7px;
+            height: 25px;
+            background-color: $second-color;
+        }
+        &--item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70px;
+            height: 70px;
+            border: solid 3px $main-color;
+            border-radius: 50%;
+            background-color: $white;
         }
     }
     &__title {
@@ -86,5 +96,58 @@
             margin: 0 0 0 15px;
             font-size: 0.8em;
         }
+    }
+}
+
+
+@media (min-width: 992px) {
+    .experiences {
+        &__box {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            > div:first-child {
+                align-self: start;
+                width: 30%;
+            }
+            > div:last-child {
+                width: 60%;
+            }
+        }
+    }
+
+    .experience {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        min-height: 120px;
+        &__date {
+            &--item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 70px;
+                height: 70px;
+                border: solid 3px $main-color;
+                border-radius: 50%;
+                background-color: $white;
+            }
+            &--after {
+                height: calc(100% - 95px);
+            }
+        }
+        &__caracteristics {
+            width: 80%;
+        }
+        &__details {
+            width: 80%;
+        }
+    }
+    .experience--empty {
+        align-items: center;
+    }
+
+    .embed-box {
+        margin-left: auto;
     }
 }

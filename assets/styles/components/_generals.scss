@@ -93,3 +93,21 @@ a:visited {
     border: solid 2px $main-color;
     border-radius: 5px;
 }
+
+
+@media (min-width: 600px) {
+    .box {
+        padding: 15px 20%;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .box {
+        padding: 15px 5%;
+    }
+
+    .embed-box {
+        width: 80%;
+    }
+}

@@ -80,7 +80,11 @@ $page = 'experiences';
                     </div>
                     <div>
                         <div class="experience">
-                            <div class="experience__date">2020</div>
+                            <div class="experience__date">
+                                <div class="experience__date--before"></div>
+                                <div class="experience__date--item">2020</div>
+                                <div class="experience__date--after"></div>
+                            </div>
                             <div class="embed-box">
                                 <h3 class="experience__title">Alternance - Développeur web front-end</h3>
                                 <div class="experience__caracteristics">
@@ -129,14 +133,22 @@ $page = 'experiences';
                         <p class="experiences__box--description">Parcours en développement web front-end et back-end, graphisme et communication multimédia</p>
                     </div>
                     <div>
-                        <div class="experience">
-                            <div class="experience__date">2019</div>
+                        <div class="experience experience--empty">
+                            <div class="experience__date">
+                                <div class="experience__date--before"></div>
+                                <div class="experience__date--item">2019</div>
+                                <div class="experience__date--after"></div>
+                            </div>
                             <div class="embed-box">
                                 Diplôme validé
                             </div>
                         </div>
                         <div class="experience">
-                            <div class="experience__date">2019</div>
+                            <div class="experience__date">
+                                <div class="experience__date--before"></div>
+                                <div class="experience__date--item">2019</div>
+                                <div class="experience__date--after"></div>
+                            </div>
                             <div class="embed-box">
                                 <h3 class="experience__title">Stage - UI/UX designer</h3>
                                 <div class="experience__caracteristics">
@@ -183,8 +195,12 @@ $page = 'experiences';
                         <p class="experiences__box--description">Parcours général et scientifique, logique informatique et électronique</p>
                     </div>
                     <div>
-                        <div class="experience">
-                            <div class="experience__date">2017</div>
+                        <div class="experience experience--empty">
+                            <div class="experience__date">
+                                <div class="experience__date--before"></div>
+                                <div class="experience__date--item">2017</div>
+                                <div class="experience__date--after"></div>
+                            </div>
                             <div class="embed-box">
                                 Diplôme obtenu - Mention Bien
                             </div>

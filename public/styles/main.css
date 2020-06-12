@@ -41,6 +41,7 @@ a:visited {
 }
 
 .hide {
+  width: 0 !important;
   height: 0 !important;
   margin: 0 !important;
   padding: 0 !important;
@@ -888,4 +889,21 @@ header {
 .skill__details--content {
   margin: 0 0 0 15px;
   font-size: 0.8em;
+}
+
+@media (min-width: 992px) {
+  .skills__box--list {
+    width: 30%;
+    border-right: solid 5px rgba(101, 179, 46, 0.25);
+  }
+
+  .skill {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .skill .embed-box {
+    width: 60%;
+  }
 }

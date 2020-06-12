@@ -192,7 +192,7 @@ window.addEventListener('DOMContentLoaded', function () {
         var dataId = toggleAction.getAttribute('data-toggle');
 
         if (dataId) {
-          var toggleItems = document.querySelectorAll('[data-toggle-id]');
+          var toggleItems = this.closest('[data-toggle-parent]').querySelectorAll('[data-toggle-id]');
           toggleItems.forEach(function (toggleItem) {
             if (!toggleItem.classList.contains('hide')) {
               toggleItem.classList.add('hide');

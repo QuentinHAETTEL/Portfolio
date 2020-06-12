@@ -73,57 +73,57 @@ $page = 'skills';
             <h1 class="title">Compétences</h1>
             <div class="box">
                 <div class="skills__box">
-                    <div>
-                        <h2 class="skills__box--title">Front-end</h2>
+                    <h2 class="skills__box--title">Front-end</h2>
+                    <div class="skill" data-toggle-parent>
                         <div class="skills__box--list">
                             <span class="label label-toggle" data-toggle="1">HTML</span>
                             <span class="label label-toggle" data-toggle="2">CSS</span>
                             <span class="label label-toggle" data-toggle="3">JavaScript</span>
                         </div>
-                    </div>
 
-                    <div class="embed-box" data-toggle-id="1">
-                        <h3 class="skill__title">HTML</h3>
-                        <img class="embed-box-toggle" data-collapse="skill1" src="<?php echo BASE_URL ?>assets/images/icons/collapse.svg" alt="Icône voir plus" />
+                        <div class="embed-box" data-toggle-id="1">
+                            <h3 class="skill__title">HTML</h3>
+                            <img class="embed-box-toggle" data-collapse="skill1" src="<?php echo BASE_URL ?>assets/images/icons/collapse.svg" alt="Icône voir plus" />
 
-                        <div class="skill__level">
-                            <div class="skill__level--bar" data-progress="90"></div>
-                            <p class="skill__level--percentage">90%</p>
+                            <div class="skill__level">
+                                <div class="skill__level--bar" data-progress="90"></div>
+                                <p class="skill__level--percentage">90%</p>
+                            </div>
+
+                            <div class="skill__details hide" data-id="skill1">
+                                <h4 class="skill__details--title">Principales utilisations</h4>
+                                <p class="skill__details--content">Développement de sites ergonomiques et respectueux des standards du Web. Intégration de maquettes et templates. Utilisation de moteurs de templating.</p>
+                            </div>
                         </div>
 
-                        <div class="skill__details hide" data-id="skill1">
-                            <h4 class="skill__details--title">Principales utilisations</h4>
-                            <p class="skill__details--content">Développement de sites ergonomiques et respectueux des standards du Web. Intégration de maquettes et templates. Utilisation de moteurs de templating.</p>
-                        </div>
-                    </div>
+                        <div class="embed-box hide" data-toggle-id="2">
+                            <h3 class="skill__title">CSS</h3>
+                            <img class="embed-box-toggle" data-collapse="skill2" src="<?php echo BASE_URL ?>assets/images/icons/collapse.svg" alt="Icône voir plus" />
 
-                    <div class="embed-box hide" data-toggle-id="2">
-                        <h3 class="skill__title">CSS</h3>
-                        <img class="embed-box-toggle" data-collapse="skill2" src="<?php echo BASE_URL ?>assets/images/icons/collapse.svg" alt="Icône voir plus" />
+                            <div class="skill__level">
+                                <div class="skill__level--bar" data-progress="85"></div>
+                                <p class="skill__level--percentage">85%</p>
+                            </div>
 
-                        <div class="skill__level">
-                            <div class="skill__level--bar" data-progress="85"></div>
-                            <p class="skill__level--percentage">85%</p>
-                        </div>
-
-                        <div class="skill__details hide" data-id="skill2">
-                            <h4 class="skill__details--title">Principales utilisations</h4>
-                            <p class="skill__details--content">Développement de sites responsives et design en suivant les principes d'UI et d'UX. Utilisation de préprocesseurs SCSS et LESS.</p>
-                        </div>
-                    </div>
-
-                    <div class="embed-box hide" data-toggle-id="3">
-                        <h3 class="skill__title">JavaScript</h3>
-                        <img class="embed-box-toggle" data-collapse="skill3" src="<?php echo BASE_URL ?>assets/images/icons/collapse.svg" alt="Icône voir plus" />
-
-                        <div class="skill__level">
-                            <div class="skill__level--bar" data-progress="80"></div>
-                            <p class="skill__level--percentage">80%</p>
+                            <div class="skill__details hide" data-id="skill2">
+                                <h4 class="skill__details--title">Principales utilisations</h4>
+                                <p class="skill__details--content">Développement de sites responsives et design en suivant les principes d'UI et d'UX. Utilisation de préprocesseurs SCSS et LESS.</p>
+                            </div>
                         </div>
 
-                        <div class="skill__details hide" data-id="skill3">
-                            <h4 class="skill__details--title">Principales utilisations</h4>
-                            <p class="skill__details--content">Dynamisation de sites web et utilisation de la technologie Ajax pour un rendu interactif. </p>
+                        <div class="embed-box hide" data-toggle-id="3">
+                            <h3 class="skill__title">JavaScript</h3>
+                            <img class="embed-box-toggle" data-collapse="skill3" src="<?php echo BASE_URL ?>assets/images/icons/collapse.svg" alt="Icône voir plus" />
+
+                            <div class="skill__level">
+                                <div class="skill__level--bar" data-progress="80"></div>
+                                <p class="skill__level--percentage">80%</p>
+                            </div>
+
+                            <div class="skill__details hide" data-id="skill3">
+                                <h4 class="skill__details--title">Principales utilisations</h4>
+                                <p class="skill__details--content">Dynamisation de sites web et utilisation de la technologie Ajax pour un rendu interactif. </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -131,39 +131,39 @@ $page = 'skills';
 
             <div class="box">
                 <div class="skills__box">
-                    <div>
-                        <h2 class="skills__box--title">Librairies</h2>
+                    <h2 class="skills__box--title">Librairies</h2>
+                    <div class="skill" data-toggle-parent>
                         <div class="skills__box--list">
                             <span class="label label-toggle" data-toggle="4">Bootstrap</span>
                             <span class="label label-toggle" data-toggle="5">Vue.js</span>
                             <span class="label label-toggle" data-toggle="6">React</span>
                         </div>
-                    </div>
 
-                    <div class="embed-box" data-toggle-id="4">
-                        <h3 class="skill__title">Bootstrap</h3>
+                        <div class="embed-box" data-toggle-id="4">
+                            <h3 class="skill__title">Bootstrap</h3>
 
-                        <div class="skill__level">
-                            <div class="skill__level--bar" data-progress="85"></div>
-                            <p class="skill__level--percentage">85%</p>
+                            <div class="skill__level">
+                                <div class="skill__level--bar" data-progress="85"></div>
+                                <p class="skill__level--percentage">85%</p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="embed-box hide" data-toggle-id="5">
-                        <h3 class="skill__title">Vue.js</h3>
+                        <div class="embed-box hide" data-toggle-id="5">
+                            <h3 class="skill__title">Vue.js</h3>
 
-                        <div class="skill__level">
-                            <div class="skill__level--bar" data-progress="60"></div>
-                            <p class="skill__level--percentage">60%</p>
+                            <div class="skill__level">
+                                <div class="skill__level--bar" data-progress="60"></div>
+                                <p class="skill__level--percentage">60%</p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="embed-box hide" data-toggle-id="6">
-                        <h3 class="skill__title">React</h3>
+                        <div class="embed-box hide" data-toggle-id="6">
+                            <h3 class="skill__title">React</h3>
 
-                        <div class="skill__level">
-                            <div class="skill__level--bar" data-progress="50"></div>
-                            <p class="skill__level--percentage">50%</p>
+                            <div class="skill__level">
+                                <div class="skill__level--bar" data-progress="50"></div>
+                                <p class="skill__level--percentage">50%</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -171,41 +171,41 @@ $page = 'skills';
 
             <div class="box">
                 <div class="skills__box">
-                    <div>
-                        <h2 class="skills__box--title">Back-end</h2>
+                    <h2 class="skills__box--title">Back-end</h2>
+                    <div class="skill" data-toggle-parent>
                         <div class="skills__box--list">
                             <span class="label label-toggle" data-toggle="7">PHP</span>
                             <span class="label label-toggle" data-toggle="8">SQL</span>
                         </div>
-                    </div>
 
-                    <div class="embed-box" data-toggle-id="7">
-                        <h3 class="skill__title">PHP</h3>
-                        <img class="embed-box-toggle" data-collapse="skill7" src="<?php echo BASE_URL ?>assets/images/icons/collapse.svg" alt="Icône voir plus" />
+                        <div class="embed-box" data-toggle-id="7">
+                            <h3 class="skill__title">PHP</h3>
+                            <img class="embed-box-toggle" data-collapse="skill7" src="<?php echo BASE_URL ?>assets/images/icons/collapse.svg" alt="Icône voir plus" />
 
-                        <div class="skill__level">
-                            <div class="skill__level--bar" data-progress="85"></div>
-                            <p class="skill__level--percentage">75%</p>
+                            <div class="skill__level">
+                                <div class="skill__level--bar" data-progress="85"></div>
+                                <p class="skill__level--percentage">75%</p>
+                            </div>
+
+                            <div class="skill__details hide" data-id="skill7">
+                                <h4 class="skill__details--title">Principales utilisations</h4>
+                                <p class="skill__details--content">Conception d'applications web complexes grâce au modèle de programmation MVC.</p>
+                            </div>
                         </div>
 
-                        <div class="skill__details hide" data-id="skill7">
-                            <h4 class="skill__details--title">Principales utilisations</h4>
-                            <p class="skill__details--content">Conception d'applications web complexes grâce au modèle de programmation MVC.</p>
-                        </div>
-                    </div>
+                        <div class="embed-box hide" data-toggle-id="8">
+                            <h3 class="skill__title">SQL</h3>
+                            <img class="embed-box-toggle" data-collapse="skill8" src="<?php echo BASE_URL ?>assets/images/icons/collapse.svg" alt="Icône voir plus" />
 
-                    <div class="embed-box hide" data-toggle-id="8">
-                        <h3 class="skill__title">SQL</h3>
-                        <img class="embed-box-toggle" data-collapse="skill8" src="<?php echo BASE_URL ?>assets/images/icons/collapse.svg" alt="Icône voir plus" />
+                            <div class="skill__level">
+                                <div class="skill__level--bar" data-progress="60"></div>
+                                <p class="skill__level--percentage">90%</p>
+                            </div>
 
-                        <div class="skill__level">
-                            <div class="skill__level--bar" data-progress="60"></div>
-                            <p class="skill__level--percentage">90%</p>
-                        </div>
-
-                        <div class="skill__details hide" data-id="skill8">
-                            <h4 class="skill__details--title">Principales utilisations</h4>
-                            <p class="skill__details--content">Gestion de bases de données MySQL et liaison avec la code PHP.</p>
+                            <div class="skill__details hide" data-id="skill8">
+                                <h4 class="skill__details--title">Principales utilisations</h4>
+                                <p class="skill__details--content">Gestion de bases de données MySQL et liaison avec la code PHP.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -213,29 +213,29 @@ $page = 'skills';
 
             <div class="box">
                 <div class="skills__box">
-                    <div>
-                        <h2 class="skills__box--title">Frameworks</h2>
+                    <h2 class="skills__box--title">Frameworks</h2>
+                    <div class="skill" data-toggle-parent>
                         <div class="skills__box--list">
                             <span class="label label-toggle" data-toggle="9">Symfony</span>
                             <span class="label label-toggle" data-toggle="10">Laravel</span>
                         </div>
-                    </div>
 
-                    <div class="embed-box" data-toggle-id="9">
-                        <h3 class="skill__title">Symfony</h3>
+                        <div class="embed-box" data-toggle-id="9">
+                            <h3 class="skill__title">Symfony</h3>
 
-                        <div class="skill__level">
-                            <div class="skill__level--bar" data-progress="55"></div>
-                            <p class="skill__level--percentage">55%</p>
+                            <div class="skill__level">
+                                <div class="skill__level--bar" data-progress="55"></div>
+                                <p class="skill__level--percentage">55%</p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="embed-box hide" data-toggle-id="10">
-                        <h3 class="skill__title">Laravel</h3>
+                        <div class="embed-box hide" data-toggle-id="10">
+                            <h3 class="skill__title">Laravel</h3>
 
-                        <div class="skill__level">
-                            <div class="skill__level--bar" data-progress="50"></div>
-                            <p class="skill__level--percentage">50%</p>
+                            <div class="skill__level">
+                                <div class="skill__level--bar" data-progress="50"></div>
+                                <p class="skill__level--percentage">50%</p>
+                            </div>
                         </div>
                     </div>
                 </div>

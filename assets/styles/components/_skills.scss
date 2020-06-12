@@ -32,7 +32,6 @@
         &--bar {
             width: 80%;
             height: 15px;
-            //background: linear-gradient(to right, $main-color 90%, $second-color 10%);
         }
         &--percentage {
             margin: 0;
@@ -46,6 +45,28 @@
         &--content {
             margin: 0 0 0 15px;
             font-size: 0.8em;
+        }
+    }
+}
+
+
+@media (min-width: 992px) {
+    .skills {
+        &__box {
+            &--list {
+                width: 30%;
+                border-right: solid 5px $second-color;
+            }
+        }
+    }
+
+    .skill {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin-top: 20px;
+        .embed-box {
+            width: 60%;
         }
     }
 }

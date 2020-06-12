@@ -149,6 +149,68 @@ window.addEventListener('DOMContentLoaded', function () {
 
 /***/ }),
 
+/***/ "./assets/scripts/progress.js":
+/*!************************************!*\
+  !*** ./assets/scripts/progress.js ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+window.addEventListener('DOMContentLoaded', function () {
+  // Script to manage all progress elements
+  var progressBars = document.querySelectorAll('[data-progress]');
+
+  if (progressBars) {
+    progressBars.forEach(function (progressBar) {
+      var level = progressBar.getAttribute('data-progress');
+
+      if (!level) {
+        level = 75;
+      }
+
+      progressBar.classList.add('progress-bar-right-' + level);
+    });
+  }
+});
+
+/***/ }),
+
+/***/ "./assets/scripts/toggle.js":
+/*!**********************************!*\
+  !*** ./assets/scripts/toggle.js ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+window.addEventListener('DOMContentLoaded', function () {
+  // Script to manage all toggle elements
+  var toggleActions = document.querySelectorAll('[data-toggle]');
+
+  if (toggleActions) {
+    toggleActions.forEach(function (toggleAction) {
+      toggleAction.addEventListener('click', function () {
+        var dataId = toggleAction.getAttribute('data-toggle');
+
+        if (dataId) {
+          var toggleItems = document.querySelectorAll('[data-toggle-id]');
+          toggleItems.forEach(function (toggleItem) {
+            if (!toggleItem.classList.contains('hide')) {
+              toggleItem.classList.add('hide');
+            }
+          });
+          var toggleItem = document.querySelector('[data-toggle-id="' + dataId + '"]');
+
+          if (toggleItem) {
+            toggleItem.classList.remove('hide');
+          }
+        }
+      });
+    });
+  }
+});
+
+/***/ }),
+
 /***/ "./assets/styles/main.scss":
 /*!*********************************!*\
   !*** ./assets/styles/main.scss ***!
@@ -161,15 +223,17 @@ window.addEventListener('DOMContentLoaded', function () {
 /***/ }),
 
 /***/ 0:
-/*!**********************************************************************************************************************!*\
-  !*** multi ./assets/scripts/main.js ./assets/scripts/menu.js ./assets/scripts/collapse.js ./assets/styles/main.scss ***!
-  \**********************************************************************************************************************/
+/*!******************************************************************************************************************************************************************************!*\
+  !*** multi ./assets/scripts/main.js ./assets/scripts/menu.js ./assets/scripts/collapse.js ./assets/scripts/toggle.js ./assets/scripts/progress.js ./assets/styles/main.scss ***!
+  \******************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! C:\wamp64\www\portfolio\assets\scripts\main.js */"./assets/scripts/main.js");
 __webpack_require__(/*! C:\wamp64\www\portfolio\assets\scripts\menu.js */"./assets/scripts/menu.js");
 __webpack_require__(/*! C:\wamp64\www\portfolio\assets\scripts\collapse.js */"./assets/scripts/collapse.js");
+__webpack_require__(/*! C:\wamp64\www\portfolio\assets\scripts\toggle.js */"./assets/scripts/toggle.js");
+__webpack_require__(/*! C:\wamp64\www\portfolio\assets\scripts\progress.js */"./assets/scripts/progress.js");
 module.exports = __webpack_require__(/*! C:\wamp64\www\portfolio\assets\styles\main.scss */"./assets/styles/main.scss");
 
 

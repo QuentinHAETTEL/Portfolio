@@ -1,0 +1,5 @@
+@use 'variables' as *;
+
+@mixin linearGradient($direction, $firstcolor, $firstvalue, $secondcolor, $secondvalue) {
+    background: linear-gradient(to $direction, $firstcolor #{$firstvalue}+'%', $secondcolor #{$secondvalue}+'%');
+}

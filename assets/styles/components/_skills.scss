@@ -1,0 +1,51 @@
+@use 'variables' as *;
+
+.skills {
+    height: calc(100vh - 87px);
+    &__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &--title {
+            margin-bottom: 0;
+            text-align: center;
+            font-size: 1.8em;
+        }
+        &--list {
+            width: 75vw;
+            margin-bottom: 16px;
+        }
+    }
+}
+
+.skill {
+    &__title {
+        margin: 0;
+        font-size: 1.1em;
+    }
+    &__level {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 0;
+        &--bar {
+            width: 80%;
+            height: 15px;
+            //background: linear-gradient(to right, $main-color 90%, $second-color 10%);
+        }
+        &--percentage {
+            margin: 0;
+        }
+    }
+    &__details {
+        &--title {
+            margin: 20px 0 0 0;
+            font-size: 0.9em;
+        }
+        &--content {
+            margin: 0 0 0 15px;
+            font-size: 0.8em;
+        }
+    }
+}

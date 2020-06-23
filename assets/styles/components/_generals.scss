@@ -51,6 +51,14 @@ a:visited {
     background-color: $main-color;
 }
 
+.separator--vertical {
+    display: inline-block;
+    width: 2px;
+    height: 25px;
+    margin: 0 2px -5px 2px;
+    background-color: $main-color;
+}
+
 .title {
     width: 100%;
     margin: 50px 0;
@@ -89,6 +97,18 @@ a:visited {
     width: 20px;
     height: 20px;
     cursor: pointer;
+}
+
+.card__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    width: 250px;
+    height: 250px;
+    margin: 15px;
 }
 
 .label {

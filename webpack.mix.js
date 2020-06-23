@@ -10,7 +10,8 @@ mix.js(
         'assets/scripts/menu.js',
         'assets/scripts/collapse.js',
         'assets/scripts/toggle.js',
-        'assets/scripts/progress.js'
+        'assets/scripts/progress.js',
+        'assets/scripts/card.js'
     ], 'public/scripts')
     .sass('assets/styles/main.scss', 'public/styles')
     .options({

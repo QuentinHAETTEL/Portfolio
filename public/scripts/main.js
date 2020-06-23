@@ -86,6 +86,37 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./assets/scripts/card.js":
+/*!********************************!*\
+  !*** ./assets/scripts/card.js ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+window.addEventListener('DOMContentLoaded', function () {
+  // Script to manage all cards elements
+  var cards = document.querySelectorAll('[data-card]');
+
+  if (cards) {
+    cards.forEach(function (card) {
+      card.addEventListener('mouseover', function () {
+        var cardDetails = card.querySelector('[data-card-details]');
+        cardDetails.classList.add('project__details--visible');
+      });
+      card.addEventListener('mouseout', function () {
+        var cardDetails = card.querySelector('[data-card-details]');
+        cardDetails.classList.remove('project__details--visible');
+      });
+      card.addEventListener('click', function () {
+        var cardDetails = card.querySelector('[data-card-details]');
+        cardDetails.classList.toggle('project__details--visible');
+      });
+    });
+  }
+});
+
+/***/ }),
+
 /***/ "./assets/scripts/collapse.js":
 /*!************************************!*\
   !*** ./assets/scripts/collapse.js ***!
@@ -223,9 +254,9 @@ window.addEventListener('DOMContentLoaded', function () {
 /***/ }),
 
 /***/ 0:
-/*!******************************************************************************************************************************************************************************!*\
-  !*** multi ./assets/scripts/main.js ./assets/scripts/menu.js ./assets/scripts/collapse.js ./assets/scripts/toggle.js ./assets/scripts/progress.js ./assets/styles/main.scss ***!
-  \******************************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************************************************!*\
+  !*** multi ./assets/scripts/main.js ./assets/scripts/menu.js ./assets/scripts/collapse.js ./assets/scripts/toggle.js ./assets/scripts/progress.js ./assets/scripts/card.js ./assets/styles/main.scss ***!
+  \*******************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -234,6 +265,7 @@ __webpack_require__(/*! C:\wamp64\www\portfolio\assets\scripts\menu.js */"./asse
 __webpack_require__(/*! C:\wamp64\www\portfolio\assets\scripts\collapse.js */"./assets/scripts/collapse.js");
 __webpack_require__(/*! C:\wamp64\www\portfolio\assets\scripts\toggle.js */"./assets/scripts/toggle.js");
 __webpack_require__(/*! C:\wamp64\www\portfolio\assets\scripts\progress.js */"./assets/scripts/progress.js");
+__webpack_require__(/*! C:\wamp64\www\portfolio\assets\scripts\card.js */"./assets/scripts/card.js");
 module.exports = __webpack_require__(/*! C:\wamp64\www\portfolio\assets\styles\main.scss */"./assets/styles/main.scss");
 
 

@@ -60,7 +60,6 @@ $page = 'skills';
 
     <link rel="stylesheet" href="../public/styles/main.css" />
     <script src="../public/scripts/main.js"></script>
-    <script src="../assets/scripts/progress.js"></script>
 </head>
 
 <body>

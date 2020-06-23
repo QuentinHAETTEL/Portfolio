@@ -67,6 +67,14 @@ a:visited {
   background-color: #65b32e;
 }
 
+.separator--vertical {
+  display: inline-block;
+  width: 2px;
+  height: 25px;
+  margin: 0 2px -5px 2px;
+  background-color: #65b32e;
+}
+
 .title {
   width: 100%;
   margin: 50px 0;
@@ -105,6 +113,18 @@ a:visited {
   width: 20px;
   height: 20px;
   cursor: pointer;
+}
+
+.card__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  width: 250px;
+  height: 250px;
+  margin: 15px;
 }
 
 .label {
@@ -906,4 +926,57 @@ header {
   .skill .embed-box {
     width: 60%;
   }
+}
+.projects {
+  height: calc(100vh - 87px);
+}
+.projects--title {
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 1.8em;
+}
+
+.project {
+  position: relative;
+  border-left: solid 5px #65b32e;
+  background: lightblue;
+  overflow: hidden;
+}
+.project__image {
+  width: 100%;
+  height: calc(250px - 90px);
+}
+.project__details {
+  position: absolute;
+  top: calc(250px - 90px);
+  left: 0;
+  right: 0;
+  height: 250px;
+  padding: 10px 0;
+  background-color: #f0f0f0;
+  transition: all 0.5s;
+}
+.project__details--title {
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+.project__details--type {
+  margin: 10px 0;
+  padding: 0 10px;
+}
+.project__details--visible {
+  top: 0;
+}
+.project__caracteristics {
+  padding: 10px;
+  border-top: solid 5px rgba(101, 179, 46, 0.25);
+}
+.project__caracteristics--description {
+  margin-top: 0;
+}
+.project__caracteristics--action {
+  display: block;
+  width: 120px;
+  margin: 10px auto;
+  color: #333333;
 }

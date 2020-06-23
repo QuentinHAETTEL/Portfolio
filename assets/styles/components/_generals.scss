@@ -139,6 +139,19 @@ a:visited {
     .embed-box {
         width: 80%;
     }
+
+    .card__container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 90vw;
+        max-width: 1400vw;
+        margin: 5vw auto;
+    }
+
+    .card {
+        margin: 5vw;
+    }
 }
 
 

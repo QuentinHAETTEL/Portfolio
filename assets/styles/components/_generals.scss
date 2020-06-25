@@ -123,6 +123,29 @@ a:visited {
     }
 }
 
+.input--success {
+    border: solid 2px $correct !important;
+    background-image: url('../../assets/images/icons/correct.svg');
+    background-size: 10%;
+    background-position: 95% 50%;
+    background-repeat: no-repeat;
+}
+
+.input--error {
+    border: solid 2px $incorrect !important;
+    background-image: url('../../assets/images/icons/incorrect.svg');
+    background-size: 10%;
+    background-position: 95% 50%;
+    background-repeat: no-repeat;
+}
+
+.textarea--success {
+    border: solid 2px $correct !important;
+}
+
+.textarea--error {
+    border: solid 2px $incorrect !important;
+}
 
 @media (min-width: 600px) {
     .box {
@@ -138,6 +161,19 @@ a:visited {
 
     .embed-box {
         width: 80%;
+    }
+
+    .card__container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 90vw;
+        max-width: 1400vw;
+        margin: 5vw auto;
+    }
+
+    .card {
+        margin: 5vw;
     }
 }
 

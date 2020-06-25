@@ -148,6 +148,105 @@ window.addEventListener('DOMContentLoaded', function () {
 
 /***/ }),
 
+/***/ "./assets/scripts/contact.js":
+/*!***********************************!*\
+  !*** ./assets/scripts/contact.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+window.addEventListener('DOMContentLoaded', function () {
+  // Script to manage all labels-inputs elements
+  var inputContainers = document.querySelectorAll('[data-input-container]');
+
+  if (inputContainers) {
+    inputContainers.forEach(function (inputContainer) {
+      var input = inputContainer.querySelector('input, textarea, select');
+      var label = inputContainer.querySelector('label');
+
+      if (input && label) {
+        input.addEventListener('focus', function () {
+          label.classList.add('contact__field--label--visible');
+          input.placeholder = '';
+        });
+        input.addEventListener('blur', function () {
+          if (input.value.length !== 0) {
+            label.classList.add('contact__field--label--visible');
+            input.placeholder = '';
+          } else {
+            label.classList.remove('contact__field--label--visible');
+            input.placeholder = input.getAttribute('data-placeholder');
+          }
+
+          if (input.nodeName === 'TEXTAREA') {
+            checkTextarea(input);
+          } else {
+            checkInput(input);
+          }
+        });
+      }
+    });
+  } // Script to check if form is correctly completed and execute it
+
+
+  var contactForm = document.getElementById('contact-form');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+      var inputs = contactForm.querySelectorAll('input');
+      inputs.forEach(function (input) {
+        checkInput(input);
+      });
+      var textareas = contactForm.querySelectorAll('textarea');
+      textareas.forEach(function (textarea) {
+        checkTextarea(textarea);
+      });
+    });
+  } // Functions
+
+
+  function checkInput(input) {
+    var error = false;
+
+    if (input.value.length < 2 || input.value.length > 100) {
+      error = true;
+    } else {
+      error = false;
+    }
+
+    if (input.type === 'email') {
+      var regex = /\S+@\S+\.\S+/;
+
+      if (regex.test(input.value)) {
+        error = false;
+      } else {
+        error = true;
+      }
+    }
+
+    if (error) {
+      input.classList.remove('input--success');
+      input.classList.add('input--error');
+    } else {
+      input.classList.remove('input--error');
+      input.classList.add('input--success');
+    }
+  }
+
+  function checkTextarea(textarea) {
+    if (textarea.value.length < 20 || textarea.value.length > 2000) {
+      textarea.classList.remove('textarea--success');
+      textarea.classList.add('textarea--error');
+    } else {
+      textarea.classList.remove('textarea--error');
+      textarea.classList.add('textarea--success');
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./assets/scripts/main.js":
 /*!********************************!*\
   !*** ./assets/scripts/main.js ***!
@@ -254,9 +353,9 @@ window.addEventListener('DOMContentLoaded', function () {
 /***/ }),
 
 /***/ 0:
-/*!*******************************************************************************************************************************************************************************************************!*\
-  !*** multi ./assets/scripts/main.js ./assets/scripts/menu.js ./assets/scripts/collapse.js ./assets/scripts/toggle.js ./assets/scripts/progress.js ./assets/scripts/card.js ./assets/styles/main.scss ***!
-  \*******************************************************************************************************************************************************************************************************/
+/*!***********************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./assets/scripts/main.js ./assets/scripts/menu.js ./assets/scripts/collapse.js ./assets/scripts/toggle.js ./assets/scripts/progress.js ./assets/scripts/card.js ./assets/scripts/contact.js ./assets/styles/main.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -266,6 +365,7 @@ __webpack_require__(/*! C:\wamp64\www\portfolio\assets\scripts\collapse.js */"./
 __webpack_require__(/*! C:\wamp64\www\portfolio\assets\scripts\toggle.js */"./assets/scripts/toggle.js");
 __webpack_require__(/*! C:\wamp64\www\portfolio\assets\scripts\progress.js */"./assets/scripts/progress.js");
 __webpack_require__(/*! C:\wamp64\www\portfolio\assets\scripts\card.js */"./assets/scripts/card.js");
+__webpack_require__(/*! C:\wamp64\www\portfolio\assets\scripts\contact.js */"./assets/scripts/contact.js");
 module.exports = __webpack_require__(/*! C:\wamp64\www\portfolio\assets\styles\main.scss */"./assets/styles/main.scss");
 
 

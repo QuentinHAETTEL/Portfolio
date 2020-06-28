@@ -175,6 +175,11 @@ a:visited {
     .card {
         margin: 5vw;
     }
+
+    .input--success, .input--error {
+        background-size: 5%;
+        background-position: 98% 50%;
+    }
 }
 
 

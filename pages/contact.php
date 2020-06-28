@@ -99,20 +99,20 @@ $page = 'contact';
 
                     <div class="contact__infos">
                         <div class="contact__logos">
-                            <a class="contact__logos--item" href="#" target="_blank">
+                            <a class="contact__logos--item" href="https://www.linkedin.com/in/quentin-haettel/" target="_blank">
                                 <img src="<?php echo BASE_URL ?>assets/images/icons/linkedin.svg" alt="Logo LinkedIn" />
                             </a>
-                            <a class="contact__logos--item" href="#" target="_blank">
+                            <a class="contact__logos--item" href="https://www.facebook.com/quentin.haettel" target="_blank">
                                 <img src="<?php echo BASE_URL ?>assets/images/icons/facebook.svg" alt="Logo Facebook" />
                             </a>
-                            <a class="contact__logos--item" href="#" target="_blank">
+                            <a class="contact__logos--item" href="https://github.com/QuentinHAETTEL/" target="_blank">
                                 <img src="<?php echo BASE_URL ?>assets/images/icons/github.svg" alt="Logo Github" />
                             </a>
                         </div>
-                        <button class="label contact__action">
+                        <a href="#" class="label contact__action" target="_blank">
                             <img src="<?php echo BASE_URL ?>assets/images/icons/download.svg" alt="Icône télécharger" />
                             Télécharger mon CV
-                        </button>
+                        </a>
                         <div class="contact__text">
                             <a class="contact__text--item" href="mailto:quentin.haettel@gmail.com" target="_blank">quentin.haettel [at] gmail.com</a>
                             <a class="contact__text--item" href="tel:0388913543" target="_blank">+33 (0)6 78 61 47 18</a>

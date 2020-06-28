@@ -189,6 +189,11 @@ a:visited {
   .card {
     margin: 5vw;
   }
+
+  .input--success, .input--error {
+    background-size: 5%;
+    background-position: 98% 50%;
+  }
 }
 .progress-bar-top-0 {
   background: linear-gradient(to top, #65b32e 0%, rgba(101, 179, 46, 0.25) 100%);
@@ -1101,6 +1106,7 @@ header {
   align-items: center;
   margin: 30px 0;
   padding: 5px 15px;
+  color: #333333;
 }
 .contact__action img {
   width: 20px;
@@ -1114,4 +1120,29 @@ header {
   margin: 10px 0;
   color: #333333;
   text-decoration: none;
+}
+
+@media (min-width: 992px) {
+  .contact__box {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .contact__box > form {
+    width: 45%;
+  }
+  .contact__box .contact__infos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+    margin: 0 -50px 0 0;
+    padding-left: 50px;
+    border-left: solid 5px rgba(101, 179, 46, 0.25);
+  }
+  .contact__logos {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 75% !important;
+  }
 }

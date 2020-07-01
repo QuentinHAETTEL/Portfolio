@@ -19,7 +19,7 @@ class ContactController {
         $contact->setEmail($_POST['email']);
         $contact->setObject($_POST['object']);
         $contact->setMessage($_POST['message']);
-        $contact->setDate(date('Y-m-d'));
+        $contact->setDate(date('Y-m-d G:i'));
 
         $insert = self::$db->exec('INSERT INTO contact (firstname, lastname, email, object, message, date) VALUES ("'.$contact->getFirstname().'", "'.$contact->getLastname().'", "'.$contact->getEmail().'", "'.$contact->getObject().'", "'.$contact->getMessage().'", "'.$contact->getDate().'");');
         if ($insert == 1) {

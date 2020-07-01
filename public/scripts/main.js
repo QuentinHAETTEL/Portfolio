@@ -152,8 +152,12 @@ window.addEventListener('DOMContentLoaded', function () {
 /*!***********************************!*\
   !*** ./assets/scripts/contact.js ***!
   \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _main__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main */ "./assets/scripts/main.js");
 
 window.addEventListener('DOMContentLoaded', function () {
   // Script to manage all labels-inputs elements
@@ -202,6 +206,31 @@ window.addEventListener('DOMContentLoaded', function () {
       textareas.forEach(function (textarea) {
         checkTextarea(textarea);
       });
+      var xhrRequest = new XMLHttpRequest();
+
+      xhrRequest.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+          var response = JSON.parse(this.responseText);
+
+          if (response) {
+            contactForm.reset();
+            var validInputs = contactForm.querySelectorAll('.input--success');
+
+            if (validInputs) {
+              validInputs.forEach(function (validInput) {
+                validInput.classList.remove('input--success');
+              });
+            }
+
+            Object(_main__WEBPACK_IMPORTED_MODULE_0__["popup"])('success', 'Votre message a été envoyé avec succès');
+          } else {
+            Object(_main__WEBPACK_IMPORTED_MODULE_0__["popup"])('error', 'Une erreur est survenue, veuillez réessayer ou envoyer un mail directement');
+          }
+        }
+      };
+
+      xhrRequest.open('POST', '../src/handlers/ContactHandler.php', true);
+      xhrRequest.send(new FormData(contactForm));
     });
   } // Functions
 
@@ -236,11 +265,11 @@ window.addEventListener('DOMContentLoaded', function () {
 
   function checkTextarea(textarea) {
     if (textarea.value.length < 20 || textarea.value.length > 2000) {
-      textarea.classList.remove('textarea--success');
-      textarea.classList.add('textarea--error');
+      textarea.classList.remove('input--success');
+      textarea.classList.add('input--error');
     } else {
-      textarea.classList.remove('textarea--error');
-      textarea.classList.add('textarea--success');
+      textarea.classList.remove('input--error');
+      textarea.classList.add('input--success');
     }
   }
 });
@@ -251,10 +280,40 @@ window.addEventListener('DOMContentLoaded', function () {
 /*!********************************!*\
   !*** ./assets/scripts/main.js ***!
   \********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: popup */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "popup", function() { return popup; });
+function popup(type, message) {
+  var popup = document.getElementById('popup');
 
+  if (popup) {
+    var popupIcon = popup.querySelector('img');
+    var popupTitle = popup.querySelector('p');
+
+    if (popupIcon && popupTitle) {
+      if (type === 'success') {
+        var src = popupIcon.getAttribute('src');
+        popupIcon.setAttribute('src', src + 'assets/images/icons/correct.svg');
+        popupIcon.setAttribute('alt', 'Icône succès');
+      } else if (type === 'error') {
+        var _src = popupIcon.getAttribute('src');
+
+        popupIcon.setAttribute('src', _src + 'assets/images/icons/incorrect.svg');
+        popupIcon.setAttribute('alt', 'Icône échec');
+      }
+
+      popupTitle.innerHTML = message;
+    }
+
+    popup.classList.add('visible');
+    setTimeout(function () {
+      popup.classList.remove('visible');
+    }, 5000);
+  }
+}
 
 /***/ }),
 

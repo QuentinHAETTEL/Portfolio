@@ -48,6 +48,13 @@
             resize: none;
         }
     }
+    &__checkbox {
+        display: flex;
+        &--label {
+            margin-left: 10px;
+            font-size: 0.7em;
+        }
+    }
     &__submit {
         display: block;
         width: 120px;

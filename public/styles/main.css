@@ -139,28 +139,33 @@ a:visited {
   cursor: pointer;
 }
 
-.input--success {
+input.input--success {
   border: solid 2px #29d069 !important;
   background-image: url("../../assets/images/icons/correct.svg");
-  background-size: 10%;
+  background-size: 5%;
   background-position: 95% 50%;
   background-repeat: no-repeat;
 }
 
-.input--error {
+input.input--error {
   border: solid 2px red !important;
   background-image: url("../../assets/images/icons/incorrect.svg");
-  background-size: 10%;
+  background-size: 5%;
   background-position: 95% 50%;
   background-repeat: no-repeat;
 }
 
-.textarea--success {
+textarea.input--success {
   border: solid 2px #29d069 !important;
 }
 
-.textarea--error {
+textarea.input--error {
   border: solid 2px red !important;
+}
+
+.visible {
+  opacity: 1 !important;
+  transition: all 1s;
 }
 
 @media (min-width: 600px) {
@@ -529,6 +534,31 @@ a:visited {
 
 .progress-bar-left-100 {
   background: linear-gradient(to left, #65b32e 100%, rgba(101, 179, 46, 0.25) 0%);
+}
+
+.popup {
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40vw;
+  padding: 10px 20px;
+  background-color: white;
+  border: solid 5px #65b32e;
+  transform: translate(-50%, 0);
+  box-shadow: 5px 5px 4px 0 rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transition: opacity 1s;
+  z-index: 10;
+}
+.popup--icon {
+  width: 50px;
+  height: 50px;
+}
+.popup--text {
+  text-align: center;
 }
 
 header {
@@ -1071,6 +1101,13 @@ header {
   border-radius: 0.5rem;
   z-index: 2;
   resize: none;
+}
+.contact__checkbox {
+  display: flex;
+}
+.contact__checkbox--label {
+  margin-left: 10px;
+  font-size: 0.7em;
 }
 .contact__submit {
   display: block;

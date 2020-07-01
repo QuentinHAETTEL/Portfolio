@@ -1,3 +1,5 @@
+import { popup } from './main';
+
 window.addEventListener('DOMContentLoaded', function () {
 
     // Script to manage all labels-inputs elements
@@ -49,6 +51,28 @@ window.addEventListener('DOMContentLoaded', function () {
             textareas.forEach(function (textarea) {
                 checkTextarea(textarea);
             });
+
+            let xhrRequest = new XMLHttpRequest();
+            xhrRequest.onreadystatechange = function () {
+                if (this.readyState === 4 && this.status === 200) {
+                    let response = JSON.parse(this.responseText);
+                    if (response) {
+                        contactForm.reset();
+                        let validInputs = contactForm.querySelectorAll('.input--success');
+                        if (validInputs) {
+                            validInputs.forEach(function (validInput) {
+                                validInput.classList.remove('input--success');
+                            });
+                        }
+                        popup('success', 'Votre message a été envoyé avec succès');
+                    }
+                    else {
+                        popup('error', 'Une erreur est survenue, veuillez réessayer ou envoyer un mail directement');
+                    }
+                }
+            };
+            xhrRequest.open('POST', '../src/handlers/ContactHandler.php', true);
+            xhrRequest.send(new FormData(contactForm));
         });
     }
 
@@ -86,12 +110,12 @@ window.addEventListener('DOMContentLoaded', function () {
 
     function checkTextarea(textarea) {
         if (textarea.value.length < 20 || textarea.value.length > 2000) {
-            textarea.classList.remove('textarea--success');
-            textarea.classList.add('textarea--error');
+            textarea.classList.remove('input--success');
+            textarea.classList.add('input--error');
         }
         else {
-            textarea.classList.remove('textarea--error');
-            textarea.classList.add('textarea--success');
+            textarea.classList.remove('input--error');
+            textarea.classList.add('input--success');
         }
     }
 

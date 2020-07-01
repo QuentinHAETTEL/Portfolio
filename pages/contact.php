@@ -91,7 +91,13 @@ $page = 'contact';
                         </div>
                         <div class="contact__field" data-input-container>
                             <label class="contact__field--label" for="contact--message">Message :</label>
-                            <textarea id="contact--message" class="contact__field--textarea" name="object" placeholder="Message" required="required" data-placeholder="Message"></textarea>
+                            <textarea id="contact--message" class="contact__field--textarea" name="message" placeholder="Message" required="required" data-placeholder="Message"></textarea>
+                        </div>
+
+                        <div class="contact__checkbox">
+                            <input id="contact--rgpd" type="checkbox" name="rgpd" required="required" />
+                            <label class="contact__checkbox--label" for="contact--rgpd">J'accepte que mes données personnelles soient recueillies pour être recontacté. Vous pouvez exercer votre droit d'accès aux données en contactant : <a href="mailto:quentin.haettel@gmail.com" target="_blank">quentin.haettel[at]gmail.com</a>.</label>
+
                         </div>
 
                         <button class="label contact__submit" type="submit">Envoyer</button>
@@ -122,6 +128,9 @@ $page = 'contact';
             </div>
         </section>
 
+        <?php
+        include('components/popup.php');
+        ?>
     </main>
 </body>
 </html>

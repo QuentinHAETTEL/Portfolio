@@ -15,7 +15,7 @@ class Contact {
 
     public function setFirstname($firstname) {
         if (isset($firstname) && !empty($firstname)) {
-            $this->firstname = htmlentities($firstname);
+            $this->firstname = htmlspecialchars($firstname);
         }
     }
 
@@ -25,7 +25,7 @@ class Contact {
 
     public function setLastname($lastname) {
         if (isset($lastname) && !empty($lastname)) {
-            $this->lastname = htmlentities($lastname);
+            $this->lastname = htmlspecialchars($lastname);
         }
     }
 
@@ -35,7 +35,7 @@ class Contact {
 
     public function setEmail($email) {
         if (isset($email) && !empty($email)) {
-            $this->email = htmlentities($email);
+            $this->email = htmlspecialchars($email);
         }
     }
 
@@ -45,7 +45,7 @@ class Contact {
 
     public function setObject($object) {
         if (isset($object) && !empty($object)) {
-            $this->object = htmlentities($object);
+            $this->object = htmlspecialchars($object);
         }
     }
 
@@ -55,7 +55,7 @@ class Contact {
 
     public function setMessage($message) {
         if (isset($message) && !empty($message)) {
-            $this->message = htmlentities($message);
+            $this->message = htmlspecialchars($message);
         }
     }
 

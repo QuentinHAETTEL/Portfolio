@@ -1217,3 +1217,27 @@ footer {
   font-size: 0.65em;
   text-align: right;
 }
+
+@media (min-width: 992px) {
+  .footer {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .footer__copyrights, .footer__links {
+    max-width: 120px;
+  }
+  .footer__logo {
+    display: block;
+  }
+  .footer__logo img {
+    width: 60px;
+    height: auto;
+  }
+  .footer__version {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+  }
+}

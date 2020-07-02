@@ -89,5 +89,9 @@ $page = 'presentation';
             </div>
         </section>
     </main>
+
+    <?php
+    include('pages/components/footer.php');
+    ?>
 </body>
 </html>

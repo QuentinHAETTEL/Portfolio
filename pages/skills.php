@@ -241,5 +241,9 @@ $page = 'skills';
             </div>
         </section>
     </main>
+
+    <?php
+    include('components/footer.php');
+    ?>
 </body>
 </html>

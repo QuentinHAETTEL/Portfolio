@@ -1,7 +1,7 @@
 @use 'variables' as *;
 
 .projects {
-    height: calc(100vh - 87px);
+    min-height: calc(100vh - 87px);
     &--title {
         margin-bottom: 0;
         text-align: center;

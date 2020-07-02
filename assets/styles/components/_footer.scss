@@ -38,3 +38,28 @@ footer {
         text-align: right;
     }
 }
+
+
+@media (min-width: 992px) {
+    .footer {
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        &__copyrights, &__links {
+            max-width: 120px;
+        }
+        &__logo {
+            display: block;
+            img {
+                width: 60px;
+                height: auto;
+            }
+        }
+        &__version {
+            position: absolute;
+            bottom: 5px;
+            right: 10px;
+        }
+    }
+}

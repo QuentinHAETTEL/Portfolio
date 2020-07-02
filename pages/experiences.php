@@ -210,5 +210,9 @@ $page = 'experiences';
             </div>
         </section>
     </main>
+
+    <?php
+    include('components/footer.php');
+    ?>
 </body>
 </html>

@@ -1,0 +1,40 @@
+@use 'variables' as *;
+
+//////////////////////////////////
+// ********** HEADER ********** //
+//////////////////////////////////
+
+footer {
+    min-height: 90px;
+    margin-top: 20px;
+    background-color: $light-gray;
+    box-shadow: 0 -3px 3px 0 rgba(0, 0, 0, 0.125);
+}
+
+.footer {
+    width: 100%;
+    padding: 5px 10px;
+    &__copyrights {
+        font-size: 0.8em;
+        text-align: center;
+    }
+    &__logo {
+        display: none;
+    }
+    &__links {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        &--item {
+            color: $black;
+            font-size: 0.8em;
+        }
+    }
+    &__version {
+        margin: 0 auto 5px auto;
+        color: $main-color;
+        font-size: 0.65em;
+        text-align: right;
+    }
+}

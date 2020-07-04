@@ -83,8 +83,9 @@
         }
     }
     &__image {
-        width: 80px;
+        width: 75px;
         height: auto;
+        max-height: 50px;
     }
     &__details {
         &--title {

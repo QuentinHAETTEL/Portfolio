@@ -31,6 +31,17 @@ body {
   padding: 0;
   font-family: "Open Sans";
 }
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("../../assets/images/texture.png");
+  opacity: 0.7;
+  z-index: -1;
+}
 
 a,
 a:hover,
@@ -878,8 +889,9 @@ header {
   height: auto;
 }
 .experience__image {
-  width: 80px;
+  width: 75px;
   height: auto;
+  max-height: 50px;
 }
 .experience__details--title {
   margin: 20px 0 0 0;
@@ -1144,6 +1156,7 @@ header {
   margin: 30px 0;
   padding: 5px 15px;
   color: #333333;
+  text-align: center;
 }
 .contact__action img {
   width: 20px;

@@ -239,6 +239,46 @@ $page = 'skills';
                     </div>
                 </div>
             </div>
+
+            <div class="box">
+                <div class="skills__box">
+                    <h2 class="skills__box--title">CMS</h2>
+                    <div class="skill" data-toggle-parent>
+                        <div class="skills__box--list">
+                            <span class="label label-toggle" data-toggle="11">Wordpress</span>
+                            <span class="label label-toggle" data-toggle="12">Drupal</span>
+                            <span class="label label-toggle" data-toggle="13">Prestashop</span>
+                        </div>
+
+                        <div class="embed-box" data-toggle-id="11">
+                            <h3 class="skill__title">Wordpress</h3>
+
+                            <div class="skill__level">
+                                <div class="skill__level--bar" data-progress="90"></div>
+                                <p class="skill__level--percentage">90%</p>
+                            </div>
+                        </div>
+
+                        <div class="embed-box hide" data-toggle-id="12">
+                            <h3 class="skill__title">Drupal</h3>
+
+                            <div class="skill__level">
+                                <div class="skill__level--bar" data-progress="85"></div>
+                                <p class="skill__level--percentage">85%</p>
+                            </div>
+                        </div>
+
+                        <div class="embed-box hide" data-toggle-id="13">
+                            <h3 class="skill__title">Prestashop</h3>
+
+                            <div class="skill__level">
+                                <div class="skill__level--bar" data-progress="85"></div>
+                                <p class="skill__level--percentage">85%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 

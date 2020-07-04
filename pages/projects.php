@@ -89,7 +89,7 @@ $page = 'projects';
                                 <span class="separator--vertical"></span>
                                 <span>JavaScript</span>
                             </div>
-                            <a class="label project__caracteristics--action" href="<?php echo ROOT; ?>/start-from-scratch">Voir le projet</a>
+                            <a class="label project__caracteristics--action" href="<?php echo ROOT; ?>/projects/start-from-scratch">Voir le projet</a>
                         </div>
                     </div>
                 </div>
@@ -110,7 +110,7 @@ $page = 'projects';
                                 <span class="separator--vertical"></span>
                                 <span>JavaScript</span>
                             </div>
-                            <a class="label project__caracteristics--action" href="<?php echo ROOT; ?>/admin-panel">Voir le projet</a>
+                            <a class="label project__caracteristics--action" href="<?php echo ROOT; ?>/projects/admin-panel">Voir le projet</a>
                         </div>
                     </div>
                 </div>
@@ -131,7 +131,7 @@ $page = 'projects';
                                 <span class="separator--vertical"></span>
                                 <span>JavaScript</span>
                             </div>
-                            <a class="label project__caracteristics--action" href="<?php echo ROOT; ?>/snake">Voir le projet</a>
+                            <a class="label project__caracteristics--action" href="<?php echo ROOT; ?>/projects/snake">Voir le projet</a>
                         </div>
                     </div>
                 </div>

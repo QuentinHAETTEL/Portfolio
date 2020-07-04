@@ -132,5 +132,9 @@ $page = 'contact';
         include('components/popup.php');
         ?>
     </main>
+
+    <?php
+    include('components/footer.php');
+    ?>
 </body>
 </html>

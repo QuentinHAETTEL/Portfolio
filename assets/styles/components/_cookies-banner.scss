@@ -1,0 +1,25 @@
+@use 'variables' as *;
+
+.cookies-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 15px;
+    color: $white;
+    background-color: $main-color;
+    text-align: center;
+    box-shadow: 0 -3px 3px 0 rgba(0, 0, 0, 0.125);
+    z-index: 10;
+    &__text {
+        margin-top: 0;
+    }
+    &__button {
+        padding: 5px 20px;
+        color: $black;
+        background-color: $light-gray;
+        border: solid 1px $light-gray;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}

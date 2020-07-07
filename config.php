@@ -1,7 +1,9 @@
 <?php
 
 define("BASE_URL", "/portfolio/");
-define("ROOT", $_SERVER['DOCUMENT_ROOT']);
+define("ROOT", $_SERVER['HTTP_HOST']);
+
+define('GA', 'UA-171624113-1');
 
 function connectDB()
 {

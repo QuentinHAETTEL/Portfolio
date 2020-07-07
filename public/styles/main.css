@@ -1254,3 +1254,26 @@ footer {
     right: 10px;
   }
 }
+.cookies-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 15px;
+  color: white;
+  background-color: #65b32e;
+  text-align: center;
+  box-shadow: 0 -3px 3px 0 rgba(0, 0, 0, 0.125);
+  z-index: 10;
+}
+.cookies-banner__text {
+  margin-top: 0;
+}
+.cookies-banner__button {
+  padding: 5px 20px;
+  color: #333333;
+  background-color: #f0f0f0;
+  border: solid 1px #f0f0f0;
+  border-radius: 5px;
+  cursor: pointer;
+}

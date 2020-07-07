@@ -12,7 +12,8 @@ mix.js(
         'assets/scripts/toggle.js',
         'assets/scripts/progress.js',
         'assets/scripts/card.js',
-        'assets/scripts/contact.js'
+        'assets/scripts/contact.js',
+        'assets/scripts/cookies_banner.js'
     ], 'public/scripts')
     .sass('assets/styles/main.scss', 'public/styles')
     .options({

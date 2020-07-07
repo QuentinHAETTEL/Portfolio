@@ -60,6 +60,10 @@ $page = 'contact';
 
     <link rel="stylesheet" href="../public/styles/main.css" />
     <script src="../public/scripts/main.js"></script>
+
+    <?php
+    include('pages/components/google_analytics.php');
+    ?>
 </head>
 
 <body>

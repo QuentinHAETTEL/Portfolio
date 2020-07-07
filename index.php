@@ -60,6 +60,10 @@ $page = 'presentation';
 
     <link rel="stylesheet" href="public/styles/main.css" />
     <script src="public/scripts/main.js"></script>
+
+    <?php
+    include('pages/components/google_analytics.php');
+    ?>
 </head>
 
 <body>
@@ -88,6 +92,10 @@ $page = 'presentation';
                 </div>
             </div>
         </section>
+
+        <?php
+        include('pages/components/cookies_banner.php');
+        ?>
     </main>
 
     <?php

@@ -71,7 +71,7 @@ window.addEventListener('DOMContentLoaded', function () {
                     }
                 }
             };
-            xhrRequest.open('POST', '../src/handlers/ContactHandler.php', true);
+            xhrRequest.open('POST', '../src/handlers/contactHandler.php', true);
             xhrRequest.send(new FormData(contactForm));
         });
     }

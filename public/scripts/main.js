@@ -229,7 +229,7 @@ window.addEventListener('DOMContentLoaded', function () {
         }
       };
 
-      xhrRequest.open('POST', '../src/handlers/ContactHandler.php', true);
+      xhrRequest.open('POST', '../src/handlers/contactHandler.php', true);
       xhrRequest.send(new FormData(contactForm));
     });
   } // Functions
@@ -271,6 +271,71 @@ window.addEventListener('DOMContentLoaded', function () {
       textarea.classList.remove('input--error');
       textarea.classList.add('input--success');
     }
+  }
+});
+
+/***/ }),
+
+/***/ "./assets/scripts/cookies_banner.js":
+/*!******************************************!*\
+  !*** ./assets/scripts/cookies_banner.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+window.addEventListener('DOMContentLoaded', function () {
+  var cookiesBanner = document.getElementById('cookies-banner');
+  var xhrRequest = new XMLHttpRequest();
+
+  xhrRequest.onreadystatechange = function () {
+    if (this.readyState === 4 && this.status === 200) {
+      var response = JSON.parse(this.responseText);
+
+      if (response === 0) {
+        window['ga-disable-UA-171624113-1'] = true;
+        var scripts = document.querySelectorAll('[data-id="cookies-script"]');
+        scripts.forEach(function (script) {
+          script.parentNode.removeChild(script);
+        });
+        cookiesBanner.classList.add('hide');
+      } else if (response === 1) {
+        cookiesBanner.classList.add('hide');
+      }
+    }
+  };
+
+  xhrRequest.open('GET', './src/handlers/cookiesHandler.php?method=getCookiesPreferences', true);
+  xhrRequest.send();
+  var cookiesAccept = document.getElementById('cookies-accept');
+  var cookiesDecline = document.getElementById('cookies-decline');
+
+  if (cookiesAccept) {
+    cookiesAccept.addEventListener('click', function () {
+      setCookiesPreferences(1);
+    });
+  }
+
+  if (cookiesDecline) {
+    cookiesDecline.addEventListener('click', function () {
+      setCookiesPreferences(0);
+    });
+  }
+
+  function setCookiesPreferences(preference) {
+    var xhrRequest = new XMLHttpRequest();
+
+    xhrRequest.onreadystatechange = function () {
+      if (this.readyState === 4 && this.status === 200) {
+        var response = JSON.parse(this.responseText);
+
+        if (response) {
+          cookiesBanner.classList.add('hide');
+        }
+      }
+    };
+
+    xhrRequest.open('GET', './src/handlers/cookiesHandler.php?preference=' + preference, true);
+    xhrRequest.send();
   }
 });
 
@@ -412,9 +477,9 @@ window.addEventListener('DOMContentLoaded', function () {
 /***/ }),
 
 /***/ 0:
-/*!***********************************************************************************************************************************************************************************************************************************!*\
-  !*** multi ./assets/scripts/main.js ./assets/scripts/menu.js ./assets/scripts/collapse.js ./assets/scripts/toggle.js ./assets/scripts/progress.js ./assets/scripts/card.js ./assets/scripts/contact.js ./assets/styles/main.scss ***!
-  \***********************************************************************************************************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./assets/scripts/main.js ./assets/scripts/menu.js ./assets/scripts/collapse.js ./assets/scripts/toggle.js ./assets/scripts/progress.js ./assets/scripts/card.js ./assets/scripts/contact.js ./assets/scripts/cookies_banner.js ./assets/styles/main.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -425,6 +490,7 @@ __webpack_require__(/*! C:\wamp64\www\portfolio\assets\scripts\toggle.js */"./as
 __webpack_require__(/*! C:\wamp64\www\portfolio\assets\scripts\progress.js */"./assets/scripts/progress.js");
 __webpack_require__(/*! C:\wamp64\www\portfolio\assets\scripts\card.js */"./assets/scripts/card.js");
 __webpack_require__(/*! C:\wamp64\www\portfolio\assets\scripts\contact.js */"./assets/scripts/contact.js");
+__webpack_require__(/*! C:\wamp64\www\portfolio\assets\scripts\cookies_banner.js */"./assets/scripts/cookies_banner.js");
 module.exports = __webpack_require__(/*! C:\wamp64\www\portfolio\assets\styles\main.scss */"./assets/styles/main.scss");
 
 

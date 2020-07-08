@@ -2,6 +2,11 @@ Options +FollowSymlinks
 
 
 RewriteEngine On
+RewriteBase /
+
+# HTTP TO HTTPS
+RewriteCond %{HTTPS} !=on
+RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
 # HOMEPAGE - PRESENTATION
 RewriteRule ^/$ index.php
@@ -12,12 +17,20 @@ RewriteRule ^presentation$ index.php
 
 # EXPERIENCES
 RewriteRule ^experiences$ pages/experiences.php
+RewriteRule ^experiences.html$ pages/experiences.php
+RewriteRule ^pages/experiences.html$ pages/experiences.php
 
 # SKILLS
 RewriteRule ^competences$ pages/skills.php
+RewriteRule ^competences.html$ pages/skills.php
+RewriteRule ^/pages/competences.html$ pages/skills.php
 
 # PROJECTS
 RewriteRule ^projets$ pages/projects.php
+RewriteRule ^projets.html$ pages/projects.php
+RewriteRule ^pages/projets.html$ pages/projects.php
 
 # CONTACT
 RewriteRule ^contact$ pages/contact.php
+RewriteRule ^contact.html$ pages/contact.php
+RewriteRule ^pages/contact.html$ pages/contact.php [L]

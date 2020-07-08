@@ -58,8 +58,8 @@ $page = 'presentation';
     <meta property="twitter:image" content="<?php echo $globalUrl ?>/assets/images/logo/logo_opengraph.jpg" />
     <meta property="twitter:image:alt" content="Logo Quentin HAETTEL - Développeur web full-stack" />
 
-    <link rel="stylesheet" href="public/styles/main.css" />
-    <script src="public/scripts/main.js"></script>
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>public/styles/main.css" />
+    <script src="<?php echo BASE_URL; ?>public/scripts/main.js"></script>
 
     <?php
     include('pages/components/google_analytics.php');

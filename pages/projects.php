@@ -14,6 +14,8 @@ $globalUrl = $protocol . '://' . $_SERVER['HTTP_HOST'];
 $url = $protocol . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
 $page = 'projects';
+
+var_dump(ROOT . '/projects/start-from-scratch');
 ?>
 
 <head>
@@ -58,11 +60,11 @@ $page = 'projects';
     <meta property="twitter:image" content="<?php echo $globalUrl ?>/assets/images/logo/logo_opengraph.jpg" />
     <meta property="twitter:image:alt" content="Logo Quentin HAETTEL - Développeur web full-stack" />
 
-    <link rel="stylesheet" href="../public/styles/main.css" />
-    <script src="../public/scripts/main.js"></script>
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>public/styles/main.css" />
+    <script src="<?php echo BASE_URL; ?>/public/scripts/main.js"></script>
 
     <?php
-    include('pages/components/google_analytics.php');
+    include('components/google_analytics.php');
     ?>
 </head>
 
@@ -76,7 +78,7 @@ $page = 'projects';
             <h1 class="title">Projets</h1>
             <div class="card__container">
                 <div class="card project" data-card>
-                    <img class="project__image" src="../assets/images/project_start-from-scratch.jpg" alt="Développement web - Start from Scratch" />
+                    <img class="project__image" src="<?php echo BASE_URL; ?>assets/images/project_start-from-scratch.jpg" alt="Développement web - Start from Scratch" />
                     <div class="project__details" data-card-details>
                         <h3 class="project__details--title">Start from Scratch</h3>
                         <span class="separator"></span>
@@ -93,13 +95,13 @@ $page = 'projects';
                                 <span class="separator--vertical"></span>
                                 <span>JavaScript</span>
                             </div>
-                            <a class="label project__caracteristics--action" href="<?php echo ROOT; ?>/projects/start-from-scratch">Voir le projet</a>
+                            <a class="label project__caracteristics--action" href="<?php echo $globalUrl; ?>/projects/start-from-scratch">Voir le projet</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="card project" data-card>
-                    <img class="project__image" src="../assets/images/project_admin-panel.jpg" alt="Développeent web - Admin panel" />
+                    <img class="project__image" src="<?php echo BASE_URL; ?>assets/images/project_admin-panel.jpg" alt="Développeent web - Admin panel" />
                     <div class="project__details" data-card-details>
                         <h3 class="project__details--title">Admin panel</h3>
                         <span class="separator"></span>
@@ -114,13 +116,13 @@ $page = 'projects';
                                 <span class="separator--vertical"></span>
                                 <span>JavaScript</span>
                             </div>
-                            <a class="label project__caracteristics--action" href="<?php echo ROOT; ?>/projects/admin-panel">Voir le projet</a>
+                            <a class="label project__caracteristics--action" href="<?php echo $globalUrl; ?>/projects/admin-panel">Voir le projet</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="card project" data-card>
-                    <img class="project__image" src="../assets/images/project_snake.jpg" alt="Développement web - Snake" />
+                    <img class="project__image" src="<?php echo BASE_URL; ?>assets/images/project_snake.jpg" alt="Développement web - Snake" />
                     <div class="project__details" data-card-details>
                         <h3 class="project__details--title">Jeu Snake</h3>
                         <span class="separator"></span>
@@ -135,7 +137,7 @@ $page = 'projects';
                                 <span class="separator--vertical"></span>
                                 <span>JavaScript</span>
                             </div>
-                            <a class="label project__caracteristics--action" href="<?php echo ROOT; ?>/projects/snake">Voir le projet</a>
+                            <a class="label project__caracteristics--action" href="<?php echo $globalUrl; ?>/projects/snake">Voir le projet</a>
                         </div>
                     </div>
                 </div>

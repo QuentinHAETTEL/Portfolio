@@ -1,0 +1,23 @@
+Options +FollowSymlinks
+
+
+RewriteEngine On
+
+# HOMEPAGE - PRESENTATION
+RewriteRule ^/$ index.php
+RewriteRule ^index\.html$ index.php
+RewriteRule ^home$ index.php
+RewriteRule ^accueil$ index.php
+RewriteRule ^presentation$ index.php
+
+# EXPERIENCES
+RewriteRule ^experiences$ pages/experiences.php
+
+# SKILLS
+RewriteRule ^competences$ pages/skills.php
+
+# PROJECTS
+RewriteRule ^projets$ pages/projects.php
+
+# CONTACT
+RewriteRule ^contact$ pages/contact.php

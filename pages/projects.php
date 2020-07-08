@@ -14,8 +14,6 @@ $globalUrl = $protocol . '://' . $_SERVER['HTTP_HOST'];
 $url = $protocol . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
 $page = 'projects';
-
-var_dump(ROOT . '/projects/start-from-scratch');
 ?>
 
 <head>

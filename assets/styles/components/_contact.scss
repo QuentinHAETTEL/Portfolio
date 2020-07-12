@@ -1,7 +1,7 @@
 @use 'variables' as *;
 
 .contact {
-    height: calc(100vh - 87px);
+    min-height: calc(100vh - 87px);
     &__box {
         display: flex;
         flex-direction: column;

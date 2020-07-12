@@ -186,8 +186,8 @@ $page = 'skills';
                             <img class="embed-box-toggle" data-collapse="skill7" src="<?php echo BASE_URL ?>assets/images/icons/collapse.svg" alt="Icône voir plus" />
 
                             <div class="skill__level">
-                                <div class="skill__level--bar" data-progress="85"></div>
-                                <p class="skill__level--percentage">75%</p>
+                                <div class="skill__level--bar" data-progress="80"></div>
+                                <p class="skill__level--percentage">80%</p>
                             </div>
 
                             <div class="skill__details hide" data-id="skill7">
@@ -201,7 +201,7 @@ $page = 'skills';
                             <img class="embed-box-toggle" data-collapse="skill8" src="<?php echo BASE_URL ?>assets/images/icons/collapse.svg" alt="Icône voir plus" />
 
                             <div class="skill__level">
-                                <div class="skill__level--bar" data-progress="60"></div>
+                                <div class="skill__level--bar" data-progress="90"></div>
                                 <p class="skill__level--percentage">90%</p>
                             </div>
 

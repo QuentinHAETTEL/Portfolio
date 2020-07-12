@@ -59,7 +59,7 @@ $page = 'projects';
     <meta property="twitter:image:alt" content="Logo Quentin HAETTEL - Développeur web full-stack" />
 
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>public/styles/main.css" />
-    <script src="<?php echo BASE_URL; ?>/public/scripts/main.js"></script>
+    <script src="<?php echo BASE_URL; ?>public/scripts/main.js"></script>
 
     <?php
     include('components/google_analytics.php');
@@ -93,7 +93,7 @@ $page = 'projects';
                                 <span class="separator--vertical"></span>
                                 <span>JavaScript</span>
                             </div>
-                            <a class="label project__caracteristics--action" href="<?php echo $globalUrl; ?>/projects/start-from-scratch">Voir le projet</a>
+                            <a class="label project__caracteristics--action" href="https://projets.quentin-haettel.fr/start-from-scratch" target="_blank">Voir le projet</a>
                         </div>
                     </div>
                 </div>
@@ -114,7 +114,7 @@ $page = 'projects';
                                 <span class="separator--vertical"></span>
                                 <span>JavaScript</span>
                             </div>
-                            <a class="label project__caracteristics--action" href="<?php echo $globalUrl; ?>/projects/admin-panel">Voir le projet</a>
+                            <a class="label project__caracteristics--action" href="https://projets.quentin-haettel.fr/admin-panel/public" target="_blank">Voir le projet</a>
                         </div>
                     </div>
                 </div>
@@ -135,7 +135,7 @@ $page = 'projects';
                                 <span class="separator--vertical"></span>
                                 <span>JavaScript</span>
                             </div>
-                            <a class="label project__caracteristics--action" href="<?php echo $globalUrl; ?>/projects/snake">Voir le projet</a>
+                            <a class="label project__caracteristics--action" href="https://projets.quentin-haettel.fr/snake" target="_blank">Voir le projet</a>
                         </div>
                     </div>
                 </div>

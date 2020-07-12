@@ -1066,7 +1066,7 @@ header {
 }
 
 .contact {
-  height: calc(100vh - 87px);
+  min-height: calc(100vh - 87px);
 }
 .contact__box {
   display: flex;

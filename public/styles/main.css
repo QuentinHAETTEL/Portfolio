@@ -738,7 +738,7 @@ header {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: calc(100% - 5px);
+  min-height: calc(100% - 5px);
   background-color: #f0f0f0;
 }
 .banner__content .banner__title::before {
@@ -755,10 +755,14 @@ header {
   font-size: 1.5em;
   font-weight: bold;
 }
-.banner__title--job {
+.banner__title--content {
   font-size: 1.7em;
   font-weight: bold;
   text-align: center;
+}
+.banner__title--link {
+  margin: 20px;
+  color: #333333;
 }
 
 @media (min-width: 992px) {
@@ -770,7 +774,7 @@ header {
     margin-bottom: 20px;
     font-size: 3em;
   }
-  .banner__content .banner__title--job {
+  .banner__content .banner__title--content {
     margin-top: 20px;
     font-size: 2.5em;
   }

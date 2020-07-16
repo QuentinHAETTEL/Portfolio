@@ -77,7 +77,7 @@ $page = 'presentation';
                 <div class="banner__title">
                     <p class="banner__title--name">Quentin HAETTEL</p>
                     <span class="separator">&nbsp;</span>
-                    <h1 class="banner__title--job">Développeur web<br />full-stack</h1>
+                    <h1 class="banner__title--content">Développeur web<br />full-stack</h1>
                 </div>
             </div>
         </section>

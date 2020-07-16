@@ -8,6 +8,16 @@ RewriteBase /
 RewriteCond %{HTTPS} !=on
 RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
+# ERRORS
+ErrorDocument 400 /portfolio/pages/errors.php
+ErrorDocument 401 /portfolio/pages/errors.php
+ErrorDocument 403 /portfolio/pages/errors.php
+ErrorDocument 404 /portfolio/pages/errors.php
+ErrorDocument 500 /portfolio/pages/errors.php
+ErrorDocument 502 /portfolio/pages/errors.php
+ErrorDocument 503 /portfolio/pages/errors.php
+ErrorDocument 504 /portfolio/pages/errors.php
+
 # HOMEPAGE - PRESENTATION
 RewriteRule ^/$ index.php
 RewriteRule ^index\.html$ index.php

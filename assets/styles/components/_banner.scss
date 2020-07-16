@@ -24,7 +24,7 @@ $topbarSize: 5px;
             justify-content: center;
             align-items: center;
             width: 100%;
-            height: calc(100% - #{$topbarSize});
+            min-height: calc(100% - #{$topbarSize});
             background-color: $light-gray;
             &::before {
                 content: '';
@@ -44,10 +44,14 @@ $topbarSize: 5px;
         font-size: 1.5em;
         font-weight: bold;
     }
-    &--job {
+    &--content {
         font-size: 1.7em;
         font-weight: bold;
         text-align: center;
+    }
+    &--link {
+        margin: 20px;
+        color: $black;
     }
 }
 
@@ -60,7 +64,7 @@ $topbarSize: 5px;
             margin-bottom: 20px;
             font-size: 3em;
         }
-        .banner__title--job {
+        .banner__title--content {
             margin-top: 20px;
             font-size: 2.5em;
         }

@@ -1,5 +1,5 @@
-<script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo GA; ?>" data-id="cookies-script"></script>
-<script data-id="cookies-script">
+<script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo GA; ?>"></script>
+<script>
     window.dataLayer = window.dataLayer || [];
     function gtag() {
         dataLayer.push(arguments);

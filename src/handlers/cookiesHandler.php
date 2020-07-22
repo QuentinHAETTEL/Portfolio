@@ -1,18 +1,14 @@
 <?php
 
 include('../../config.php');
+require_once '../controllers/CookieController.php';
+$cookieController = new CookieController();
+$cookie = new Cookie();
 
-if (isset($_GET['method']) && $_GET['method'] == 'getCookiesPreferences') {
-    if (isset($_COOKIE['cookies-preferences']) && $_COOKIE['cookies-preferences'] == 0) {
-        $preference = 0;
-        foreach ($_COOKIE as $cookie => $value) {
-            if ($cookie !== 'cookies-preferences') {
-                setcookie($cookie, null, time()-3600, '/');
-            }
-        }
-    }
-    else if (isset($_COOKIE['cookies-preferences']) && $_COOKIE['cookies-preferences'] == 1) {
-        $preference = 1;
+/* Get preference cookie */
+if (isset($_GET['method']) && $_GET['method'] == 'getCookiesPreference') {
+    if (isset($_COOKIE['cookies-preferences'])) {
+        $preference = $_COOKIE['cookies-preferences'];
     }
     else {
         $preference = null;
@@ -21,15 +17,24 @@ if (isset($_GET['method']) && $_GET['method'] == 'getCookiesPreferences') {
     print(json_encode($preference));
 }
 
-if (isset($_GET['preference'])) {
-    /* Remove existing cookies if user decline cookies */
+
+/* Create preference cookie */
+if (isset($_GET['method']) && $_GET['method'] == 'setCookiesPreference' && isset($_GET['preference'])) {
+
     if ($_GET['preference'] == 0) {
-        foreach ($_COOKIE as $cookie => $value) {
-            setcookie($cookie, null, time()-3600, '/');
+        /* Remove existing cookies if user decline cookies */
+        foreach ($_COOKIE as $cookieName => $cookieValue) {
+            $cookie->setName($cookieName);
+            $cookie->setValue(null);
+            $cookie->setTime(time()-3600);
+            $cookieController->createCookie($cookie);
         }
     }
 
-    setcookie('cookies-preferences', $_GET['preference'], time()+(3600*24*30), '/');
+    $cookie->setName('cookies-preferences');
+    $cookie->setValue($_GET['preference']);
+    $cookie->setTime(time()+(3600*24*30));
+    $cookieController->createCookie($cookie);
 
     print(json_encode(true));
 }

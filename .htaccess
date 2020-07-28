@@ -9,14 +9,14 @@ RewriteCond %{HTTPS} !=on
 RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
 # ERRORS
-ErrorDocument 400 /portfolio/pages/errors.php
-ErrorDocument 401 /portfolio/pages/errors.php
-ErrorDocument 403 /portfolio/pages/errors.php
-ErrorDocument 404 /portfolio/pages/errors.php
-ErrorDocument 500 /portfolio/pages/errors.php
-ErrorDocument 502 /portfolio/pages/errors.php
-ErrorDocument 503 /portfolio/pages/errors.php
-ErrorDocument 504 /portfolio/pages/errors.php
+ErrorDocument 400 /pages/errors.php?error=400
+ErrorDocument 401 /pages/errors.php?error=401
+ErrorDocument 403 /pages/errors.php?error=403
+ErrorDocument 404 /pages/errors.php?error=404
+ErrorDocument 500 /pages/errors.php?error=500
+ErrorDocument 502 /pages/errors.php?error=502
+ErrorDocument 503 /pages/errors.php?error=503
+ErrorDocument 504 /pages/errors.php?error=504
 
 # HOMEPAGE - PRESENTATION
 RewriteRule ^/$ index.php

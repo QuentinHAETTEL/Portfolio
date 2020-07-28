@@ -17,6 +17,9 @@ $url = $protocol . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 $page = '';
 
 $error = new ErrorHttpController();
+if (!isset($_GET['error']) || empty($_GET['error'])) {
+    $_GET['error'] = '404';
+}
 ?>
 
 <head>
@@ -24,7 +27,7 @@ $error = new ErrorHttpController();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="robots" content="noindex">
-    <title>Erreur <?php echo http_response_code(); ?></title>
+    <title>Erreur <?php echo $_GET['error']; ?></title>
     <link rel="canonical" href="<?php echo $url ?>" />
 
     <link rel="shortcut icon" type="image/svg+xml" href="../assets/images/favicon/favicon.svg" />
@@ -56,10 +59,10 @@ $error = new ErrorHttpController();
         <section class="banner">
             <div class="banner__content">
                 <div class="banner__title">
-                    <p class="banner__title--name">Erreur <?php echo http_response_code(); ?></p>
+                    <p class="banner__title--name">Erreur <?php echo $_GET['error']; ?></p>
                     <span class="separator">&nbsp;</span>
-                    <h1 class="banner__title--content"><?php echo $error->getErrorDescription(http_response_code()) ?></h1>
-                    <a class="banner__title--link" href="#">Retourner à la page d'accueil</a>
+                    <h1 class="banner__title--content"><?php echo $error->getErrorDescription($_GET['error']) ?></h1>
+                    <a class="banner__title--link" href="<?php echo BASE_URL; ?>">Retourner à la page d'accueil</a>
                 </div>
             </div>
         </section>

@@ -1,3 +1,5 @@
+import { BASE_URL } from './main';
+
 window.addEventListener('DOMContentLoaded', function () {
 
     const cookiesBanner = document.getElementById('cookies-banner');
@@ -15,7 +17,7 @@ window.addEventListener('DOMContentLoaded', function () {
             }
         }
     };
-    xhrRequest.open('GET', './src/handlers/cookiesHandler.php?method=getCookiesPreference', true);
+    xhrRequest.open('GET', BASE_URL+'src/handlers/cookiesHandler.php?method=getCookiesPreference', true);
     xhrRequest.send();
 
 
@@ -42,11 +44,13 @@ window.addEventListener('DOMContentLoaded', function () {
             if (this.readyState === 4 && this.status === 200) {
                 let response = JSON.parse(this.responseText);
                 if (response) {
-                    cookiesBanner.classList.add('hide');
+                    if (cookiesBanner) {
+                        cookiesBanner.classList.add('hide');
+                    }
                 }
             }
         };
-        xhrRequest.open('GET', './src/handlers/cookiesHandler.php?method=setCookiesPreference&preference=' + preference, true);
+        xhrRequest.open('GET', BASE_URL+'src/handlers/cookiesHandler.php?method=setCookiesPreference&preference=' + preference, true);
         xhrRequest.send();
     }
 

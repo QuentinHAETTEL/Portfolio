@@ -1,3 +1,5 @@
+export let BASE_URL = '/portfolio/';
+
 export function popup(type, message) {
     let popup = document.getElementById('popup');
     if (popup) {
@@ -24,5 +26,4 @@ export function popup(type, message) {
             popup.classList.remove('visible');
         }, 5000)
     }
-
 }

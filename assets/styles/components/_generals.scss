@@ -134,6 +134,21 @@ a:visited {
     }
 }
 
+.button {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 3px 10px;
+    background-color: $white;
+    border: solid 2px $main-color;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
 input.input--success {
     border: solid 2px $correct !important;
     background-image: url('../../assets/images/icons/correct.svg');

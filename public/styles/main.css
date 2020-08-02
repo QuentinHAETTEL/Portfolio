@@ -150,6 +150,21 @@ a:visited {
   cursor: pointer;
 }
 
+.button {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 3px 10px;
+  background-color: white;
+  border: solid 2px #65b32e;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
 input.input--success {
   border: solid 2px #29d069 !important;
   background-image: url("../../assets/images/icons/correct.svg");
@@ -1280,4 +1295,16 @@ footer {
   border: solid 1px #f0f0f0;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.legals {
+  min-height: calc(100vh - 87px);
+}
+.legals__box--title {
+  margin-bottom: 0;
+  text-align: left;
+  font-size: 1.6em;
+}
+.legals__box a {
+  color: #333333;
 }

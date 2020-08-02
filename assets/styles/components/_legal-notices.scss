@@ -1,0 +1,15 @@
+@use 'variables' as *;
+
+.legals {
+    min-height: calc(100vh - 87px);
+    &__box {
+        &--title {
+            margin-bottom: 0;
+            text-align: left;
+            font-size: 1.6em;
+        }
+        a {
+            color: $black;
+        }
+    }
+}

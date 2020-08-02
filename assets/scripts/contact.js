@@ -1,3 +1,4 @@
+import { BASE_URL } from "./main";
 import { popup } from './main';
 
 window.addEventListener('DOMContentLoaded', function () {
@@ -71,7 +72,7 @@ window.addEventListener('DOMContentLoaded', function () {
                     }
                 }
             };
-            xhrRequest.open('POST', '../src/handlers/contactHandler.php', true);
+            xhrRequest.open('POST', BASE_URL+'src/handlers/contactHandler.php', true);
             xhrRequest.send(new FormData(contactForm));
         });
     }

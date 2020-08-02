@@ -159,6 +159,7 @@ window.addEventListener('DOMContentLoaded', function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _main__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main */ "./assets/scripts/main.js");
 
+
 window.addEventListener('DOMContentLoaded', function () {
   // Script to manage all labels-inputs elements
   var inputContainers = document.querySelectorAll('[data-input-container]');
@@ -229,7 +230,7 @@ window.addEventListener('DOMContentLoaded', function () {
         }
       };
 
-      xhrRequest.open('POST', '../src/handlers/contactHandler.php', true);
+      xhrRequest.open('POST', _main__WEBPACK_IMPORTED_MODULE_0__["BASE_URL"] + 'src/handlers/contactHandler.php', true);
       xhrRequest.send(new FormData(contactForm));
     });
   } // Functions
@@ -280,8 +281,12 @@ window.addEventListener('DOMContentLoaded', function () {
 /*!******************************************!*\
   !*** ./assets/scripts/cookies_banner.js ***!
   \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _main__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main */ "./assets/scripts/main.js");
 
 window.addEventListener('DOMContentLoaded', function () {
   var cookiesBanner = document.getElementById('cookies-banner');
@@ -300,7 +305,7 @@ window.addEventListener('DOMContentLoaded', function () {
     }
   };
 
-  xhrRequest.open('GET', './src/handlers/cookiesHandler.php?method=getCookiesPreference', true);
+  xhrRequest.open('GET', _main__WEBPACK_IMPORTED_MODULE_0__["BASE_URL"] + 'src/handlers/cookiesHandler.php?method=getCookiesPreference', true);
   xhrRequest.send();
   var cookiesAccept = document.getElementById('cookies-accept');
   var cookiesDecline = document.getElementById('cookies-decline');
@@ -326,12 +331,14 @@ window.addEventListener('DOMContentLoaded', function () {
         var response = JSON.parse(this.responseText);
 
         if (response) {
-          cookiesBanner.classList.add('hide');
+          if (cookiesBanner) {
+            cookiesBanner.classList.add('hide');
+          }
         }
       }
     };
 
-    xhrRequest.open('GET', './src/handlers/cookiesHandler.php?method=setCookiesPreference&preference=' + preference, true);
+    xhrRequest.open('GET', _main__WEBPACK_IMPORTED_MODULE_0__["BASE_URL"] + 'src/handlers/cookiesHandler.php?method=setCookiesPreference&preference=' + preference, true);
     xhrRequest.send();
   }
 });
@@ -342,12 +349,14 @@ window.addEventListener('DOMContentLoaded', function () {
 /*!********************************!*\
   !*** ./assets/scripts/main.js ***!
   \********************************/
-/*! exports provided: popup */
+/*! exports provided: BASE_URL, popup */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BASE_URL", function() { return BASE_URL; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "popup", function() { return popup; });
+var BASE_URL = '/portfolio/';
 function popup(type, message) {
   var popup = document.getElementById('popup');
 

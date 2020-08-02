@@ -17,7 +17,7 @@ class CookieController {
             ]);
         }
         else {
-            setcookie($cookie->getName(), $cookie->getValue(), $cookie->getTime(), "'".$cookie->getPath()."; samesite=".$cookie->getSamesite()."'", $cookie->getDomain(), $cookie->getSecure(), $cookie->getHttponly());
+            setcookie($cookie->getName(), $cookie->getValue(), $cookie->getTime(), $cookie->getPath(), $cookie->getDomain(), $cookie->getSecure(), $cookie->getHttponly());
         }
     }
 

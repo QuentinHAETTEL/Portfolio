@@ -43,4 +43,9 @@ RewriteRule ^pages/projets.html$ pages/projects.php
 # CONTACT
 RewriteRule ^contact$ pages/contact.php
 RewriteRule ^contact.html$ pages/contact.php
-RewriteRule ^pages/contact.html$ pages/contact.php [L]
+RewriteRule ^pages/contact.html$ pages/contact.php
+
+# LEGAL NOTICES
+RewriteRule ^mentions-legales$ pages/legal-notices.php
+RewriteRule ^mentions-legales.html$ pages/legal-notices.php
+RewriteRule ^pages/mentions-legales.html$ pages/legal-notices.php [L]

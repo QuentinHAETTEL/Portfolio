@@ -119,7 +119,7 @@ $page = 'contact';
                                 <img src="<?php echo BASE_URL ?>assets/images/icons/github.svg" alt="Logo Github" />
                             </a>
                         </div>
-                        <a href="#" class="label contact__action" target="_blank">
+                        <a href="<?php echo BASE_URL; ?>data/CV.pdf" class="label contact__action" download="CV_HAETTEL-Quentin.pdf" target="_blank">
                             <img src="<?php echo BASE_URL ?>assets/images/icons/download.svg" alt="Icône télécharger" />
                             Télécharger mon CV
                         </a>

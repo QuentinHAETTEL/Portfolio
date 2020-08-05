@@ -11,5 +11,11 @@
         a {
             color: $black;
         }
+        &--list {
+            li {
+                margin: 7px 0;
+                text-decoration: underline;
+            }
+        }
     }
 }

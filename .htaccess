@@ -48,4 +48,9 @@ RewriteRule ^pages/contact.html$ pages/contact.php
 # LEGAL NOTICES
 RewriteRule ^mentions-legales$ pages/legal-notices.php
 RewriteRule ^mentions-legales.html$ pages/legal-notices.php
-RewriteRule ^pages/mentions-legales.html$ pages/legal-notices.php [L]
+RewriteRule ^pages/mentions-legales.html$ pages/legal-notices.php
+
+# SITEMAP
+RewriteRule ^plan-du-site$ pages/sitemap.php
+RewriteRule ^plan-du-site.html$ pages/sitemap.php
+RewriteRule ^pages/plan-du-site.html$ pages/sitemap.php [L]

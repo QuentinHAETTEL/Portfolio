@@ -13,7 +13,7 @@ else {
 $globalUrl = $protocol . '://' . $_SERVER['HTTP_HOST'];
 $url = $protocol . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
-$page = 'experiences';
+$page = '';
 ?>
 
 <head>

@@ -1308,3 +1308,7 @@ footer {
 .legals__box a {
   color: #333333;
 }
+.legals__box--list li {
+  margin: 7px 0;
+  text-decoration: underline;
+}

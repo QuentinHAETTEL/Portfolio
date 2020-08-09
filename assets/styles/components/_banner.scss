@@ -9,6 +9,7 @@ $topbarSize: 5px;
     align-items: center;
     height: calc(100vh - 87px);
     background-image: url('../../assets/images/code_background.jpg');
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: 25% 50%;
     &__content {

@@ -41,9 +41,13 @@ body::after {
   bottom: 0;
   left: 0;
   right: 0;
-  background-image: url("../../assets/images/texture.png");
+  background-image: url("../../assets/images/texture.webp");
   opacity: 0.7;
   z-index: -1;
+}
+
+body.no-webp {
+  background-image: url("../../assets/images/texture.jpg");
 }
 
 a,
@@ -738,7 +742,7 @@ header {
   justify-content: center;
   align-items: center;
   height: calc(100vh - 87px);
-  background-image: url("../../assets/images/code_background.jpg");
+  background-image: url("../../assets/images/code_background.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 25% 50%;
@@ -768,6 +772,10 @@ header {
   width: 100%;
   height: 5px;
   background-color: #65b32e;
+}
+
+.no-webp .banner {
+  background-image: url("../../assets/images/code_background.jpg");
 }
 
 .banner__title--name {
@@ -821,6 +829,10 @@ header {
   height: 150px;
   margin: 20px 0;
   border: solid 4px #65b32e;
+  border-radius: 50%;
+}
+.presentation__box--photo source, .presentation__box--photo img {
+  width: 100%;
   border-radius: 50%;
 }
 

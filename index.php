@@ -87,7 +87,10 @@ $page = 'presentation';
             <div class="box">
                 <div class="presentation__box">
                     <p class="presentation__box--text">Bonjour, je m'appelle Quentin HAETTEL, je suis <strong>développeur web full-stack à Strasbourg</strong> et dans sa région</p>
-                    <img class="presentation__box--photo" src="assets/images/photo_presentation.jpg" alt="Photo Quentin HAETTEL - Développeur web full-stack" />
+                    <picture class="presentation__box--photo">
+                        <source srcset="assets/images/photo_presentation.webp" type="image/webp">
+                        <img src="assets/images/photo_presentation.jpg" alt="Photo Quentin HAETTEL - Développeur web full-stack">
+                    </picture>
                     <p class="presentation__box--text">Je suis actuellement apprenti en Licence Professionnelle DWEB à l'IUT de Haguenau</p>
                 </div>
             </div>

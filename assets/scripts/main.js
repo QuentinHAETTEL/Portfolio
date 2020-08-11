@@ -1,3 +1,5 @@
+import { webpSupport } from "./compatibility";
+
 export let BASE_URL = '/portfolio/';
 
 export function popup(type, message) {
@@ -27,3 +29,5 @@ export function popup(type, message) {
         }, 5000)
     }
 }
+
+webpSupport();

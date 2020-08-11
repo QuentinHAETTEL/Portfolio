@@ -22,6 +22,10 @@
             margin: 20px 0;
             border: solid 4px $main-color;
             border-radius: 50%;
+            source, img {
+                width: 100%;
+                border-radius: 50%;
+            }
         }
     }
 }

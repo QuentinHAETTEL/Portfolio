@@ -148,6 +148,30 @@ window.addEventListener('DOMContentLoaded', function () {
 
 /***/ }),
 
+/***/ "./assets/scripts/compatibility.js":
+/*!*****************************************!*\
+  !*** ./assets/scripts/compatibility.js ***!
+  \*****************************************/
+/*! exports provided: webpSupport */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "webpSupport", function() { return webpSupport; });
+function webpSupport() {
+  var webp = new Image();
+
+  webp.onload = webp.onerror = function () {
+    if (webp.height !== 2) {
+      document.body.classList.add('no-webp');
+    }
+  };
+
+  webp.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
+}
+
+/***/ }),
+
 /***/ "./assets/scripts/contact.js":
 /*!***********************************!*\
   !*** ./assets/scripts/contact.js ***!
@@ -356,6 +380,8 @@ window.addEventListener('DOMContentLoaded', function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BASE_URL", function() { return BASE_URL; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "popup", function() { return popup; });
+/* harmony import */ var _compatibility__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./compatibility */ "./assets/scripts/compatibility.js");
+
 var BASE_URL = '/portfolio/';
 function popup(type, message) {
   var popup = document.getElementById('popup');
@@ -385,6 +411,7 @@ function popup(type, message) {
     }, 5000);
   }
 }
+Object(_compatibility__WEBPACK_IMPORTED_MODULE_0__["webpSupport"])();
 
 /***/ }),
 

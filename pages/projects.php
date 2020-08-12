@@ -76,7 +76,10 @@ $page = 'projects';
             <h1 class="title">Projets</h1>
             <div class="card__container">
                 <div class="card project" data-card>
-                    <img class="project__image" src="<?php echo BASE_URL; ?>assets/images/project_start-from-scratch.jpg" alt="Développement web - Start from Scratch" />
+                    <picture class="project__image">
+                        <source srcset="<?php echo BASE_URL; ?>assets/images/project_start-from-scratch.webp">
+                        <img src="<?php echo BASE_URL; ?>assets/images/project_start-from-scratch.jpg" alt="Développement web - Start from Scratch">
+                    </picture>
                     <div class="project__details" data-card-details>
                         <h3 class="project__details--title">Start from Scratch</h3>
                         <span class="separator"></span>
@@ -99,7 +102,10 @@ $page = 'projects';
                 </div>
 
                 <div class="card project" data-card>
-                    <img class="project__image" src="<?php echo BASE_URL; ?>assets/images/project_admin-panel.jpg" alt="Développeent web - Admin panel" />
+                    <picture class="project__image">
+                        <source srcset="<?php echo BASE_URL; ?>assets/images/project_admin-panel.webp">
+                        <img src="<?php echo BASE_URL; ?>assets/images/project_admin-panel.jpg" alt="Développement web - Admin panel">
+                    </picture>
                     <div class="project__details" data-card-details>
                         <h3 class="project__details--title">Admin panel</h3>
                         <span class="separator"></span>
@@ -120,6 +126,10 @@ $page = 'projects';
                 </div>
 
                 <div class="card project" data-card>
+                    <picture class="project__image">
+                        <source srcset="<?php echo BASE_URL; ?>assets/images/project_snake.webp">
+                        <img src="<?php echo BASE_URL; ?>assets/images/project_snake.jpg" alt="Développement web - Snake">
+                    </picture>
                     <img class="project__image" src="<?php echo BASE_URL; ?>assets/images/project_snake.jpg" alt="Développement web - Snake" />
                     <div class="project__details" data-card-details>
                         <h3 class="project__details--title">Jeu Snake</h3>

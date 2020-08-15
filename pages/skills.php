@@ -72,6 +72,10 @@ $page = 'skills';
     ?>
 
     <main>
+        <?php
+        include('components/settings_tabs.php');
+        ?>
+
         <section class="skills">
             <h1 class="title">Compétences</h1>
             <div class="box">

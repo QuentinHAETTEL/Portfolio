@@ -75,7 +75,7 @@
             display: block;
             width: 56px;
             height: 56px;
-            border: solid 3px $main-color;
+            border: solid 3px var(--main-color);
             border-radius: 50%;
             img {
                 width: 50px;
@@ -124,7 +124,7 @@
                 width: 45%;
                 margin: 0 -50px 0 0;
                 padding-left: 50px;
-                border-left: solid 5px $second-color;
+                border-left: solid 5px var(--second-color);
             }
         }
         &__logos {

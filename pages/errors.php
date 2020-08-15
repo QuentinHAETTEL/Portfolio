@@ -56,6 +56,10 @@ if (!isset($_GET['error']) || empty($_GET['error'])) {
     ?>
 
     <main>
+        <?php
+        include('components/settings_tabs.php');
+        ?>
+
         <section class="banner">
             <div class="banner__content">
                 <div class="banner__title">

@@ -50,6 +50,10 @@ include('components/header.php');
 ?>
 
 <main>
+    <?php
+    include('components/settings_tabs.php');
+    ?>
+
     <section class="legals">
         <h1 class="title">Plan du site</h1>
         <div class="box">

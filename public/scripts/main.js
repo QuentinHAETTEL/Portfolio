@@ -373,16 +373,27 @@ window.addEventListener('DOMContentLoaded', function () {
 /*!********************************!*\
   !*** ./assets/scripts/main.js ***!
   \********************************/
-/*! exports provided: BASE_URL, popup */
+/*! exports provided: BASE_URL, colors, popup */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BASE_URL", function() { return BASE_URL; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "colors", function() { return colors; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "popup", function() { return popup; });
 /* harmony import */ var _compatibility__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./compatibility */ "./assets/scripts/compatibility.js");
 
 var BASE_URL = '/portfolio/';
+var colors = {
+  'lightgreen': 'rgb(101, 153, 46)',
+  'green': 'rgb(0, 116, 0)',
+  'lightblue': 'rgb(8, 178, 227)',
+  'blue': 'rgb(30, 60, 113)',
+  'brown': 'rgb(118, 66, 72)',
+  'orange': 'rgb(237, 93, 49)',
+  'yellow': 'rgb(253, 186, 53)',
+  'purple': 'rgb(190, 130, 185)'
+};
 function popup(type, message) {
   var popup = document.getElementById('popup');
 
@@ -462,6 +473,64 @@ window.addEventListener('DOMContentLoaded', function () {
 
 /***/ }),
 
+/***/ "./assets/scripts/settings-tab.js":
+/*!****************************************!*\
+  !*** ./assets/scripts/settings-tab.js ***!
+  \****************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _main__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main */ "./assets/scripts/main.js");
+
+var root = document.documentElement; // Script to get cookie and apply style
+
+var xhrRequest = new XMLHttpRequest();
+
+xhrRequest.onreadystatechange = function () {
+  if (this.readyState === 4 && this.status === 200) {
+    var response = JSON.parse(this.responseText);
+    changeColor(_main__WEBPACK_IMPORTED_MODULE_0__["colors"][response]);
+  }
+};
+
+xhrRequest.open('GET', _main__WEBPACK_IMPORTED_MODULE_0__["BASE_URL"] + 'src/handlers/cookiesHandler.php?method=getColorCookie', true);
+xhrRequest.send();
+window.addEventListener('DOMContentLoaded', function () {
+  // Script to manage toggle from settings-tab
+  var tab = document.getElementById('settings-tab');
+  var tabToggle = document.getElementById('settings-tab-toggle');
+
+  if (tab && tabToggle) {
+    tabToggle.addEventListener('click', function () {
+      tab.classList.toggle('settings-tab--open');
+    });
+  } // Script to manage colors of the website
+
+
+  var colorsTogglers = document.querySelectorAll('[data-color]');
+
+  if (colorsTogglers) {
+    colorsTogglers.forEach(function (colorToggler) {
+      colorToggler.addEventListener('click', function () {
+        var color = this.getAttribute('data-color');
+        changeColor(_main__WEBPACK_IMPORTED_MODULE_0__["colors"][color]);
+        var xhrRequest = new XMLHttpRequest();
+        xhrRequest.open('GET', _main__WEBPACK_IMPORTED_MODULE_0__["BASE_URL"] + 'src/handlers/cookiesHandler.php?method=setColorCookie&color=' + color, true);
+        xhrRequest.send();
+      });
+    });
+  }
+});
+
+function changeColor(color) {
+  root.style.setProperty('--main-color', color);
+  root.style.setProperty('--second-color', color.slice(0, 3) + 'a' + color.slice(3, -1) + ', 0.25)');
+}
+
+/***/ }),
+
 /***/ "./assets/scripts/toggle.js":
 /*!**********************************!*\
   !*** ./assets/scripts/toggle.js ***!
@@ -510,9 +579,9 @@ window.addEventListener('DOMContentLoaded', function () {
 /***/ }),
 
 /***/ 0:
-/*!**********************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** multi ./assets/scripts/main.js ./assets/scripts/menu.js ./assets/scripts/collapse.js ./assets/scripts/toggle.js ./assets/scripts/progress.js ./assets/scripts/card.js ./assets/scripts/contact.js ./assets/scripts/cookies_banner.js ./assets/styles/main.scss ***!
-  \**********************************************************************************************************************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./assets/scripts/main.js ./assets/scripts/menu.js ./assets/scripts/collapse.js ./assets/scripts/toggle.js ./assets/scripts/progress.js ./assets/scripts/card.js ./assets/scripts/contact.js ./assets/scripts/cookies_banner.js ./assets/scripts/compatibility.js ./assets/scripts/settings-tab.js ./assets/styles/main.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -524,6 +593,8 @@ __webpack_require__(/*! C:\wamp64\www\portfolio\assets\scripts\progress.js */"./
 __webpack_require__(/*! C:\wamp64\www\portfolio\assets\scripts\card.js */"./assets/scripts/card.js");
 __webpack_require__(/*! C:\wamp64\www\portfolio\assets\scripts\contact.js */"./assets/scripts/contact.js");
 __webpack_require__(/*! C:\wamp64\www\portfolio\assets\scripts\cookies_banner.js */"./assets/scripts/cookies_banner.js");
+__webpack_require__(/*! C:\wamp64\www\portfolio\assets\scripts\compatibility.js */"./assets/scripts/compatibility.js");
+__webpack_require__(/*! C:\wamp64\www\portfolio\assets\scripts\settings-tab.js */"./assets/scripts/settings-tab.js");
 module.exports = __webpack_require__(/*! C:\wamp64\www\portfolio\assets\styles\main.scss */"./assets/styles/main.scss");
 
 

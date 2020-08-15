@@ -33,7 +33,7 @@
         &--before {
             width: 7px;
             height: 25px;
-            background-color: $second-color;
+            background-color: var(--second-color);
         }
         &--item {
 
@@ -41,7 +41,7 @@
         &--after {
             width: 7px;
             height: calc(100% - 95px);
-            background-color: $second-color;
+            background-color: var(--second-color);
         }
     }
     &__date {
@@ -52,7 +52,7 @@
         &--before, &--after {
             width: 7px;
             height: 25px;
-            background-color: $second-color;
+            background-color: var(--second-color);
         }
         &--item {
             display: flex;
@@ -60,7 +60,7 @@
             align-items: center;
             width: 70px;
             height: 70px;
-            border: solid 3px $main-color;
+            border: solid 3px var(--second-color);
             border-radius: 50%;
             background-color: $white;
         }
@@ -128,7 +128,7 @@
                 align-items: center;
                 width: 70px;
                 height: 70px;
-                border: solid 3px $main-color;
+                border: solid 3px var(--main-color);
                 border-radius: 50%;
                 background-color: $white;
             }

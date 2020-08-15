@@ -14,7 +14,8 @@ mix.js(
         'assets/scripts/card.js',
         'assets/scripts/contact.js',
         'assets/scripts/cookies_banner.js',
-        'assets/scripts/compatibility.js'
+        'assets/scripts/compatibility.js',
+        'assets/scripts/settings-tab.js'
     ], 'public/scripts')
     .sass('assets/styles/main.scss', 'public/styles')
     .options({

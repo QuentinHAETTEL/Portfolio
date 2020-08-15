@@ -11,7 +11,7 @@
 
 .project {
     position: relative;
-    border-left: solid 5px $main-color;
+    border-left: solid 5px var(--main-color);
     background: lightblue;
     overflow: hidden;
     &__image {
@@ -41,7 +41,7 @@
     }
     &__caracteristics {
         padding: 10px;
-        border-top: solid 5px $second-color;
+        border-top: solid 5px var(--second-color);
         &--description {
             margin-top: 0;
         }

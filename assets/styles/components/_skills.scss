@@ -55,7 +55,7 @@
         &__box {
             &--list {
                 width: 30%;
-                border-right: solid 5px $second-color;
+                border-right: solid 5px var(--second-color);
             }
         }
     }

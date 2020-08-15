@@ -72,6 +72,10 @@ $page = 'contact';
     ?>
 
     <main>
+        <?php
+        include('components/settings_tabs.php');
+        ?>
+
         <section class="contact">
             <h1 class="title">Contact</h1>
             <div class="box">

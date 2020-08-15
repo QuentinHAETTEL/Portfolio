@@ -38,3 +38,27 @@ if (isset($_GET['method']) && $_GET['method'] == 'setCookiesPreference' && isset
 
     print(json_encode(true));
 }
+
+
+/* Get color cookie */
+if (isset($_GET['method']) && $_GET['method'] == 'getColorCookie') {
+    if (isset($_COOKIE['style'])) {
+        $style = $_COOKIE['style'];
+    }
+    else {
+        $style = 'lightgreen';
+    }
+
+    print(json_encode($style));
+}
+
+
+/* Create color cookie */
+if (isset($_GET['method']) && $_GET['method'] == 'setColorCookie' && isset($_GET['color'])) {
+    $cookie->setName('style');
+    $cookie->setValue($_GET['color']);
+    $cookie->setTime(time()+(3600*12));
+    $cookieController->createCookie($cookie);
+
+    print(json_encode(true));
+}

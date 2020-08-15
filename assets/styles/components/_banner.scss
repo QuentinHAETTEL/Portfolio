@@ -34,7 +34,7 @@ $topbarSize: 5px;
                 display: inline-block;
                 width: 100%;
                 height: $topbarSize;
-                background-color: $main-color;
+                background-color: var(--main-color);
             }
         }
     }

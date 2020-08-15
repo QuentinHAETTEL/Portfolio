@@ -33,7 +33,7 @@ footer {
     }
     &__version {
         margin: 0 auto 5px auto;
-        color: $main-color;
+        color: var(--main-color);
         font-size: 0.65em;
         text-align: right;
     }

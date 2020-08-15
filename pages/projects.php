@@ -72,6 +72,10 @@ $page = 'projects';
     ?>
 
     <main>
+        <?php
+        include('components/settings_tabs.php');
+        ?>
+
         <section class="projects">
             <h1 class="title">Projets</h1>
             <div class="card__container">

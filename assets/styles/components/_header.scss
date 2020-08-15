@@ -54,7 +54,7 @@ header {
         display: inline-block;
         width: 100%;
         height: $topbarSize;
-        background-color: $main-color;
+        background-color: var(--main-color);
     }
 }
 
@@ -95,10 +95,10 @@ header {
         }
     }
     &:hover {
-        background-color: $second-color;
+        background-color: var(--second-color);
     }
     &--active {
-        border-color: $main-color;
+        border-color: var(--main-color);
     }
 }
 
@@ -137,7 +137,7 @@ header {
             }
         }
         &--active {
-            border-color: $main-color;
+            border-color: var(--main-color);
         }
     }
 }

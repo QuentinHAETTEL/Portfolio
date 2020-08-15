@@ -72,6 +72,10 @@ $page = 'presentation';
     ?>
 
     <main>
+        <?php
+        include('pages/components/settings_tabs.php');
+        ?>
+
         <section class="banner">
             <div class="banner__content">
                 <div class="banner__title">

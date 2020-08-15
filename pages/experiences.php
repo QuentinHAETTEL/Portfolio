@@ -72,6 +72,10 @@ $page = 'experiences';
     ?>
 
     <main>
+        <?php
+        include('components/settings_tabs.php');
+        ?>
+
         <section class="experiences">
             <h1 class="title">Expériences</h1>
             <div class="box">

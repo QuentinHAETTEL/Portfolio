@@ -1,6 +1,11 @@
 @use 'variables' as *;
 @use 'mixins' as *;
 
+:root {
+    --main-color: #{$main-color};
+    --second-color: #{$second-color};
+}
+
 ////////////////////////////////////
 // ********** GENERALS ********** //
 ////////////////////////////////////
@@ -63,7 +68,7 @@ a:visited {
     width: 50%;
     height: 5px;
     margin: 0 auto;
-    background-color: $main-color;
+    background-color: var(--main-color);
 }
 
 .separator--vertical {
@@ -71,14 +76,14 @@ a:visited {
     width: 2px;
     height: 25px;
     margin: 0 2px -5px 2px;
-    background-color: $main-color;
+    background-color: var(--main-color);
 }
 
 .title {
     width: 100%;
     margin: 50px 0;
     padding: 10px 0;
-    background-color: $main-color;
+    background-color: var(--main-color);
     color: $white;
     font-size: 1.5em;
     text-align: center;
@@ -90,7 +95,7 @@ a:visited {
     margin: 5vw auto;
     padding: 15px 15%;
     background-color: $light-gray;
-    border-left: solid 7px $main-color;
+    border-left: solid 7px var(--main-color);
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
@@ -100,7 +105,7 @@ a:visited {
     width: 75vw;
     padding: 20px;
     background-color: $white;
-    border: solid 1px $main-color;
+    border: solid 1px var(--main-color);
     border-left-width: 5px;
     border-radius: 5px;
 }
@@ -131,7 +136,7 @@ a:visited {
     margin-top: 5px;
     padding: 3px 10px;
     background-color: $white;
-    border: solid 2px $main-color;
+    border: solid 2px var(--main-color);
     border-radius: 5px;
     &-toggle {
         cursor: pointer;
@@ -143,7 +148,7 @@ a:visited {
     margin-top: 5px;
     padding: 3px 10px;
     background-color: $white;
-    border: solid 2px $main-color;
+    border: solid 2px var(--main-color);
     border-radius: 5px;
     cursor: pointer;
 }
@@ -220,6 +225,17 @@ textarea.input--error {
 
 
 
+//////////////////////////////////
+// ********** COLORS ********** //
+//////////////////////////////////
+@each $name, $hex in $colors {
+    .#{$name}-bg {
+        background-color: $hex;
+    }
+}
+
+
+
 ////////////////////////////////////////
 // ********** MIXINS CALLS ********** //
 ////////////////////////////////////////
@@ -231,7 +247,7 @@ $directions: (top, right, bottom, left);
         $j: 100 - $i;
 
         .progress-bar-#{$direction}-#{$i} {
-            @include linearGradient($direction, $main-color, $i, $second-color, $j);
+            @include linearGradient($direction, var(--main-color), $i, var(--second-color), $j);
         }
     }
 }

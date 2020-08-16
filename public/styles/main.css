@@ -133,9 +133,12 @@ a:visited {
   position: absolute;
   right: 5px;
   bottom: 5px;
+  cursor: pointer;
   width: 20px;
   height: 20px;
-  cursor: pointer;
+}
+.embed-box-toggle svg {
+  fill: var(--main-color);
 }
 
 .card__container {
@@ -1217,9 +1220,10 @@ header {
   border: solid 3px var(--main-color);
   border-radius: 50%;
 }
-.contact__logos--item img {
+.contact__logos--item svg {
   width: 50px;
   height: 50px;
+  fill: var(--main-color);
 }
 .contact__action {
   display: flex;

@@ -90,7 +90,9 @@ $page = 'skills';
 
                         <div class="embed-box" data-toggle-id="1">
                             <h3 class="skill__title">HTML</h3>
-                            <img class="embed-box-toggle" data-collapse="skill1" src="<?php echo BASE_URL ?>assets/images/icons/collapse.svg" alt="Icône voir plus" />
+                            <span class="embed-box-toggle" data-collapse="skill1">
+                                <?php include('../assets/images/icons/collapse.html'); ?>
+                            </span>
 
                             <div class="skill__level">
                                 <div class="skill__level--bar" data-progress="90"></div>
@@ -105,7 +107,9 @@ $page = 'skills';
 
                         <div class="embed-box hide" data-toggle-id="2">
                             <h3 class="skill__title">CSS</h3>
-                            <img class="embed-box-toggle" data-collapse="skill2" src="<?php echo BASE_URL ?>assets/images/icons/collapse.svg" alt="Icône voir plus" />
+                            <span class="embed-box-toggle" data-collapse="skill2">
+                                <?php include('../assets/images/icons/collapse.html'); ?>
+                            </span>
 
                             <div class="skill__level">
                                 <div class="skill__level--bar" data-progress="85"></div>
@@ -120,7 +124,9 @@ $page = 'skills';
 
                         <div class="embed-box hide" data-toggle-id="3">
                             <h3 class="skill__title">JavaScript</h3>
-                            <img class="embed-box-toggle" data-collapse="skill3" src="<?php echo BASE_URL ?>assets/images/icons/collapse.svg" alt="Icône voir plus" />
+                            <span class="embed-box-toggle" data-collapse="skill3">
+                                <?php include('../assets/images/icons/collapse.html'); ?>
+                            </span>
 
                             <div class="skill__level">
                                 <div class="skill__level--bar" data-progress="80"></div>
@@ -187,7 +193,9 @@ $page = 'skills';
 
                         <div class="embed-box" data-toggle-id="7">
                             <h3 class="skill__title">PHP</h3>
-                            <img class="embed-box-toggle" data-collapse="skill7" src="<?php echo BASE_URL ?>assets/images/icons/collapse.svg" alt="Icône voir plus" />
+                            <span class="embed-box-toggle" data-collapse="skill7">
+                                <?php include('../assets/images/icons/collapse.html'); ?>
+                            </span>
 
                             <div class="skill__level">
                                 <div class="skill__level--bar" data-progress="80"></div>
@@ -202,7 +210,9 @@ $page = 'skills';
 
                         <div class="embed-box hide" data-toggle-id="8">
                             <h3 class="skill__title">SQL</h3>
-                            <img class="embed-box-toggle" data-collapse="skill8" src="<?php echo BASE_URL ?>assets/images/icons/collapse.svg" alt="Icône voir plus" />
+                            <span class="embed-box-toggle" data-collapse="skill8">
+                                <?php include('../assets/images/icons/collapse.html'); ?>
+                            </span>
 
                             <div class="skill__level">
                                 <div class="skill__level--bar" data-progress="90"></div>

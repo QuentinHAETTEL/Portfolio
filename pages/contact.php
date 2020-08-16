@@ -105,7 +105,6 @@ $page = 'contact';
                         <div class="contact__checkbox">
                             <input id="contact--rgpd" type="checkbox" name="rgpd" required="required" />
                             <label class="contact__checkbox--label" for="contact--rgpd">J'accepte que mes données personnelles soient recueillies pour être recontacté. Vous pouvez exercer votre droit d'accès aux données en contactant : <a href="mailto:quentin.haettel@gmail.com" target="_blank">quentin.haettel[at]gmail.com</a>.</label>
-
                         </div>
 
                         <button class="label contact__submit" type="submit">Envoyer</button>
@@ -114,13 +113,14 @@ $page = 'contact';
                     <div class="contact__infos">
                         <div class="contact__logos">
                             <a class="contact__logos--item" href="https://www.linkedin.com/in/quentin-haettel/" target="_blank">
-                                <img src="<?php echo BASE_URL ?>assets/images/icons/linkedin.svg" alt="Logo LinkedIn" />
+<!--                                <img src="--><?php //echo BASE_URL ?><!--assets/images/icons/linkedin.svg" alt="Logo LinkedIn" />-->
+                                <?php include('../assets/images/icons/linkedin.html'); ?>
                             </a>
                             <a class="contact__logos--item" href="https://www.facebook.com/quentin.haettel" target="_blank">
-                                <img src="<?php echo BASE_URL ?>assets/images/icons/facebook.svg" alt="Logo Facebook" />
+                                <?php include('../assets/images/icons/facebook.html'); ?>
                             </a>
                             <a class="contact__logos--item" href="https://github.com/QuentinHAETTEL/" target="_blank">
-                                <img src="<?php echo BASE_URL ?>assets/images/icons/github.svg" alt="Logo Github" />
+                                <?php include('../assets/images/icons/github.html'); ?>
                             </a>
                         </div>
                         <a href="<?php echo BASE_URL; ?>data/CV.pdf" class="label contact__action" download="CV_HAETTEL-Quentin.pdf" target="_blank">

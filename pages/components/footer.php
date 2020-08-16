@@ -8,6 +8,6 @@
             <a class="footer__links--item" href="<?php echo BASE_URL; ?>mentions-legales">Mentions légales</a>
             <a class="footer__links--item" href="<?php echo BASE_URL; ?>plan-du-site">Plan du site</a>
         </div>
-        <p class="footer__version">v 1.0.1</p>
+        <p class="footer__version">v 1.1.0</p>
     </div>
 </footer>

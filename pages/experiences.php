@@ -108,7 +108,9 @@ $page = 'experiences';
                                     </div>
                                     <img class="experience__image" src="<?php echo BASE_URL ?>assets/images/logo_2le.svg" alt="Logo 2LE" />
                                 </div>
-                                <img class="embed-box-toggle" data-collapse="experience1" src="<?php echo BASE_URL ?>assets/images/icons/collapse.svg" alt="Icône voir plus" />
+                                <span class="embed-box-toggle" data-collapse="experience1">
+                                    <?php include('../assets/images/icons/collapse.html'); ?>
+                                </span>
                                 <div class="experience__details hide" data-id="experience1">
                                     <div>
                                         <h4 class="experience__details--title">Missions confiées</h4>
@@ -172,7 +174,9 @@ $page = 'experiences';
                                     </div>
                                     <img class="experience__image" src="<?php echo BASE_URL ?>assets/images/logo_losypamo.svg" alt="Logo Losypamo" />
                                 </div>
-                                <img class="embed-box-toggle" data-collapse="experience2" src="<?php echo BASE_URL ?>assets/images/icons/collapse.svg" alt="Icône voir plus" />
+                                <span class="embed-box-toggle" data-collapse="experience2">
+                                    <?php include '../assets/images/icons/collapse.html'; ?>
+                                </span>
                                 <div class="experience__details hide" data-id="experience2">
                                     <div>
                                         <h4 class="experience__details--title">Missions confiées</h4>

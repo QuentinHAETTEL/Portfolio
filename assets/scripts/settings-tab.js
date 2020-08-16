@@ -20,11 +20,23 @@ window.addEventListener('DOMContentLoaded', function () {
     // Script to manage toggle from settings-tab
     const tab = document.getElementById('settings-tab');
     const tabToggle = document.getElementById('settings-tab-toggle');
+    let open = false;
 
     if (tab && tabToggle) {
-        tabToggle.addEventListener('click', function () {
+        tabToggle.addEventListener('click', function (event) {
+            event.stopImmediatePropagation();
             tab.classList.toggle('settings-tab--open');
-        })
+            open = !open;
+            if (open) {
+                document.body.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    tab.classList.remove('settings-tab--open');
+                });
+                tab.addEventListener('click', function (event) {
+                    event.stopPropagation();
+                });
+            }
+        });
     }
 
 

@@ -1,6 +1,6 @@
 <div id="settings-tab" class="settings-tab">
     <div class="settings-tab__content">
-        <h3 class="settings-tab__title">Change theme</h3>
+        <h3 class="settings-tab__title">Changer le thème</h3>
         <ul class="settings-tab__colors">
             <li class="settings-tab__colors--item lightgreen-bg" data-color="lightgreen"></li>
             <li class="settings-tab__colors--item green-bg" data-color="green"></li>

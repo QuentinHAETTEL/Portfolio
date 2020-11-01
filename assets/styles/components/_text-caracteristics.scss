@@ -1,0 +1,27 @@
+.text-caracteristics {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+
+    p {
+        margin: 0;
+    }
+
+    &__icon {
+        width: 20px;
+        height: auto;
+    }
+
+    &__image {
+        width: 75px;
+        height: auto;
+        max-height: 50px;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .text-caracteristics {
+        width: 80%;
+    }
+}

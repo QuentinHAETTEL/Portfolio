@@ -76,49 +76,49 @@ $page = 'experiences';
         include('components/settings_tabs.php');
         ?>
 
-        <section class="experiences">
-            <h1 class="title">Expériences</h1>
+        <section>
+            <h1>Expériences</h1>
             <div class="box">
-                <div class="experiences__box">
+                <div class="box__wrapper box__wrapper--thirds">
                     <div>
-                        <h2 class="experiences__box--title">LP MI-DWEB</h2>
-                        <p class="experiences__box--date">2019 - 2020</p>
+                        <h2 class="box__title">LP MI-DWEB</h2>
+                        <p class="box__subtitle">2019 - 2020</p>
                         <span class="separator">&nbsp;</span>
-                        <p class="experiences__box--description">Parcours en développement web front-end et back-end, compétences avancées en UI/UX design, CMS Prestashop et Drupal</p>
+                        <p class="box__text">Parcours en développement web front-end et back-end, compétences avancées en UI/UX design, CMS Prestashop et Drupal</p>
                     </div>
                     <div>
-                        <div class="experience">
-                            <div class="experience__date">
-                                <div class="experience__date--before"></div>
-                                <div class="experience__date--item">2020</div>
-                                <div class="experience__date--after"></div>
+                        <div class="embed-box__wrapper">
+                            <div class="timeline">
+                                <div class="timeline__before"></div>
+                                <div class="timeline__dot">2020</div>
+                                <div class="timeline__after"></div>
                             </div>
-                            <div class="embed-box">
-                                <h3 class="experience__title">Alternance - Développeur web front-end</h3>
-                                <div class="experience__caracteristics">
+                            <div class="embed-box embed-box--large">
+                                <h3 class="embed-box__title">Alternance - Développeur web front-end</h3>
+                                <div class="text-caracteristics">
                                     <div>
-                                        <p class="experience__caracteristics--duration">
-                                            <img src="<?php echo BASE_URL ?>assets/images/icons/duration.svg" alt="Icône durée" />
+                                        <p class="xsmall-text">
+                                            <img class="text-caracteristics__icon" src="<?php echo BASE_URL ?>assets/images/icons/duration.svg" alt="Icône durée" />
                                             Septembre - Août
                                         </p>
-                                        <p class="experience__caracteristics--location">
-                                            <img src="<?php echo BASE_URL ?>assets/images/icons/location.svg" alt="Icône localisation" />
+                                        <p class="xsmall-text">
+                                            <img class="text-caracteristics__icon" src="<?php echo BASE_URL ?>assets/images/icons/location.svg" alt="Icône localisation" />
                                             Mulhouse
                                         </p>
                                     </div>
-                                    <img class="experience__image" src="<?php echo BASE_URL ?>assets/images/logo_2le.svg" alt="Logo 2LE" />
+                                    <img class="text-caracteristics__image" src="<?php echo BASE_URL ?>assets/images/logo_2le.svg" alt="Logo 2LE" />
                                 </div>
-                                <span class="embed-box-toggle" data-collapse="experience1">
+                                <span class="embed-box__toggle" data-collapse="experience1">
                                     <?php include('../assets/images/icons/collapse.html'); ?>
                                 </span>
-                                <div class="experience__details hide" data-id="experience1">
+                                <div class="embed-box__details hide" data-id="experience1">
                                     <div>
-                                        <h4 class="experience__details--title">Missions confiées</h4>
-                                        <p class="experience__details--content">Développement et modifications front-end des différentes applications web créées. Ergonomie et design des pages grâce aux méthodes d'UX et d'UI pour s'adapter aux besoins des clients.</p>
+                                        <h4>Missions confiées</h4>
+                                        <p class="embed-box__text">Développement et modifications front-end des différentes applications web créées. Ergonomie et design des pages grâce aux méthodes d'UX et d'UI pour s'adapter aux besoins des clients.</p>
                                     </div>
                                     <div>
-                                        <h4 class="experience__details--title">Technologies utilisées</h4>
-                                        <p class="experience__details--content">
+                                        <h4>Technologies utilisées</h4>
+                                        <p>
                                             <span class="label">HTML</span>
                                             <span class="label">CSS</span>
                                             <span class="label">Bootstrap</span>
@@ -135,56 +135,56 @@ $page = 'experiences';
             </div>
 
             <div class="box">
-                <div class="experiences__box">
+                <div class="box__wrapper box__wrapper--thirds">
                     <div>
-                        <h2 class="experiences__box--title">DUT MMI</h2>
-                        <p class="experiences__box--date">2017 - 2019</p>
+                        <h2 class="box__title">DUT MMI</h2>
+                        <p class="box__subtitle">2017 - 2019</p>
                         <span class="separator">&nbsp;</span>
-                        <p class="experiences__box--description">Parcours en développement web front-end et back-end, graphisme et communication multimédia</p>
+                        <p class="box__text">Parcours en développement web front-end et back-end, graphisme et communication multimédia</p>
                     </div>
                     <div>
-                        <div class="experience experience--empty">
-                            <div class="experience__date">
-                                <div class="experience__date--before"></div>
-                                <div class="experience__date--item">2019</div>
-                                <div class="experience__date--after"></div>
+                        <div class="embed-box__wrapper">
+                            <div class="timeline">
+                                <div class="timeline__before"></div>
+                                <div class="timeline__dot">2019</div>
+                                <div class="timeline__after"></div>
                             </div>
-                            <div class="embed-box">
+                            <div class="embed-box embed-box--large">
                                 Diplôme validé
                             </div>
                         </div>
-                        <div class="experience">
-                            <div class="experience__date">
-                                <div class="experience__date--before"></div>
-                                <div class="experience__date--item">2019</div>
-                                <div class="experience__date--after"></div>
+                        <div class="embed-box__wrapper">
+                            <div class="timeline">
+                                <div class="timeline__before"></div>
+                                <div class="timeline__dot">2019</div>
+                                <div class="timeline__after"></div>
                             </div>
-                            <div class="embed-box">
-                                <h3 class="experience__title">Stage - UI/UX designer</h3>
-                                <div class="experience__caracteristics">
+                            <div class="embed-box embed-box--large">
+                                <h3 class="embed-box__title">Stage - UI/UX designer</h3>
+                                <div class="text-caracteristics">
                                     <div>
-                                        <p class="experience__caracteristics--duration">
-                                            <img src="<?php echo BASE_URL ?>assets/images/icons/duration.svg" alt="Icône durée" />
+                                        <p class="xsmall-text">
+                                            <img class="text-caracteristics__icon" src="<?php echo BASE_URL ?>assets/images/icons/duration.svg" alt="Icône durée" />
                                             Avril - Juin
                                         </p>
-                                        <p class="experience__caracteristics--location">
-                                            <img src="<?php echo BASE_URL ?>assets/images/icons/location.svg" alt="Icône localisation" />
+                                        <p class="xsmall-text">
+                                            <img class="text-caracteristics__icon" src="<?php echo BASE_URL ?>assets/images/icons/location.svg" alt="Icône localisation" />
                                             Saverne
                                         </p>
                                     </div>
-                                    <img class="experience__image" src="<?php echo BASE_URL ?>assets/images/logo_losypamo.svg" alt="Logo Losypamo" />
+                                    <img class="text-caracteristics__image" src="<?php echo BASE_URL ?>assets/images/logo_losypamo.svg" alt="Logo Losypamo" />
                                 </div>
-                                <span class="embed-box-toggle" data-collapse="experience2">
+                                <span class="embed-box__toggle" data-collapse="experience2">
                                     <?php include '../assets/images/icons/collapse.html'; ?>
                                 </span>
-                                <div class="experience__details hide" data-id="experience2">
+                                <div class="embed-box__details hide" data-id="experience2">
                                     <div>
-                                        <h4 class="experience__details--title">Missions confiées</h4>
-                                        <p class="experience__details--content">Analyse et critique d'un système de gestion de cartes bancaires d'un point de vue ergonomique et graphique et mise en place de certaines améliorations.</p>
+                                        <h4>Missions confiées</h4>
+                                        <p class="embed-box__text">Analyse et critique d'un système de gestion de cartes bancaires d'un point de vue ergonomique et graphique et mise en place de certaines améliorations.</p>
                                     </div>
                                     <div>
-                                        <h4 class="experience__details--title">Technologies utilisées</h4>
-                                        <p class="experience__details--content">
+                                        <h4>Technologies utilisées</h4>
+                                        <p>
                                             <span class="label">HTML</span>
                                             <span class="label">CSS</span>
                                             <span class="label">PrimeFaces</span>
@@ -199,21 +199,21 @@ $page = 'experiences';
             </div>
 
             <div class="box">
-                <div class="experiences__box">
+                <div class="box__wrapper box__wrapper--thirds">
                     <div>
-                        <h2 class="experiences__box--title">Bac S-SI</h2>
-                        <p class="experiences__box--date">2014 - 2017</p>
+                        <h2 class="box__title">Bac S-SI</h2>
+                        <p class="box__subtitle">2014 - 2017</p>
                         <span class="separator">&nbsp;</span>
-                        <p class="experiences__box--description">Parcours général et scientifique, logique informatique et électronique</p>
+                        <p class="box__text">Parcours général et scientifique, logique informatique et électronique</p>
                     </div>
                     <div>
-                        <div class="experience experience--empty">
-                            <div class="experience__date">
-                                <div class="experience__date--before"></div>
-                                <div class="experience__date--item">2017</div>
-                                <div class="experience__date--after"></div>
+                        <div class="embed-box__wrapper">
+                            <div class="timeline">
+                                <div class="timeline__before"></div>
+                                <div class="timeline__dot">2017</div>
+                                <div class="timeline__after"></div>
                             </div>
-                            <div class="embed-box">
+                            <div class="embed-box embed-box--large">
                                 Diplôme obtenu - Mention Bien
                             </div>
                         </div>

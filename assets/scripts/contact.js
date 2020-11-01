@@ -12,17 +12,13 @@ window.addEventListener('DOMContentLoaded', function () {
             let label = inputContainer.querySelector('label');
             if (input && label) {
                 input.addEventListener('focus', function () {
-                    label.classList.add('contact__field--label--visible');
+                    label.classList.add('form__label--visible');
                     input.placeholder = '';
                 });
 
                 input.addEventListener('blur', function () {
-                    if (input.value.length !== 0) {
-                        label.classList.add('contact__field--label--visible');
-                        input.placeholder = '';
-                    }
-                    else {
-                        label.classList.remove('contact__field--label--visible');
+                    if (input.value.length === 0) {
+                        label.classList.remove('form__label--visible');
                         input.placeholder = input.getAttribute('data-placeholder');
                     }
                     if (input.nodeName === 'TEXTAREA') {
@@ -100,23 +96,23 @@ window.addEventListener('DOMContentLoaded', function () {
         }
 
         if (error) {
-            input.classList.remove('input--success');
-            input.classList.add('input--error');
+            input.classList.remove('form__field--input-success');
+            input.classList.add('form__field--input-error');
         }
         else {
-            input.classList.remove('input--error');
-            input.classList.add('input--success');
+            input.classList.remove('form__field--input-error');
+            input.classList.add('form__field--input-success');
         }
     }
 
     function checkTextarea(textarea) {
         if (textarea.value.length < 20 || textarea.value.length > 2000) {
-            textarea.classList.remove('input--success');
-            textarea.classList.add('input--error');
+            textarea.classList.remove('form__fiels--textarea-success');
+            textarea.classList.add('form__field--textarea-error');
         }
         else {
-            textarea.classList.remove('input--error');
-            textarea.classList.add('input--success');
+            textarea.classList.remove('form__field--textarea-error');
+            textarea.classList.add('form__field--textarea-success');
         }
     }
 

@@ -1,14 +1,44 @@
-@use 'components/generals' as *;
-@use 'components/popup' as *;
+// ****** SETTINGS ******
+@use 'settings/colors' as *;
+@use 'settings/fonts' as *;
 
+
+// ****** ELEMENTS ******
+@use 'elements/body' as *;
+@use 'elements/section' as *;
+@use 'elements/h' as *;
+@use 'elements/a' as *;
+
+
+// ****** OBJECTS ******
+@use 'objects/colors' as *;
+@use 'objects/fonts' as *;
+@use 'objects/display' as *;
+@use 'objects/progress-bar' as *;
+
+
+// ****** COMPONENTS ******
 @use 'components/header' as *;
+@use 'components/menu' as *;
 @use 'components/banner' as *;
-@use 'components/presentation' as *;
-@use 'components/experiences' as *;
-@use 'components/skills' as *;
-@use 'components/projects' as *;
-@use 'components/contact' as *;
+@use 'components/box' as *;
+@use 'components/embed-box' as *;
+@use 'components/timeline' as *;
+@use 'components/separator' as *;
+@use 'components/text-caracteristics' as *;
+@use 'components/label' as *;
+@use 'components/progress-bar' as *;
+@use 'components/card' as *;
+@use 'components/button' as *;
+@use 'components/social-icons' as *;
+@use 'components/form' as *;
+@use 'components/list' as *;
 @use 'components/footer' as *;
-@use 'components/cookies-banner' as *;
-@use 'components/legal-notices' as *;
-@use 'components/settings-tabs' as *;
+@use 'components/band' as *;
+@use 'components/popup' as *;
+@use 'components/settings-tab' as *;
+@use 'components/colorpicker' as *;
+
+
+// ***** UTILITIES *****
+@use 'utilities/contact' as *;

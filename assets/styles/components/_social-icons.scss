@@ -1,0 +1,34 @@
+@use 'sass:map';
+@use '../settings/borders' as *;
+
+
+.social-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 450px;
+    height: 190px;
+
+    &__item {
+        display: block;
+        width: #{50 + 2*map.get($borders, 'regular')};
+        height: #{50 + 2*map.get($borders, 'regular')};
+        border: map.get($borders, 'regular') solid var(--main-color);
+        border-radius: 50%;
+
+        svg {
+            width: 50px;
+            height: 50px;
+            fill: var(--main-color);
+        }
+    }
+}
+
+
+@media (min-width: 992px) {
+    .social-icons {
+        justify-content: space-around;
+        padding: 0 25px;
+    }
+}

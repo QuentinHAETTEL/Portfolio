@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded', function () {
                     let collapseItem = document.querySelector('[data-id="' + dataId + '"]');
                     if (collapseItem) {
                         collapseItem.classList.toggle('hide');
-                        collapseToggle.classList.toggle('rotate180');
+                        collapseToggle.classList.toggle('rotate-180');
                     }
                 }
             });

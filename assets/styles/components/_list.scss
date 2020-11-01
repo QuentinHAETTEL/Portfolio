@@ -1,0 +1,16 @@
+@use '../settings/colors' as *;
+
+
+.list {
+
+    &__item {
+        margin: 7px 0;
+        color: inherit;
+        text-decoration: underline;
+        &:hover {
+            > a {
+                color: $main-color;
+            }
+        }
+    }
+}

@@ -1,4 +1,4 @@
 <section id="popup" class="popup">
-    <img class="popup--icon" src="<?php echo BASE_URL ?>" alt="" />
-    <p class="popup--text"></p>
+    <img class="popup__icon" src="<?php echo BASE_URL ?>" alt="" />
+    <p></p>
 </section>

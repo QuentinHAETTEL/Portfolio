@@ -1,0 +1,32 @@
+@use '../settings/colors' as *;
+@use '../settings/fonts' as *;
+
+:root {
+    --main-color: #{$main-color};
+    --second-color: #{$second-color};
+}
+
+* {
+    box-sizing: border-box;
+    font-family: $main-font;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    &::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: url('../../assets/images/texture.webp');
+        opacity: 0.7;
+        z-index: -1;
+    }
+}
+
+body.no-webp {
+    background-image: url('../../assets/images/texture.jpg');
+}

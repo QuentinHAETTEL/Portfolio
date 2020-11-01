@@ -1,0 +1,75 @@
+@use 'sass:map';
+@use '../settings/colors' as *;
+@use '../settings/borders' as *;
+
+
+.menu {
+
+    &__toggle {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 40px;
+        height: 60px;
+        padding: 40px 0 0 0;
+        font-size: 0.9em;
+        border: none;
+        background-image: url('../../assets/images/icons/menu.svg');
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    &__item {
+        padding: 10px 0;
+        border-left: map.get($borders, 'large') solid transparent;
+        font-size: 1.2em;
+        font-weight: bold;
+        text-transform: uppercase;
+        list-style-type: none;
+        &:hover {
+            background-color: var(--second-color);
+        }
+        &--active {
+            border-color: var(--main-color);
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        padding: 0 25px;
+        color: $black;
+    }
+
+    &__icon {
+        width: auto;
+        height: 35px;
+        margin-right: 25px;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .menu {
+
+        &__toggle {
+            display: none;
+        }
+
+        &__item {
+            border-bottom: map.get($borders, 'large') solid transparent;
+            border-left: none;
+            &--active {
+                border-color: var(--main-color);
+            }
+        }
+
+        &__link {
+            flex-direction: column;
+        }
+
+        &__icon {
+            margin-right: 0;
+        }
+    }
+}

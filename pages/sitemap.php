@@ -55,23 +55,23 @@ include('components/header.php');
     ?>
 
     <section class="legals">
-        <h1 class="title">Plan du site</h1>
+        <h1>Plan du site</h1>
         <div class="box">
-            <div class="legals__box">
-                <ul class="legals__box--list">
-                    <li><a href="<?php echo BASE_URL; ?>">Présentation</a></li>
-                    <li><a href="<?php echo BASE_URL; ?>experiences">Expériences</a></li>
-                    <li><a href="<?php echo BASE_URL; ?>competences">Compétences</a></li>
-                    <li>
+            <div class="box__wrapper box__wrapper--columns">
+                <ul class="list">
+                    <li class="list__item"><a href="<?php echo BASE_URL; ?>">Présentation</a></li>
+                    <li class="list__item"><a href="<?php echo BASE_URL; ?>experiences">Expériences</a></li>
+                    <li class="list__item"><a href="<?php echo BASE_URL; ?>competences">Compétences</a></li>
+                    <li class="list__item">
                         <a href="<?php echo BASE_URL; ?>projets">Projets</a>
                         <ul>
-                            <li><a href="https://projets.quentin-haettel.fr/start-from-scratch/">Start from Scratch</a></li>
-                            <li><a href="https://projets.quentin-haettel.fr/admin-panel/public">Admin panel</a></li>
-                            <li><a href="https://projets.quentin-haettel.fr/snake">Snake</a></li>
+                            <li class="list__item"><a href="https://projets.quentin-haettel.fr/start-from-scratch/">Start from Scratch</a></li>
+                            <li class="list__item"><a href="https://projets.quentin-haettel.fr/admin-panel/public">Admin panel</a></li>
+                            <li class="list__item"><a href="https://projets.quentin-haettel.fr/snake">Snake</a></li>
                         </ul>
                     </li>
-                    <li><a href="<?php echo BASE_URL; ?>contact">Contact</a></li>
-                    <li><a href="<?php echo BASE_URL; ?>mentions-legales">Mentions légales</a></li>
+                    <li class="list__item"><a href="<?php echo BASE_URL; ?>contact">Contact</a></li>
+                    <li class="list__item"><a href="<?php echo BASE_URL; ?>mentions-legales">Mentions légales</a></li>
                 </ul>
             </div>
         </div>

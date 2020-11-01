@@ -1,0 +1,68 @@
+@use 'sass:map';
+@use '../settings/colors' as *;
+@use '../settings/borders' as *;
+
+
+.embed-box {
+    position: relative;
+    width: 75vw;
+    padding: 20px;
+    background-color: $white;
+    border: map.get($borders, 'xsmall') solid var(--main-color);
+    border-left-width: 5px;
+    border-radius: 5px;
+    &--large {
+        width: 75vw;
+    }
+
+    &__wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__title {
+        margin: 0;
+        font-size: 1.1em;
+    }
+
+    &__text {
+        margin: 0 0 0 15px;
+        font-size: 0.8em;
+    }
+
+    &__toggle {
+        position: absolute;
+        right: 5px;
+        bottom: 5px;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        svg {
+            fill: var(--main-color);
+        }
+    }
+}
+
+
+@media (min-width: 992px) {
+    .embed-box {
+        width: 60%;
+        margin-left: auto;
+        &--large {
+            width: 80%;
+        }
+
+        &__wrapper {
+            flex-direction: row;
+            justify-content: space-between;
+            min-height: 120px;
+        }
+
+        &__details {
+            width: 80%;
+        }
+    }
+}

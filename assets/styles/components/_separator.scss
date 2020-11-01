@@ -1,0 +1,19 @@
+@use 'sass:map';
+@use '../settings/borders' as *;
+
+
+.separator {
+    display: block;
+    width: 50%;
+    height: map.get($borders, 'large');
+    margin: 0 auto;
+    background-color: var(--main-color);
+}
+
+.separator--vertical {
+    display: inline-block;
+    width: map.get($borders, 'small');
+    height: 25px;
+    margin: 0 2px -5px 2px;
+    background-color: var(--main-color);
+}

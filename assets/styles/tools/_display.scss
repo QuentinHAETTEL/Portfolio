@@ -1,0 +1,38 @@
+@use 'sass:list';
+
+$flex-direction-values: row, row-reverse, column, column-reverse, inherit, initial, unset;
+$flex-wrap-values: nowrap, wrap, wrap-reverse, inherit, initial, unset;
+$justify-content-values: flex-start, flex-end, center, normal, space-between, space-around, space-evenly, stretch, inherit, initial, unset;
+$align-items-values: flex-start, flex-end, center, normal, stretch, baseline, inherit, initial, unset;
+
+@mixin flex($direction:'', $wrap:'', $justify:'', $align:'') {
+    display: flex;
+
+    @if $direction != '' and list.index($flex-direction-values, $direction) {
+        flex-direction: $direction;
+    }
+    @else {
+        @error '#{$direction} is not a valid value for `flex-direction` property';
+    }
+
+    @if $wrap != '' and list.index($flex-wrap-values, $wrap) {
+        flex-wrap: $wrap;
+    }
+    @else {
+        @error '#{$wrap} is not a valid value for `flex-wrap` property';
+    }
+
+    @if $justify != '' and list.index($justify-content-values, $justify) {
+        justify-content: $justify;
+    }
+    @else {
+        @error '#{$justify} is not a valid value for `justify-content` property';
+    }
+
+    @if $align != '' and list.index($align-items-values, $align) {
+        align-items: $align;
+    }
+    @else {
+        @error '#{$align} is not a valid value for `align-items` property';
+    }
+}

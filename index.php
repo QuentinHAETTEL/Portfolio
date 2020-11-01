@@ -78,24 +78,22 @@ $page = 'presentation';
 
         <section class="banner">
             <div class="banner__content">
-                <div class="banner__title">
-                    <p class="banner__title--name">Quentin HAETTEL</p>
-                    <span class="separator">&nbsp;</span>
-                    <h1 class="banner__title--content">Développeur web<br />full-stack</h1>
-                </div>
+                <p class="banner__title">Quentin HAETTEL</p>
+                <span class="separator">&nbsp;</span>
+                <h1 class="banner__text">Développeur web<br />full-stack</h1>
             </div>
         </section>
 
         <section id="presentation" class="presentation">
-            <h2 class="title">Présentation</h2>
+            <h2 class="h1">Présentation</h2>
             <div class="box">
-                <div class="presentation__box">
-                    <p class="presentation__box--text">Bonjour, je m'appelle Quentin HAETTEL, je suis <strong>développeur web full-stack à Strasbourg</strong> et dans sa région</p>
-                    <picture class="presentation__box--photo">
+                <div class="box__wrapper box__wrapper__between">
+                    <p class="box__text box__text--small">Bonjour, je m'appelle Quentin HAETTEL, je suis <strong class="normal-text">développeur web full-stack à Strasbourg</strong> et dans sa région</p>
+                    <picture class="box__image">
                         <source srcset="assets/images/photo_presentation.webp" type="image/webp">
                         <img src="assets/images/photo_presentation.jpg" alt="Photo Quentin HAETTEL - Développeur web full-stack">
                     </picture>
-                    <p class="presentation__box--text">Je suis actuellement apprenti en Licence Professionnelle DWEB à l'IUT de Haguenau</p>
+                    <p class="box__text box__text--small">Je suis actuellement apprenti en Licence Professionnelle DWEB à l'IUT de Haguenau</p>
                 </div>
             </div>
         </section>

@@ -1,0 +1,73 @@
+@use 'sass:map';
+@use '../settings/colors' as *;
+@use '../settings/borders' as *;
+
+
+.card {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: 15px;
+    border-left: map.get($borders, 'large') solid var(--main-color);
+    overflow: hidden;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__image {
+        width: 100%;
+        height: calc(250px - 90px);
+    }
+
+    &__description {
+        position: absolute;
+        top: calc(250px - 90px);
+        left: 0;
+        right: 0;
+        height: 250px;
+        padding: 10px 0;
+        background-color: $light-gray;
+        transition: all 0.5s;
+        &--visible {
+            top: 0;
+        }
+    }
+
+    &__title {
+        margin: 0 0 10px 0;
+        text-align: center;
+    }
+
+    &__category {
+        margin: 10px 0;
+        padding: 0 10px;
+    }
+
+    &__text {
+        margin-top: 0;
+    }
+
+    &__details {
+        padding: 10px;
+        border-top: map.get($borders, 'large') solid var(--second-color);
+    }
+}
+
+
+@media (min-width: 992px) {
+    .card {
+        margin: 5vw;
+
+        &__wrapper {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 90vw;
+            max-width: 1400vw;
+            margin: 5vw auto;
+        }
+    }
+}

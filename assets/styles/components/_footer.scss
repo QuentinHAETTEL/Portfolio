@@ -1,8 +1,5 @@
-@use 'variables' as *;
+@use '../settings/colors' as *;
 
-//////////////////////////////////
-// ********** HEADER ********** //
-//////////////////////////////////
 
 footer {
     min-height: 90px;
@@ -14,23 +11,33 @@ footer {
 .footer {
     width: 100%;
     padding: 5px 10px;
+
     &__copyrights {
         font-size: 0.8em;
         text-align: center;
     }
+
     &__logo {
         display: none;
+
+        img {
+            width: 60px;
+            height: auto;
+        }
     }
+
     &__links {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        &--item {
-            color: $black;
-            font-size: 0.8em;
-        }
     }
+
+    &__link {
+        color: $black;
+        font-size: 0.8em;
+    }
+
     &__version {
         margin: 0 auto 5px auto;
         color: var(--main-color);
@@ -46,16 +53,19 @@ footer {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        &__copyrights, &__links {
+
+        &__copyrights {
             max-width: 120px;
         }
+
         &__logo {
             display: block;
-            img {
-                width: 60px;
-                height: auto;
-            }
         }
+
+        &__links {
+            max-width: 120px;
+        }
+
         &__version {
             position: absolute;
             bottom: 5px;

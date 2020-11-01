@@ -1,4 +1,5 @@
-@use 'variables' as *;
+@use '../settings/colors' as *;
+
 
 .settings-tab {
     position: fixed;
@@ -8,6 +9,20 @@
     align-items: flex-end;
     z-index: 10;
     transition: all 0.5s;
+
+    &__content {
+        width: 350px;
+        padding: 10px 30px;
+        background-color: $white;
+        border: solid 1px $gray;
+        border-top-right-radius: 5px;
+    }
+
+    &__title {
+        margin: 0;
+        text-align: center;
+    }
+
     &__toggler {
         display: flex;
         justify-content: center;
@@ -17,34 +32,10 @@
         background-color: var(--main-color);
         border-top-right-radius: 5px;
         cursor: pointer;
+
         img {
             width: 20px;
             height: auto;
-        }
-    }
-    &__content {
-        width: 350px;
-        padding: 10px 30px;
-        background-color: $white;
-        border: solid 1px $gray;
-        border-top-right-radius: 5px;
-    }
-    &__title {
-        margin: 0;
-        text-align: center;
-    }
-    &__colors {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 0;
-        list-style-type: none;
-        &--item {
-            width: 40px;
-            height: 40px;
-            margin: 10px;
-            border-radius: 50%;
-            cursor: pointer;
         }
     }
 }
@@ -55,22 +46,23 @@
 }
 
 
-
-
 @media (min-width: 992px) {
     .settings-tab {
         top: 50%;
         align-items: center;
         transform: translate(0, -50%);
+
+        &__content {
+            border-bottom-right-radius: 5px;
+        }
+
         &__toggler {
             height: 60px;
             border-bottom-right-radius: 5px;
+
             img {
                 width: 25px;
             }
-        }
-        &__content {
-            border-bottom-right-radius: 5px;
         }
     }
 }

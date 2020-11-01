@@ -1,0 +1,13 @@
+@use '../settings/fonts' as *;
+
+@each $name, $size in $font-size {
+    .#{$name}-text {
+        font-size: $size;
+    }
+}
+
+@each $type in $font-weight {
+    .#{$type}-text {
+        font-weight: $type;
+    }
+}

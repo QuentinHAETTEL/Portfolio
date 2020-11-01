@@ -7,16 +7,16 @@ window.addEventListener('DOMContentLoaded', function () {
         cards.forEach(function (card) {
             card.addEventListener('mouseover', function () {
                 let cardDetails = card.querySelector('[data-card-details]');
-                cardDetails.classList.add('project__details--visible');
+                cardDetails.classList.add('card__description--visible');
             });
             card.addEventListener('mouseout', function () {
                 let cardDetails = card.querySelector('[data-card-details]');
-                cardDetails.classList.remove('project__details--visible');
+                cardDetails.classList.remove('card__description--visible');
             });
 
             card.addEventListener('click', function () {
                 let cardDetails = card.querySelector('[data-card-details]');
-                cardDetails.classList.toggle('project__details--visible');
+                cardDetails.classList.toggle('card__description--visible');
             });
         });
     }

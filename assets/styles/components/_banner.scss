@@ -1,9 +1,9 @@
-@use 'variables' as *;
+@use 'sass:map';
+@use '../settings/colors' as *;
+@use '../settings/borders' as *;
 
-$topbarSize: 5px;
 
 .banner {
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,66 +12,61 @@ $topbarSize: 5px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 25% 50%;
+
     &__content {
         position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         width: 90vw;
         max-width: 360px;
-        height: 200px;
-        .banner__title {
-            position: absolute;
-            top: $topbarSize;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            min-height: calc(100% - #{$topbarSize});
-            background-color: $light-gray;
-            &::before {
-                content: '';
-                position: absolute;
-                top: -$topbarSize;
-                display: inline-block;
-                width: 100%;
-                height: $topbarSize;
-                background-color: var(--main-color);
-            }
-        }
+        min-height: 200px;
+        background-color: $light-gray;
+        border-top: map.get($borders, 'large') solid var(--main-color);
     }
-}
 
-.no-webp .banner {
-    background-image: url('../../assets/images/code_background.jpg');
-}
-
-.banner__title {
-    &--name {
+    &__title {
         font-size: 1.5em;
         font-weight: bold;
     }
-    &--content {
+
+    &__text {
+        margin: 25px 0;
+        color: inherit;
+        background-color: inherit;
         font-size: 1.7em;
         font-weight: bold;
         text-align: center;
     }
-    &--link {
-        margin: 20px;
+
+    &__link {
+        margin-bottom: 20px;
         color: $black;
     }
 }
 
 
 @media (min-width: 992px) {
-    .banner__content {
-        max-width: 600px;
-        height: 340px;
-        .banner__title--name {
+    .banner {
+
+        &__content {
+            max-width: 600px;
+            height: 360px;
+        }
+
+        &__title {
             margin-bottom: 20px;
             font-size: 3em;
         }
-        .banner__title--content {
-            margin-top: 20px;
+
+        &__text {
             font-size: 2.5em;
         }
     }
+}
+
+
+.no-webp .banner {
+    background-image: url('../../assets/images/code_background.jpg');
 }

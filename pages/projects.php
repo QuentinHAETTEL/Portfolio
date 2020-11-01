@@ -76,22 +76,22 @@ $page = 'projects';
         include('components/settings_tabs.php');
         ?>
 
-        <section class="projects">
-            <h1 class="title">Projets</h1>
-            <div class="card__container">
-                <div class="card project" data-card>
-                    <picture class="project__image">
+        <section>
+            <h1>Projets</h1>
+            <div class="card__wrapper">
+                <div class="card" data-card>
+                    <picture class="card__image">
                         <source srcset="<?php echo BASE_URL; ?>assets/images/project_start-from-scratch.webp">
                         <img src="<?php echo BASE_URL; ?>assets/images/project_start-from-scratch.jpg" alt="Développement web - Start from Scratch">
                     </picture>
-                    <div class="project__details" data-card-details>
-                        <h3 class="project__details--title">Start from Scratch</h3>
+                    <div class="card__description" data-card-details>
+                        <h3 class="card__title">Start from Scratch</h3>
                         <span class="separator"></span>
-                        <p class="project__details--type">Développement full-stack</p>
+                        <p class="card__category">Développement full-stack</p>
 
-                        <div class="project__caracteristics">
-                            <p class="project__caracteristics--description">Éditeur de composants HTML accessibles</p>
-                            <div class="project__caracteristics--languages">
+                        <div class="card__details">
+                            <p class="card__text">Éditeur de composants HTML accessibles</p>
+                            <div>
                                 <span>HTML</span>
                                 <span class="separator--vertical"></span>
                                 <span>PHP</span>
@@ -100,56 +100,55 @@ $page = 'projects';
                                 <span class="separator--vertical"></span>
                                 <span>JavaScript</span>
                             </div>
-                            <a class="label project__caracteristics--action" href="https://projets.quentin-haettel.fr/start-from-scratch" target="_blank">Voir le projet</a>
+                            <a class="button button--center" href="https://projets.quentin-haettel.fr/start-from-scratch" target="_blank">Voir le projet</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="card project" data-card>
+                <div class="card" data-card>
                     <picture class="project__image">
                         <source srcset="<?php echo BASE_URL; ?>assets/images/project_admin-panel.webp">
                         <img src="<?php echo BASE_URL; ?>assets/images/project_admin-panel.jpg" alt="Développement web - Admin panel">
                     </picture>
-                    <div class="project__details" data-card-details>
-                        <h3 class="project__details--title">Admin panel</h3>
+                    <div class="card__description" data-card-details>
+                        <h3 class="card__title">Admin panel</h3>
                         <span class="separator"></span>
-                        <p class="project__details--type">Développement front-end</p>
+                        <p class="card__category">Développement front-end</p>
 
-                        <div class="project__caracteristics">
-                            <p class="project__caracteristics--description">Intégration d'un panel administrateur statique</p>
-                            <div class="project__caracteristics--languages">
+                        <div class="card__details">
+                            <p class="card__text">Intégration d'un panel administrateur statique</p>
+                            <div>
                                 <span>HTML</span>
                                 <span class="separator--vertical"></span>
                                 <span>CSS</span>
                                 <span class="separator--vertical"></span>
                                 <span>JavaScript</span>
                             </div>
-                            <a class="label project__caracteristics--action" href="https://projets.quentin-haettel.fr/admin-panel/public" target="_blank">Voir le projet</a>
+                            <a class="button button--center" href="https://projets.quentin-haettel.fr/admin-panel/public" target="_blank">Voir le projet</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="card project" data-card>
+                <div class="card" data-card>
                     <picture class="project__image">
                         <source srcset="<?php echo BASE_URL; ?>assets/images/project_snake.webp">
                         <img src="<?php echo BASE_URL; ?>assets/images/project_snake.jpg" alt="Développement web - Snake">
                     </picture>
-                    <img class="project__image" src="<?php echo BASE_URL; ?>assets/images/project_snake.jpg" alt="Développement web - Snake" />
-                    <div class="project__details" data-card-details>
-                        <h3 class="project__details--title">Jeu Snake</h3>
+                    <div class="card__description" data-card-details>
+                        <h3 class="card__title">Jeu Snake</h3>
                         <span class="separator"></span>
-                        <p class="project__details--type">Développement front-end</p>
+                        <p class="card__category">Développement front-end</p>
 
-                        <div class="project__caracteristics">
-                            <p class="project__caracteristics--description">Célèbre jeu Snake avec modes de difficulté</p>
-                            <div class="project__caracteristics--languages">
+                        <div class="card__details">
+                            <p class="card__text">Célèbre jeu Snake avec modes de difficulté</p>
+                            <div>
                                 <span>HTML</span>
                                 <span class="separator--vertical"></span>
                                 <span>CSS</span>
                                 <span class="separator--vertical"></span>
                                 <span>JavaScript</span>
                             </div>
-                            <a class="label project__caracteristics--action" href="https://projets.quentin-haettel.fr/snake" target="_blank">Voir le projet</a>
+                            <a class="button button--center" href="https://projets.quentin-haettel.fr/snake" target="_blank">Voir le projet</a>
                         </div>
                     </div>
                 </div>

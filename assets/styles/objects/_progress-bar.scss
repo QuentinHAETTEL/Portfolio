@@ -1,0 +1,14 @@
+@use '../tools/gradients' as *;
+
+$directions: (top, right, bottom, left);
+
+@each $direction in $directions {
+    @for $i from 0 through 20 {
+        $i: $i * 5;
+        $j: 100 - $i;
+
+        .progress-bar-#{$direction}-#{$i} {
+            @include linearGradient($direction, var(--main-color), $i, var(--second-color), $j);
+        }
+    }
+}

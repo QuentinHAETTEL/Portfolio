@@ -5,9 +5,9 @@
             <img src="<?php echo BASE_URL; ?>assets/images/logo/logo.svg" alt="Logo" />
         </a>
         <div class="footer__links">
-            <a class="footer__links--item" href="<?php echo BASE_URL; ?>mentions-legales">Mentions légales</a>
-            <a class="footer__links--item" href="<?php echo BASE_URL; ?>plan-du-site">Plan du site</a>
+            <a class="footer__link" href="<?php echo BASE_URL; ?>mentions-legales">Mentions légales</a>
+            <a class="footer__link" href="<?php echo BASE_URL; ?>plan-du-site">Plan du site</a>
         </div>
-        <p class="footer__version">v 1.1.0</p>
+        <p class="footer__version">v 1.2.0</p>
     </div>
 </footer>

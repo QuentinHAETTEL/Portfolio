@@ -62,12 +62,10 @@ if (!isset($_GET['error']) || empty($_GET['error'])) {
 
         <section class="banner">
             <div class="banner__content">
-                <div class="banner__title">
-                    <p class="banner__title--name">Erreur <?php echo $_GET['error']; ?></p>
-                    <span class="separator">&nbsp;</span>
-                    <h1 class="banner__title--content"><?php echo $error->getErrorDescription($_GET['error']) ?></h1>
-                    <a class="banner__title--link" href="<?php echo BASE_URL; ?>">Retourner à la page d'accueil</a>
-                </div>
+                <p class="banner__title">Erreur <?php echo $_GET['error']; ?></p>
+                <span class="separator">&nbsp;</span>
+                <h1 class="banner__text"><?php echo $error->getErrorDescription($_GET['error']) ?></h1>
+                <a class="banner__link" href="<?php echo BASE_URL; ?>">Retourner à la page d'accueil</a>
             </div>
         </section>
     </main>

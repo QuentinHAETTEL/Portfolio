@@ -1,43 +1,38 @@
-@use 'variables' as *;
+@use 'sass:map';
+@use '../settings/colors' as *;
+@use '../settings/borders' as *;
 
-$topbarSize: 7px;
-
-//////////////////////////////////
-// ********** HEADER ********** //
-//////////////////////////////////
 
 header {
     position: relative;
-    height: #{80 + $topbarSize};
+    height: #{80 + map.get($borders, 'xlarge')};
 }
 
 .header {
     position: fixed;
-    top: $topbarSize;
+    top: map.get($borders, 'xlarge');
     display: flex;
     flex-direction: column;
     justify-content: stretch;
     width: 100%;
     height: 80px;
     z-index: 5;
+    &::before {
+        content: '';
+        position: absolute;
+        top: -#{map.get($borders, 'xlarge')};
+        display: inline-block;
+        width: 100%;
+        height: map.get($borders, 'xlarge');
+        background-color: var(--main-color);
+    }
+
     &__left {
         position: relative;
         height: 80px;
         background-color: $light-gray;
-        &--logo {
-            position: absolute;
-            top: 40px;
-            left: 50%;
-            transform: translate(-50%, 0);
-            display: block;
-            height: 100%;
-            z-index: 2;
-            img {
-                width: 100%;
-                height: 100%;
-            }
-        }
     }
+
     &__right {
         position: absolute;
         top: 80px;
@@ -47,58 +42,20 @@ header {
         background-color: $light-gray;
         z-index: 1;
     }
-    &::before {
-        content: '';
+
+    &__logo {
         position: absolute;
-        top: -$topbarSize;
-        display: inline-block;
-        width: 100%;
-        height: $topbarSize;
-        background-color: var(--main-color);
-    }
-}
+        top: 40px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        display: block;
+        height: 100%;
+        z-index: 2;
 
-.menu-toggle {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    width: 40px;
-    height: 60px;
-    padding: 40px 0 0 0;
-    font-size: 0.9em;
-    border: none;
-    background: url('../../assets/images/icons/menu.svg');
-    background-repeat: no-repeat;
-    cursor: pointer;
-}
-
-.menu-item {
-    padding: 10px 0;
-    border-left: solid 5px transparent;
-    font-size: 1.2em;
-    font-weight: bold;
-    text-transform: uppercase;
-    list-style-type: none;
-    a,
-    a:hover,
-    a:focus,
-    a:active,
-    a:visited {
-        display: flex;
-        align-items: center;
-        padding: 0 25px;
-        color: $black;
         img {
-            width: auto;
-            height: 35px;
-            margin-right: 25px;
+            width: 100%;
+            height: 100%;
         }
-    }
-    &:hover {
-        background-color: var(--second-color);
-    }
-    &--active {
-        border-color: var(--main-color);
     }
 }
 
@@ -106,9 +63,11 @@ header {
 @media (min-width: 992px) {
     .header {
         flex-direction: row;
+
         &__left {
             width: 20%;
         }
+
         &__right {
             position: relative;
             top: 0;
@@ -116,28 +75,6 @@ header {
             justify-content: flex-end;
             width: 80%;
             padding-top: 0;
-        }
-    }
-
-    .menu-toggle {
-        display: none;
-    }
-
-    .menu-item {
-        border-bottom: solid 5px transparent;
-        border-left: none;
-        a,
-        a:hover,
-        a:focus,
-        a:active,
-        a:visited {
-            flex-direction: column;
-            img {
-                margin-right: 0;
-            }
-        }
-        &--active {
-            border-color: var(--main-color);
         }
     }
 }

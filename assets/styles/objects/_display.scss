@@ -1,0 +1,31 @@
+.hide {
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    overflow: hidden !important;
+}
+
+.visible {
+    opacity: 1 !important;
+    transition: all 1s;
+}
+
+.flex {
+    display: flex;
+}
+.flex-column {
+    flex-direction: column;
+}
+
+.rotate-180 {
+    transform: rotate(180deg);
+    transition: transform 0.3s;
+}
+
+@media (max-width: 992px) {
+    .mobile-hide {
+        display: none;
+    }
+}

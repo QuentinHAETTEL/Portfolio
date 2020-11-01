@@ -101,15 +101,15 @@ window.addEventListener('DOMContentLoaded', function () {
     cards.forEach(function (card) {
       card.addEventListener('mouseover', function () {
         var cardDetails = card.querySelector('[data-card-details]');
-        cardDetails.classList.add('project__details--visible');
+        cardDetails.classList.add('card__description--visible');
       });
       card.addEventListener('mouseout', function () {
         var cardDetails = card.querySelector('[data-card-details]');
-        cardDetails.classList.remove('project__details--visible');
+        cardDetails.classList.remove('card__description--visible');
       });
       card.addEventListener('click', function () {
         var cardDetails = card.querySelector('[data-card-details]');
-        cardDetails.classList.toggle('project__details--visible');
+        cardDetails.classList.toggle('card__description--visible');
       });
     });
   }
@@ -138,7 +138,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
           if (collapseItem) {
             collapseItem.classList.toggle('hide');
-            collapseToggle.classList.toggle('rotate180');
+            collapseToggle.classList.toggle('rotate-180');
           }
         }
       });
@@ -195,15 +195,12 @@ window.addEventListener('DOMContentLoaded', function () {
 
       if (input && label) {
         input.addEventListener('focus', function () {
-          label.classList.add('contact__field--label--visible');
+          label.classList.add('form__label--visible');
           input.placeholder = '';
         });
         input.addEventListener('blur', function () {
-          if (input.value.length !== 0) {
-            label.classList.add('contact__field--label--visible');
-            input.placeholder = '';
-          } else {
-            label.classList.remove('contact__field--label--visible');
+          if (input.value.length === 0) {
+            label.classList.remove('form__label--visible');
             input.placeholder = input.getAttribute('data-placeholder');
           }
 
@@ -280,21 +277,21 @@ window.addEventListener('DOMContentLoaded', function () {
     }
 
     if (error) {
-      input.classList.remove('input--success');
-      input.classList.add('input--error');
+      input.classList.remove('form__field--input-success');
+      input.classList.add('form__field--input-error');
     } else {
-      input.classList.remove('input--error');
-      input.classList.add('input--success');
+      input.classList.remove('form__field--input-error');
+      input.classList.add('form__field--input-success');
     }
   }
 
   function checkTextarea(textarea) {
     if (textarea.value.length < 20 || textarea.value.length > 2000) {
-      textarea.classList.remove('input--success');
-      textarea.classList.add('input--error');
+      textarea.classList.remove('form__fiels--textarea-success');
+      textarea.classList.add('form__field--textarea-error');
     } else {
-      textarea.classList.remove('input--error');
-      textarea.classList.add('input--success');
+      textarea.classList.remove('form__field--textarea-error');
+      textarea.classList.add('form__field--textarea-success');
     }
   }
 });

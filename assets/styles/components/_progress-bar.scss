@@ -1,0 +1,15 @@
+.progress-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 30px 10px 0;
+
+    &__bar {
+        width: 90%;
+        height: 15px;
+    }
+
+    &__percentage {
+        margin: 0;
+    }
+}

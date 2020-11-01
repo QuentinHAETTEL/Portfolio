@@ -1,0 +1,30 @@
+@use 'sass:map';
+@use '../settings/colors' as *;
+@use '../settings/borders' as *;
+
+.label {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 3px 10px;
+    background-color: $white;
+    border: map.get($borders, 'small') solid var(--main-color);
+    border-radius: 5px;
+    &-toggle {
+        cursor: pointer;
+    }
+
+    &__list {
+        width: 75vw;
+        margin-bottom: 16px;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .label {
+        &__list {
+            width: 30%;
+            border-right: map.get($borders, 'large') solid var(--second-color);
+        }
+    }
+}

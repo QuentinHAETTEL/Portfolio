@@ -1,12 +1,11 @@
 @use 'sass:map';
 @use '../settings/colors' as *;
 @use '../settings/borders' as *;
+@use '../tools/display' as *;
 
 
 .timeline {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex($direction:column, $align:center);
     align-self: stretch;
 
     &__before {
@@ -16,9 +15,7 @@
     }
 
     &__dot {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex($justify:center, $align:center);
         width: 70px;
         height: 70px;
         border: map.get($borders, 'regular') solid var(--main-color);

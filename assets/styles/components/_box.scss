@@ -1,6 +1,7 @@
 @use 'sass:map';
 @use '../settings/colors' as *;
 @use '../settings/borders' as *;
+@use '../tools/display' as *;
 
 
 .box {
@@ -15,19 +16,16 @@
     border-bottom-right-radius: 5px;
 
     &__wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include flex($direction:column, $justify:center, $align:center);
         margin-top: 20px;
         &--thirds {
             margin-top: 0;
         }
         &__between {
-            justify-content: space-between;
+            @include flex($flex:'', $justify:space-between);
         }
         &--full-height {
-            align-items: stretch;
+            @include flex($flex:'', $align:stretch);
         }
     }
 
@@ -86,13 +84,12 @@
         padding: 15px 5%;
 
         &__wrapper {
-            flex-direction: row;
+            @include flex($flex:'', $direction:row);
             &--columns {
-                flex-direction: column;
-                align-items: flex-start;
+                @include flex($flex:'', $direction:column, $align:flex-start);
             }
             &--middle {
-                justify-content: space-between;
+                @include flex($flex:'', $justify:space-between);
                 > *:first-child {
                     width: 45%;
                 }
@@ -101,7 +98,7 @@
                 }
             }
             &--thirds {
-                justify-content: space-between;
+                @include flex($flex:'', $justify:space-between);
                 > *:first-child {
                     align-self: start;
                     width: 30%;

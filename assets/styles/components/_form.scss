@@ -1,6 +1,7 @@
 @use 'sass:map';
 @use '../settings/colors' as *;
 @use '../settings/borders' as *;
+@use '../tools/display' as *;
 
 
 .form {
@@ -13,7 +14,7 @@
     }
 
     &__checkbox-wrapper {
-        display: flex;
+        @include flex();
     }
 
     &__label {

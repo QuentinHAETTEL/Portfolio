@@ -1,12 +1,11 @@
 @use 'sass:map';
 @use '../settings/colors' as *;
 @use '../settings/borders' as *;
+@use '../tools/display' as *;
 
 
 .banner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex($justify:center, $align:center);
     height: calc(100vh - 87px);
     background-image: url('../../assets/images/code_background.webp');
     background-size: cover;
@@ -15,10 +14,7 @@
 
     &__content {
         position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include flex($direction:column, $justify:center, $align:center);
         width: 90vw;
         max-width: 360px;
         min-height: 200px;

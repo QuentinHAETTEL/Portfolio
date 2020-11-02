@@ -1,6 +1,7 @@
 @use 'sass:map';
 @use '../settings/colors' as *;
 @use '../settings/borders' as *;
+@use '../tools/display' as *;
 
 
 .embed-box {
@@ -17,10 +18,7 @@
 
     &__wrapper {
         position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include flex($direction:column, $justify:center, $align:center);
     }
 
     &__title {
@@ -56,8 +54,7 @@
         }
 
         &__wrapper {
-            flex-direction: row;
-            justify-content: space-between;
+            @include flex($flex:'', $direction:row, $justify:space-between);
             min-height: 120px;
         }
 

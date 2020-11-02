@@ -1,11 +1,10 @@
 @use 'sass:map';
 @use '../settings/borders' as *;
+@use '../tools/display' as *;
 
 
 .social-icons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex($justify:space-between, $align:center);
     width: 100%;
     max-width: 450px;
     height: 190px;
@@ -28,7 +27,7 @@
 
 @media (min-width: 992px) {
     .social-icons {
-        justify-content: space-around;
+        @include flex($flex:'', $justify:space-around);
         padding: 0 25px;
     }
 }

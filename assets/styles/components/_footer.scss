@@ -1,4 +1,5 @@
 @use '../settings/colors' as *;
+@use '../tools/display' as *;
 
 
 footer {
@@ -27,10 +28,7 @@ footer {
     }
 
     &__links {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
+        @include flex($direction:column, $justify:space-between, $align:center);
     }
 
     &__link {
@@ -50,9 +48,7 @@ footer {
 @media (min-width: 992px) {
     .footer {
         position: relative;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+        @include flex($justify:space-around, $align:center);
 
         &__copyrights {
             max-width: 120px;

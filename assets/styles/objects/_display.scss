@@ -1,3 +1,6 @@
+@use '../tools/display' as *;
+
+
 .hide {
     width: 0 !important;
     height: 0 !important;
@@ -13,10 +16,10 @@
 }
 
 .flex {
-    display: flex;
+    @include flex();
 }
 .flex-column {
-    flex-direction: column;
+    @include flex($flex:'', $direction:column);
 }
 
 .rotate-180 {

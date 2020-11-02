@@ -1,6 +1,8 @@
+@use '../tools/display' as *;
+
+
 .text-caracteristics {
-    display: flex;
-    justify-content: space-between;
+    @include flex($justify:space-between);
     margin-top: 5px;
 
     p {

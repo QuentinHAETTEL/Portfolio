@@ -1,9 +1,10 @@
+@use '../tools/display' as *;
+
+
 .contact {
 
     &__infos {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flex($direction:column, $align:center);
         margin: 0 -50px 0 0;
         padding-left: 50px;
         border-left: solid 5px var(--second-color);

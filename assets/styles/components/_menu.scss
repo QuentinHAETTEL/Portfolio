@@ -1,6 +1,7 @@
 @use 'sass:map';
 @use '../settings/colors' as *;
 @use '../settings/borders' as *;
+@use '../tools/display' as *;
 
 
 .menu {
@@ -35,8 +36,7 @@
     }
 
     &__link {
-        display: flex;
-        align-items: center;
+        @include flex($align:center);
         padding: 0 25px;
         color: $black;
     }
@@ -65,7 +65,7 @@
         }
 
         &__link {
-            flex-direction: column;
+            @include flex($flex:'', $direction:column);
         }
 
         &__icon {

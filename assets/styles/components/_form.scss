@@ -2,6 +2,7 @@
 @use '../settings/colors' as *;
 @use '../settings/borders' as *;
 @use '../tools/display' as *;
+@use '../tools/media-query' as *;
 
 
 .form {
@@ -54,6 +55,9 @@
             background-size: 5%;
             background-position: 95% 50%;
             background-repeat: no-repeat;
+            @include media('>tablet') {
+                background-position: 98% 50%;
+            }
         }
         &--input-error {
             border: map.get($borders, 'small') solid $incorrect;
@@ -61,26 +65,15 @@
             background-size: 5%;
             background-position: 95% 50%;
             background-repeat: no-repeat;
+            @include media('>tablet') {
+                background-position: 98% 50%;
+            }
         }
         &--textarea-success {
             border: map.get($borders, 'small') solid $correct;
         }
         &--textarea-error {
             border: map.get($borders, 'small') solid $incorrect;
-        }
-    }
-}
-
-
-@media (min-width: 992px) {
-    .form {
-        &__field {
-            &--input-success {
-                background-position: 98% 50%;
-            }
-            &--input-error {
-                background-position: 98% 50%;
-            }
         }
     }
 }

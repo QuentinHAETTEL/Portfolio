@@ -2,27 +2,58 @@
 @use '../settings/colors' as *;
 @use '../settings/borders' as *;
 @use '../tools/display' as *;
+@use '../tools/media-query' as *;
 
 
 .box {
     width: 90vw;
     max-width: 1400px;
     margin: 5vw auto;
-    padding: 15px 15%;
+    padding: 15px 6%;
     color: $black;
     background-color: $light-gray;
     border-left: map.get($borders, 'xlarge') solid var(--main-color);
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+    @include media('>tablet') {
+        padding: 15px 5%;
+    }
 
     &__wrapper {
         @include flex($direction:column, $justify:center, $align:center);
         margin-top: 20px;
+        @include media('>tablet') {
+            @include flex($flex:'', $direction:row);
+        }
         &--thirds {
             margin-top: 0;
+            @include media('>tablet') {
+                @include flex($flex:'', $justify:space-between);
+                > *:first-child {
+                    align-self: start;
+                    width: 30%;
+                }
+                > *:last-child {
+                    width: 60%;
+                }
+            }
         }
-        &__between {
+        &--middle {
+            @include media('>tablet') {
+                @include flex($flex:'', $justify:space-between);
+                > *:first-child {
+                    width: 45%;
+                }
+                > *:last-child {
+                    width: 45%;
+                }
+            }
+        }
+        &--between {
             @include flex($flex:'', $justify:space-between);
+        }
+        &--columns {
+            @include flex($flex:'', $direction:column, $align:flex-start);
         }
         &--full-height {
             @include flex($flex:'', $align:stretch);
@@ -46,6 +77,11 @@
 
     &__text {
         text-align: center;
+        &--small {
+            @include media('>tablet') {
+                width: 350px;
+            }
+        }
         &--link {
             display: block;
             margin: 10px 0;
@@ -67,52 +103,6 @@
         source, img {
             width: 100%;
             border-radius: 50%;
-        }
-    }
-}
-
-
-@media (min-width: 600px) {
-    .box {
-        padding: 15px 20%;
-    }
-}
-
-
-@media (min-width: 992px) {
-    .box {
-        padding: 15px 5%;
-
-        &__wrapper {
-            @include flex($flex:'', $direction:row);
-            &--columns {
-                @include flex($flex:'', $direction:column, $align:flex-start);
-            }
-            &--middle {
-                @include flex($flex:'', $justify:space-between);
-                > *:first-child {
-                    width: 45%;
-                }
-                > *:last-child {
-                    width: 45%;
-                }
-            }
-            &--thirds {
-                @include flex($flex:'', $justify:space-between);
-                > *:first-child {
-                    align-self: start;
-                    width: 30%;
-                }
-                > *:last-child {
-                    width: 60%;
-                }
-            }
-        }
-
-        &__text {
-            &--small {
-                width: 350px;
-            }
         }
     }
 }

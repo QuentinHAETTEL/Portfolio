@@ -1,9 +1,13 @@
 @use '../tools/display' as *;
+@use '../tools/media-query' as *;
 
 
 .text-caracteristics {
     @include flex($justify:space-between);
     margin-top: 5px;
+    @include media('>tablet') {
+        width: 80%;
+    }
 
     p {
         margin: 0;
@@ -18,12 +22,5 @@
         width: 75px;
         height: auto;
         max-height: 50px;
-    }
-}
-
-
-@media (min-width: 992px) {
-    .text-caracteristics {
-        width: 80%;
     }
 }

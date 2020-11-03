@@ -87,7 +87,7 @@ $page = 'presentation';
         <section id="presentation" class="presentation">
             <h2 class="h1">Présentation</h2>
             <div class="box">
-                <div class="box__wrapper box__wrapper__between">
+                <div class="box__wrapper box__wrapper--between">
                     <p class="box__text box__text--small">Bonjour, je m'appelle Quentin HAETTEL, je suis <strong class="normal-text">développeur web full-stack à Strasbourg</strong> et dans sa région</p>
                     <picture class="box__image">
                         <source srcset="assets/images/photo_presentation.webp" type="image/webp">

@@ -2,6 +2,7 @@
 @use '../settings/colors' as *;
 @use '../settings/borders' as *;
 @use '../tools/display' as *;
+@use '../tools/media-query' as *;
 
 
 .card {
@@ -11,9 +12,18 @@
     margin: 15px;
     border-left: map.get($borders, 'large') solid var(--main-color);
     overflow: hidden;
+    @include media('>tablet') {
+        margin: 5vw;
+    }
 
     &__wrapper {
         @include flex($direction:column, $align:center);
+        @include media('>tablet') {
+            @include flex($flex:'', $direction:row, $wrap:wrap, $justify:center);
+            width: 90vw;
+            max-width: 1400vw;
+            margin: 5vw auto;
+        }
     }
 
     &__image {
@@ -52,19 +62,5 @@
     &__details {
         padding: 10px;
         border-top: map.get($borders, 'large') solid var(--second-color);
-    }
-}
-
-
-@media (min-width: 992px) {
-    .card {
-        margin: 5vw;
-
-        &__wrapper {
-            @include flex($flex:'', $direction:row, $wrap:wrap, $justify:center);
-            width: 90vw;
-            max-width: 1400vw;
-            margin: 5vw auto;
-        }
     }
 }

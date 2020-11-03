@@ -1,6 +1,7 @@
 @use 'sass:map';
 @use '../settings/borders' as *;
 @use '../tools/display' as *;
+@use '../tools/media-query' as *;
 
 
 .social-icons {
@@ -8,6 +9,10 @@
     width: 100%;
     max-width: 450px;
     height: 190px;
+    @include media('>tablet') {
+        @include flex($flex:'', $justify:space-around);
+        padding: 0 25px;
+    }
 
     &__item {
         display: block;
@@ -21,13 +26,5 @@
             height: 50px;
             fill: var(--main-color);
         }
-    }
-}
-
-
-@media (min-width: 992px) {
-    .social-icons {
-        @include flex($flex:'', $justify:space-around);
-        padding: 0 25px;
     }
 }

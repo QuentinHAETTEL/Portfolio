@@ -1,5 +1,6 @@
 @use '../settings/colors' as *;
 @use '../tools/display' as *;
+@use '../tools/media-query' as *;
 
 
 footer {
@@ -12,14 +13,24 @@ footer {
 .footer {
     width: 100%;
     padding: 5px 10px;
+    @include media('>tablet') {
+        position: relative;
+        @include flex($justify:space-around, $align:center);
+    }
 
     &__copyrights {
         font-size: 0.8em;
         text-align: center;
+        @include media('>tablet') {
+            max-width: 120px;
+        }
     }
 
     &__logo {
         display: none;
+        @include media('>tablet') {
+            display: block;
+        }
 
         img {
             width: 60px;
@@ -29,6 +40,9 @@ footer {
 
     &__links {
         @include flex($direction:column, $justify:space-between, $align:center);
+        @include media('>tablet') {
+            max-width: 120px;
+        }
     }
 
     &__link {
@@ -41,28 +55,7 @@ footer {
         color: var(--main-color);
         font-size: 0.65em;
         text-align: right;
-    }
-}
-
-
-@media (min-width: 992px) {
-    .footer {
-        position: relative;
-        @include flex($justify:space-around, $align:center);
-
-        &__copyrights {
-            max-width: 120px;
-        }
-
-        &__logo {
-            display: block;
-        }
-
-        &__links {
-            max-width: 120px;
-        }
-
-        &__version {
+        @include media('>tablet') {
             position: absolute;
             bottom: 5px;
             right: 10px;

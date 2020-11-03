@@ -2,6 +2,7 @@
 @use '../settings/colors' as *;
 @use '../settings/borders' as *;
 @use '../tools/display' as *;
+@use '../tools/media-query' as *;
 
 
 .menu {
@@ -18,6 +19,9 @@
         background-image: url('../../assets/images/icons/menu.svg');
         background-repeat: no-repeat;
         cursor: pointer;
+        @include media('>tablet') {
+            display: none;
+        }
     }
 
     &__item {
@@ -27,6 +31,10 @@
         font-weight: bold;
         text-transform: uppercase;
         list-style-type: none;
+        @include media('>tablet') {
+            border-bottom: map.get($borders, 'large') solid transparent;
+            border-left: none;
+        }
         &:hover {
             background-color: var(--second-color);
         }
@@ -39,36 +47,16 @@
         @include flex($align:center);
         padding: 0 25px;
         color: $black;
+        @include media('>tablet') {
+            @include flex($flex:'', $direction:column);
+        }
     }
 
     &__icon {
         width: auto;
         height: 35px;
         margin-right: 25px;
-    }
-}
-
-
-@media (min-width: 992px) {
-    .menu {
-
-        &__toggle {
-            display: none;
-        }
-
-        &__item {
-            border-bottom: map.get($borders, 'large') solid transparent;
-            border-left: none;
-            &--active {
-                border-color: var(--main-color);
-            }
-        }
-
-        &__link {
-            @include flex($flex:'', $direction:column);
-        }
-
-        &__icon {
+        @include media('>tablet') {
             margin-right: 0;
         }
     }

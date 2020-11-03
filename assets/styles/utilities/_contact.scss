@@ -1,12 +1,15 @@
 @use '../tools/display' as *;
+@use '../tools/media-query' as *;
 
 
 .contact {
 
     &__infos {
-        @include flex($direction:column, $align:center);
-        margin: 0 -50px 0 0;
-        padding-left: 50px;
-        border-left: solid 5px var(--second-color);
+        @include media('>tablet') {
+            @include flex($direction:column, $align:center);
+            margin: 0 -50px 0 0;
+            padding-left: 50px;
+            border-left: solid 5px var(--second-color);
+        }
     }
 }

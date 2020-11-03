@@ -2,6 +2,7 @@
 @use '../settings/colors' as *;
 @use '../settings/borders' as *;
 @use '../tools/display' as *;
+@use '../tools/media-query' as *;
 
 
 .embed-box {
@@ -12,13 +13,24 @@
     border: map.get($borders, 'xsmall') solid var(--main-color);
     border-left-width: 5px;
     border-radius: 5px;
+    @include media('>tablet') {
+        width: 60%;
+        margin-left: auto;
+    }
     &--large {
         width: 75vw;
+        @include media('>tablet') {
+            width: 80%;
+        }
     }
 
     &__wrapper {
         position: relative;
         @include flex($direction:column, $justify:center, $align:center);
+        @include media('>tablet') {
+            @include flex($flex:'', $direction:row, $justify:space-between);
+            min-height: 120px;
+        }
     }
 
     &__title {
@@ -31,6 +43,12 @@
         font-size: 0.8em;
     }
 
+    &__details {
+        @include media('>tablet') {
+            width: 80%;
+        }
+    }
+
     &__toggle {
         position: absolute;
         right: 5px;
@@ -40,26 +58,6 @@
         height: 20px;
         svg {
             fill: var(--main-color);
-        }
-    }
-}
-
-
-@media (min-width: 992px) {
-    .embed-box {
-        width: 60%;
-        margin-left: auto;
-        &--large {
-            width: 80%;
-        }
-
-        &__wrapper {
-            @include flex($flex:'', $direction:row, $justify:space-between);
-            min-height: 120px;
-        }
-
-        &__details {
-            width: 80%;
         }
     }
 }

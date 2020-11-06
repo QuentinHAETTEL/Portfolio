@@ -3,6 +3,7 @@
 @use '../settings/borders' as *;
 @use '../tools/display' as *;
 @use '../tools/media-query' as *;
+@use '../tools/shadow' as *;
 
 
 .card {
@@ -11,6 +12,7 @@
     height: 250px;
     margin: 15px;
     border-left: map.get($borders, 'large') solid var(--main-color);
+    @include shadow(regular);
     overflow: hidden;
     @include media('>tablet') {
         margin: 5vw;

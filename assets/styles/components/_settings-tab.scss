@@ -1,6 +1,7 @@
 @use '../settings/colors' as *;
 @use '../tools/display' as *;
 @use '../tools/media-query' as *;
+@use '../tools/shadow' as *;
 
 
 .settings-tab {
@@ -38,6 +39,7 @@
         height: 40px;
         background-color: var(--main-color);
         border-top-right-radius: 5px;
+        @include shadow(regular);
         cursor: pointer;
         @include media('>tablet') {
             height: 60px;

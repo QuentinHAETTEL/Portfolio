@@ -2,6 +2,7 @@
 @use '../settings/colors' as *;
 @use '../settings/borders' as *;
 @use '../tools/display' as *;
+@use '../tools/shadow' as *;
 
 
 .button {
@@ -12,6 +13,7 @@
     background-color: $white;
     border: map.get($borders, 'small') solid var(--main-color);
     border-radius: 5px;
+    @include shadow(small);
     cursor: pointer;
     &--center {
         display: block;

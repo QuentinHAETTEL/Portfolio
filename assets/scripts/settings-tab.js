@@ -29,11 +29,7 @@ window.addEventListener('DOMContentLoaded', function () {
             open = !open;
             if (open) {
                 document.body.addEventListener('click', function (event) {
-                    event.preventDefault();
                     tab.classList.remove('settings-tab--open');
-                });
-                tab.addEventListener('click', function (event) {
-                    event.stopPropagation();
                 });
             }
         });

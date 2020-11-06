@@ -3,6 +3,7 @@
 @use '../settings/borders' as *;
 @use '../tools/display' as *;
 @use '../tools/media-query' as *;
+@use '../tools/shadow' as *;
 
 
 .banner {
@@ -21,6 +22,7 @@
         min-height: 200px;
         background-color: $light-gray;
         border-top: map.get($borders, 'large') solid var(--main-color);
+        @include shadow(regular);
         @include media('>tablet') {
             max-width: 600px;
             height: 360px;

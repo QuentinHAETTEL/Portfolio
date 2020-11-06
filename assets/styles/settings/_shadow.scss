@@ -1,0 +1,25 @@
+$shadows: (
+    none: (
+        x: 0,
+        y: 0,
+        blur: 0
+    ),
+    small: (
+        x: 1px,
+        y: 1px,
+        blur: 7px
+    ),
+    regular: (
+        x: 3px,
+        y: 3px,
+        blur: 10px
+    ),
+    large: (
+        x: 5px,
+        y: 5px,
+        blur: 12px
+    )
+);
+
+
+$shadow-color: rgba(0, 0, 0, 0.3);

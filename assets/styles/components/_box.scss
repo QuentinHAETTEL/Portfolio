@@ -3,6 +3,7 @@
 @use '../settings/borders' as *;
 @use '../tools/display' as *;
 @use '../tools/media-query' as *;
+@use '../tools/shadow' as *;
 
 
 .box {
@@ -15,6 +16,7 @@
     border-left: map.get($borders, 'xlarge') solid var(--main-color);
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+    @include shadow(regular);
     @include media('>tablet') {
         padding: 15px 5%;
     }

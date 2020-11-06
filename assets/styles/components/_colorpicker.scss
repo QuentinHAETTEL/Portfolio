@@ -1,4 +1,5 @@
 @use '../tools/display' as *;
+@use '../tools/shadow' as *;
 
 
 .colorpicker {
@@ -11,6 +12,7 @@
         height: 40px;
         margin: 10px;
         border-radius: 50%;
+        @include shadow(small);
         cursor: pointer;
     }
 }

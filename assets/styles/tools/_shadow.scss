@@ -1,0 +1,35 @@
+@use 'sass:list';
+@use 'sass:map';
+@use '../settings/shadow' as *;
+
+
+@mixin shadow($size, $inset:false, $direction:bottom) {
+    @if $size != '' and list.index(map.keys($shadows), $size) {
+
+        @if $direction == top or $direction == bottom {
+            $x: map.get(map.get($shadows, $size), 'x');
+            $y: map.get(map.get($shadows, $size), 'y');
+            $blur: map.get(map.get($shadows, $size), 'blur');
+
+            @if $inset {
+                @if $direction == top {
+                    box-shadow: inset $x -#{$y} $blur $shadow-color;
+                }
+                @else {
+                    box-shadow: inset $x $y $blur $shadow-color;
+                }
+            }
+            @else {
+                @if $direction == top {
+                    box-shadow: $x -#{$y} $blur $shadow-color;
+                }
+                @else {
+                    box-shadow: $x $y $blur $shadow-color;
+                }
+            }
+        }
+        @else {
+            @error '#{$direction} is not a valid value for a shadow direction, only `top` and `bottom` are allowed';
+        }
+    }
+}

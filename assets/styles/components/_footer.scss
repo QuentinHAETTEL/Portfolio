@@ -1,6 +1,7 @@
 @use '../settings/colors' as *;
 @use '../tools/display' as *;
 @use '../tools/media-query' as *;
+@use '../tools/shadow' as *;
 
 
 footer {
@@ -13,6 +14,7 @@ footer {
 .footer {
     width: 100%;
     padding: 5px 10px;
+    @include shadow(small, $direction:top);
     @include media('>tablet') {
         position: relative;
         @include flex($justify:space-around, $align:center);

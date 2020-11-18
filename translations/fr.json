@@ -1,0 +1,253 @@
+{
+    "lang": "fr",
+    "generals": {
+        "iAccept": "J'accepte",
+        "idecline": "Je refuse",
+        "send": "Envoyer",
+        "contact": {
+            "mail": "quentin.haettel [at] gmail.com",
+            "mailTo": "quentin.haettel@gmail.com",
+            "phone": "+33 (0)6 78 61 47 18",
+            "phoneTo": "0678614718"
+        },
+        "error": "Erreur",
+        "backToHome": "Retourner à la page d'accueil"
+    },
+
+    "header": {
+        "logoTitle": "Logo",
+        "menu": "Menu",
+        "presentationIcon": "Icône présentation",
+        "presentationItem": "Présentation",
+        "experiencesIcon": "Icône expériences",
+        "experiencesItem": "Expériences",
+        "skillsIcon": "Icône compétences",
+        "skillsItem": "Compétences",
+        "projectsIcon": "Icône projets",
+        "projectsItem": "Projets",
+        "contactIcon": "Icône contact",
+        "contactItem": "Contact"
+    },
+
+    "presentation": {
+        "name": "Quentin HAETTEL",
+        "jobPartOne": "Développeur web",
+        "jobPartTwo": "full-stack",
+        "title": "Présentation",
+        "descriptionPartOne": "Bonjour, je m'appelle Quentin HAETTEL, je suis ",
+        "descriptionPartTwo": "développeur web full-stack à Strasbourg",
+        "descriptionPartThree": " et dans sa région",
+        "descriptionPartFour": "Je suis actuellement apprenti en Licence Professionnelle DWEB à l'IUT de Haguenau",
+        "picture": "Photo Quentin HAETTEL - Développeur web full-stack"
+    },
+
+    "experiences": {
+        "title": "Expériences",
+        "experienceOne": {
+            "name": "Bac S-SI",
+            "period": "2014 - 2017",
+            "description": "Parcours général et scientifique, logique informatique et électronique",
+            "step": {
+                "year": "2017",
+                "description": "Diplôme obtenu - Mention Bien"
+            }
+        },
+        "experienceTwo": {
+            "name": "DUT MMI",
+            "period": "2017 - 2019",
+            "description": "Parcours en développement web front-end et back-end, graphisme et communication multimédia",
+            "stepOne": {
+                "year": "2019",
+                "name": "Stage - UI/UX designer",
+                "duration": "Avril - Juin",
+                "location": "Saverne",
+                "image": "Logo Losypamo",
+                "missions": "Analyse et critique d'un système de gestion de cartes bancaires d'un point de vue ergonomique et graphique et mise en place de certaines améliorations."
+            },
+            "stepTwo": {
+                "year": "2019",
+                "description": "Diplôme obtenu"
+            }
+        },
+        "experienceThree": {
+            "name": "LP MI-DWEB",
+            "period": "2019 - 2020",
+            "description": "Parcours en développement web front-end et back-end, compétences avancées en UI/UX design, CMS Prestashop et Drupal",
+            "stepOne": {
+                "year": "2020",
+                "name": "Alternance - Développeur web front-end",
+                "duration": "Septembre - Août",
+                "location": "Mulhouse",
+                "image": "Logo 2LE",
+                "missions": "Développement et modifications front-end des différentes applications web créées en interne. Ergonomie et design des pages grâce aux méthodes d'UX et d'UI pour s'adapter aux besoins du client."
+            }
+        },
+        "durationIcon": "Icône durée",
+        "locationIcon": "Icône localisation",
+        "missionsTitle": "Missions confiées",
+        "technologiesTitle": "Technologies utilisées"
+    },
+
+    "skills": {
+        "title": "Compétences",
+        "frontend": "Front-end",
+        "backend": "Back-end",
+        "libraries": "Librairies",
+        "frameworks": "Frameworks",
+        "CMS": "CMS",
+        "HTMLusages": "Développement de sites ergonomiques et respectueux des standards du Web. Intégration de maquettes et templates. Utilisation de moteurs de templating.",
+        "CSSusages": "Développement de sites responsives et design en suivant les principes d'UI et d'UX. Utilisation des préprocesseurs SCSS et LESS.",
+        "JSusages": "Dynamisation de sites web et utilisation de la technologie Ajax pour un rendu interractif.",
+        "PHPusages": "Conception d'applications web complexes grâce au modèle de programmation MVC",
+        "SQLusages": "Gestion de bases de données MySQL et liaison avec le code PHP",
+        "usagesTitle": "Principales utilisations"
+    },
+
+    "projects": {
+        "title": "Projets",
+        "projectOne": {
+            "name": "Start from Scratch",
+            "image": "Développement web - Start from Scratch",
+            "category": "Développement full-stack",
+            "description": "Éditeur de composants HTML accessibles"
+        },
+        "projectTwo": {
+            "name": "Admin panel",
+            "image": "Développement web - Admin panel",
+            "category": "Développement front-end",
+            "description": "Intégration d'un panel administrateur statique"
+        },
+        "projectThree": {
+            "name": "Jeu Snake",
+            "image": "Développement web - Snake",
+            "category": "Développement front-end",
+            "description": "Célèbre jeu Snake avec modes de difficulté"
+        },
+        "showProject": "Voir le projet"
+    },
+
+    "contact": {
+        "title": "Contact",
+        "firstname": "Prénom",
+        "lastname": "Nom",
+        "email": "Adresse mail",
+        "subject": "Objet",
+        "message": "Message",
+        "rgpd": "J'accepte que mes données personnelles soient recueillies pour être recontacté. Vous pouvez exercer votre droit d'accès aux données en contactant",
+        "downloadIcon": "Icône télécharger",
+        "downloadCV": "Télécharger mon CV"
+    },
+
+    "languages": {
+        "HTML": "HTML",
+        "CSS": "CSS",
+        "Bootstrap": "Bootstrap",
+        "Primefaces": "PrimeFaces",
+        "PHP": "PHP",
+        "SQL": "SQL",
+        "Symfony": "Symfony",
+        "Laravel": "Laravel",
+        "JS": "JavaScript",
+        "Vue": "Vue.JS",
+        "React": "React",
+        "J2EE": "Java J2EE",
+        "Wordpress": "Wordpress",
+        "Drupal": "Drupal",
+        "Prestashop": "Prestashop"
+    },
+
+    "legal": {
+        "title": "Mentions légales",
+        "partOne": {
+            "subtitle": "A propos du site",
+            "textOne": "L’ensemble des données et les informations présentes sur le site ",
+            "textTwo": " sont mises à disposition du public par Quentin HAETTEL",
+            "textThree": "La connexion et la navigation sur le site ",
+            "textFour": " par l’utilisateur implique l'acceptation intégrale et sans réserve des présentes mentions légales."
+        },
+        "partTwo": {
+            "subtitle": "Propriétaire",
+            "text": "Ce site est la propriété de Quentin HAETTEL, joignable à l'adresse"
+        },
+        "partThree": {
+            "subtitle": "Hébergement",
+            "text": "Ce site est hébergé par IONOS by 1&1 :"
+        },
+        "partFour": {
+            "subtitle": "Directeur de publication",
+            "textOne": "L’édition et la direction de la publication du site ",
+            "textTwo": " est assurée par Quentin HAETTEL."
+        },
+        "partFive": {
+            "subtitle": "Accès au site",
+            "text": "Le site est accessible, 7j/7, 24h/24 sauf cas d'interruption programmée ou non pouvant découler d’une nécessité de maintenance. En cas de modification, d'interruption ou de suspension des services, Quentin HAETTEL ne saurait être tenu responsable."
+        },
+        "partSix": {
+            "subtitle": "Collecte de données",
+            "text": "Le site est exempté de déclaration à la CNIL, dans la mesure où il ne collecte aucune donnée concernant les utilisateurs."
+        },
+        "partSeven": {
+            "subtitle": "Cookies",
+            "textOne": "L’utilisateur est informé que lors de ses visites sur le site ",
+            "textTwo": ", des cookies peuvent s’installer automatiquement sur son navigateur. En naviguant sur le site, il les accepte. Il a également la possibilité de refuser cette installation, ce qui a pour effet de supprimer tous les cookies déjà installés.",
+            "textThree": "Un type de cookie est obligatoire au bon fonctionnement du site, il permet de garder en mémoire le choix de l'utilisateur concernant l'acceptation ou non de l'installations d'autres cookies. Ce type de cookie ne nécessite pas l'autorisation de l'utilisateur pour être installé.",
+            "textFour": "Vous pouvez modifier ici vos paramètres de cookies pour ce site :"
+        },
+        "host": {
+            "name": "1&1 Internet SARL",
+            "address": "7 Place de la Gare",
+            "city": "57200 SARREGUEMINES",
+            "phone": "+33 (0)9 70 80 89 11",
+            "phoneTo": "0970808911",
+            "mail": "hostmaster [at] 1and1.fr",
+            "mailTo": "hostmaster@1and1.fr"
+        }
+    },
+
+    "sitemap": {
+        "title": "Plan du site"
+    },
+
+    "cookies": {
+        "description": "En poursuivant votre navigation sur ce site, vous acceptez l'utilisation de cookies à des fins de mesures d'audience",
+        "enable": "Activer les cookies",
+        "disable": "Désactiver les cookies"
+    },
+
+    "error": {
+        "400": "Une erreur est survenue, veuillez recommencer plus tard ou contacter l'administrateur du site",
+        "401": "Une authentification est nécessaire pour accéder à la page demandée",
+        "403": "Les droits d'accès ne permettent pas d'accéder à la page demandée",
+        "404": "La page demandée n'existe pas",
+        "500": "Une erreur est survenue, veuillez recommencer plus tard ou contacter l'administrateur du site",
+        "502": "Une erreur est survenue, veuillez recommencer plus tard ou contacter l'administrateur du site",
+        "503": "Le site est temporairement indisponible ou en maintenance, veuillez recommencer plus tard ou contacter l'administrateur du site",
+        "504": "Le temps d'attente pour le chargement de la page demandée est trop long, veuillez recommencer plus tard ou contacter l'administrateur du site"
+    },
+
+    "settings": {
+        "parametersIcon": "Icône paramètres",
+        "changeTheme": "Changer le thème",
+        "changeLanguage": "Changer la langue",
+        "englishIcon": "English flag",
+        "frenchIcon": "Drapeau français",
+        "colors": {
+            "lightgreen": "Vert clair",
+            "darkgreen": "Vert foncé",
+            "lightblue": "Bleu clair",
+            "darkblue": "Bleu foncé",
+            "brown": "Marron",
+            "orange": "Orange",
+            "yellow": "Jaune",
+            "purple": "Violet"
+        },
+        "languages": {
+            "french": "Français",
+            "english": "Anglais"
+        }
+    },
+
+    "footer": {
+        "copyrights": "Propriété originale : Quentin HAETTEL"
+    }
+}

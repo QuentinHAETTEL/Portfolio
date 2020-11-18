@@ -3,6 +3,7 @@
 
 <?php
 include('../config.php');
+require_once '../src/controllers/TranslationController.php';
 // Get the URL of the current page : testing the protocol and get the URL
 if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') {
     $protocol = 'https';
@@ -14,6 +15,9 @@ $globalUrl = $protocol . '://' . $_SERVER['HTTP_HOST'];
 $url = $protocol . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
 $page = 'contact';
+$translations = new TranslationController();
+$lang = $translations->getLanguage();
+$translation = $translations->getTranslations($lang);
 ?>
 
 <head>
@@ -77,37 +81,37 @@ $page = 'contact';
         ?>
 
         <section>
-            <h1>Contact</h1>
+            <h1><?php echo $translation['contact']['title']; ?></h1>
             <div class="box contact">
                 <div class="box__wrapper box__wrapper--middle">
                     <form id="contact-form" class="form" method="POST" action="#">
                         <div class="form__field-wrapper" data-input-container>
-                            <label class="form__label" for="contact--firstname">Prénom :</label>
-                            <input id="contact--firstname" class="form__field" type="text" name="firstname" placeholder="Prénom" required="required" data-placeholder="Prénom" />
+                            <label class="form__label" for="contact--firstname"><?php echo $translation['contact']['firstname']; ?> :</label>
+                            <input id="contact--firstname" class="form__field" type="text" name="firstname" placeholder="<?php echo $translation['contact']['firstname']; ?>" required="required" data-placeholder="<?php echo $translation['contact']['firstname']; ?>" />
                         </div>
                         <div class="form__field-wrapper" data-input-container>
-                            <label class="form__label" for="contact--lastname">Nom :</label>
-                            <input id="contact--lastname" class="form__field" type="text" name="lastname" placeholder="Nom" required="required" data-placeholder="Nom" />
+                            <label class="form__label" for="contact--lastname"><?php echo $translation['contact']['lastname']; ?> :</label>
+                            <input id="contact--lastname" class="form__field" type="text" name="lastname" placeholder="<?php echo $translation['contact']['lastname']; ?>" required="required" data-placeholder="<?php echo $translation['contact']['lastname']; ?>" />
                         </div>
                         <div class="form__field-wrapper" data-input-container>
-                            <label class="form__label" for="contact--email">Adresse mail :</label>
-                            <input id="contact--email" class="form__field" type="email" name="email" placeholder="Adresse mail" required="required" data-placeholder="Adresse mail" />
+                            <label class="form__label" for="contact--email"><?php echo $translation['contact']['email']; ?> :</label>
+                            <input id="contact--email" class="form__field" type="email" name="email" placeholder="<?php echo $translation['contact']['email']; ?>" required="required" data-placeholder="<?php echo $translation['contact']['email']; ?>" />
                         </div>
                         <div class="form__field-wrapper" data-input-container>
-                            <label class="form__label" for="contact--object">Objet :</label>
-                            <input id="contact--object" class="form__field" type="text" name="object" placeholder="Objet" required="required" data-placeholder="Objet" />
+                            <label class="form__label" for="contact--object"><?php echo $translation['contact']['subject']; ?> :</label>
+                            <input id="contact--object" class="form__field" type="text" name="object" placeholder="<?php echo $translation['contact']['subject']; ?>" required="required" data-placeholder="<?php echo $translation['contact']['subject']; ?>" />
                         </div>
                         <div class="form__field-wrapper" data-input-container>
-                            <label class="form__label" for="contact--message">Message :</label>
-                            <textarea id="contact--message" class="form__field form__field--textarea" name="message" placeholder="Message" required="required" data-placeholder="Message"></textarea>
+                            <label class="form__label" for="contact--message"><?php echo $translation['contact']['message']; ?> :</label>
+                            <textarea id="contact--message" class="form__field form__field--textarea" name="message" placeholder="<?php echo $translation['contact']['message']; ?>" required="required" data-placeholder="<?php echo $translation['contact']['message']; ?>"></textarea>
                         </div>
 
                         <div class="form__checkbox-wrapper">
                             <input id="contact--rgpd" type="checkbox" name="rgpd" required="required" />
-                            <label class="form__label-checkbox" for="contact--rgpd">J'accepte que mes données personnelles soient recueillies pour être recontacté. Vous pouvez exercer votre droit d'accès aux données en contactant : <a href="mailto:quentin.haettel@gmail.com" target="_blank">quentin.haettel[at]gmail.com</a>.</label>
+                            <label class="form__label-checkbox" for="contact--rgpd"><?php echo $translation['contact']['rgpd']; ?> : <a href="mailto:<?php echo $translation['generals']['contact']['mailTo'] ?>" target="_blank"><?php echo $translation['generals']['contact']['mail'] ?></a>.</label>
                         </div>
 
-                        <button class="button button--center" type="submit">Envoyer</button>
+                        <button class="button button--center" type="submit"><?php echo $translation['generals']['send']; ?></button>
                     </form>
 
                     <div class="contact__infos">
@@ -123,12 +127,12 @@ $page = 'contact';
                             </a>
                         </div>
                         <a href="<?php echo BASE_URL; ?>data/CV.pdf" class="button" download="CV-HAETTEL_Quentin.pdf" target="_blank">
-                            <img class="button__icon" src="<?php echo BASE_URL ?>assets/images/icons/download.svg" alt="Icône télécharger" />
-                            Télécharger mon CV
+                            <img class="button__icon" src="<?php echo BASE_URL ?>assets/images/icons/download.svg" alt="<?php echo $translation['contact']['downloadIcon']; ?>" />
+                            <?php echo $translation['contact']['downloadCV']; ?>
                         </a>
                         <div class="box__text">
-                            <a class="box__text--link" href="mailto:quentin.haettel@gmail.com" target="_blank">quentin.haettel [at] gmail.com</a>
-                            <a class="box__text--link" href="tel:0678614718" target="_blank">+33 (0)6 78 61 47 18</a>
+                            <a class="box__text--link" href="mailto:<?php echo $translation['generals']['contact']['mailTo'] ?>" target="_blank"><?php echo $translation['generals']['contact']['mail'] ?></a>
+                            <a class="box__text--link" href="tel:<?php echo $translation['generals']['contact']['phoneTo'] ?>" target="_blank"><?php echo $translation['generals']['contact']['phone'] ?></a>
                         </div>
                     </div>
                 </div>

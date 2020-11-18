@@ -13,11 +13,12 @@
     background-color: $white;
     border: map.get($borders, 'small') solid var(--main-color);
     border-radius: 5px;
+    text-align: center;
     @include shadow(small);
     cursor: pointer;
     &--center {
         display: block;
-        width: 120px;
+        width: 125px;
         margin: 10px auto;
         padding: 3px 10px;
     }

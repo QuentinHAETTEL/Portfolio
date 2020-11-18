@@ -1,0 +1,253 @@
+{
+    "lang": "en",
+    "generals": {
+        "iAccept": "I accept",
+        "idecline": "I decline",
+        "send": "Send",
+        "contact": {
+            "mail": "quentin.haettel [at] gmail.com",
+            "mailTo": "quentin.haettel@gmail.com",
+            "phone": "+33 (0)6 78 61 47 18",
+            "phoneTo": "0678614718"
+        },
+        "error": "Error",
+        "backToHome": "Go back to the homepage"
+    },
+
+    "header": {
+        "logoTitle": "Logo",
+        "menu": "Menu",
+        "presentationIcon": "Presentation icon",
+        "presentationItem": "Presentation",
+        "experiencesIcon": "Experiences icon",
+        "experiencesItem": "Experiences",
+        "skillsIcon": "Skills icon",
+        "skillsItem": "Skills",
+        "projectsIcon": "Projets icon",
+        "projectsItem": "Projects",
+        "contactIcon": "Contact icon",
+        "contactItem": "Contact"
+    },
+
+    "presentation": {
+        "name": "Quentin HAETTEL",
+        "jobPartOne": "Full-stack web",
+        "jobPartTwo": "developer",
+        "title": "Presentation",
+        "descriptionPartOne": "Hello, I'm Quentin HAETTEL, I am full-stack ",
+        "descriptionPartTwo": "web developer in and around Strasbourg",
+        "descriptionPartThree": "",
+        "descriptionPartFour": "Currently I am in apprenticeship in Licence Professionnelle DWEB in the IUT of Haguenau",
+        "picture": "Picture of Quentin HAETTEL - Full-stack web developer"
+    },
+
+    "experiences": {
+        "title": "Experiences",
+        "experienceOne": {
+            "name": "Scientific Baccalauréat",
+            "period": "2014 - 2017",
+            "description": "General and scientific course, computer logic and electronics",
+            "step": {
+                "year": "2017",
+                "description": "Graduated - Mention Well"
+            }
+        },
+        "experienceTwo": {
+            "name": "DUT MMI",
+            "period": "2017 - 2019",
+            "description": "Front-end and back-end web development course, graphic design and communication",
+            "stepOne": {
+                "year": "2019",
+                "name": "Internship - UI/UX designer",
+                "duration": "April - June",
+                "location": "Saverne, France",
+                "image": "Losypamo logo",
+                "missions": "Analysis and critique of a bank card management system from an ergonomic avec a graphic point of view and implementation of a part of improvements."
+            },
+            "stepTwo": {
+                "year": "2019",
+                "description": "Graduated"
+            }
+        },
+        "experienceThree": {
+            "name": "LP MI-DWEB",
+            "period": "2019 - 2020",
+            "description": "Front-end and back-end web development course, advanced skills in UI/UX design, Prestashop and Drupal CMS",
+            "stepOne": {
+                "year": "2020",
+                "name": "Apprenticeship - Front-end web developer",
+                "duration": "September - August",
+                "location": "Mulhouse, France",
+                "image": "2LE logo",
+                "missions": "Front-end modifications and development of web applications created in-house. User experience and design of pages with UX and UI methods to adapt to the client's needs."
+            }
+        },
+        "durationIcon": "Duration icon",
+        "locationIcon": "Location icon",
+        "missionsTitle": "Missions",
+        "technologiesTitle": "Technologies"
+    },
+
+    "skills": {
+        "title": "Skills",
+        "frontend": "Front-end",
+        "backend": "Back-end",
+        "libraries": "Librairies",
+        "frameworks": "Frameworks",
+        "CMS": "CMS",
+        "HTMLusages": "Development of user friendly and standards compliants websites. Mockups and templates integration. Usages of template engines.",
+        "CSSusages": "Development of responsive and beautiful websites following UI and UX principles. Usage of preprocessors SCSS and LESS.",
+        "JSusages": "Dynamization of websites and usage of Ajax technology to get an interractive rendering.",
+        "PHPusages": "Designing complex web applications with MVC pattern.",
+        "SQLusages": "Management of MySQL data bases and link with PHP code.",
+        "usagesTitle": "Main uses"
+    },
+
+    "projects": {
+        "title": "Projects",
+        "projectOne": {
+            "name": "Start from Scratch",
+            "image": "Web development - Start from Scratch",
+            "category": "Full-stack development",
+            "description": "HTML accessibles components editor"
+        },
+        "projectTwo": {
+            "name": "Admin panel",
+            "image": "Web development - Admin panel",
+            "category": "Front-end development",
+            "description": "Integration of a static administrator panel"
+        },
+        "projectThree": {
+            "name": "Snake game",
+            "image": "Web development - Snake",
+            "category": "Front-end development",
+            "description": "Famous Snake game with difficulty options"
+        },
+        "showProject": "Show project"
+    },
+
+    "contact": {
+        "title": "Contact",
+        "firstname": "Firstname",
+        "lastname": "Lastname",
+        "email": "Email",
+        "subject": "Subject",
+        "message": "Message",
+        "rgpd": "I accept that my personal datas be collected to be recontacted. You can exercice your right of access to your datas by contacting",
+        "downloadIcon": "Download icon",
+        "downloadCV": "Download my CV"
+    },
+
+    "languages": {
+        "HTML": "HTML",
+        "CSS": "CSS",
+        "Bootstrap": "Bootstrap",
+        "Primefaces": "PrimeFaces",
+        "PHP": "PHP",
+        "SQL": "SQL",
+        "Symfony": "Symfony",
+        "Laravel": "Laravel",
+        "JS": "JavaScript",
+        "Vue": "Vue.JS",
+        "React": "React",
+        "J2EE": "Java J2EE",
+        "Wordpress": "Wordpress",
+        "Drupal": "Drupal",
+        "Prestashop": "Prestashop"
+    },
+
+    "legal": {
+        "title": "Legal notice",
+        "partOne": {
+            "subtitle": "About the website",
+            "textOne": "All datas and informations present on the website ",
+            "textTwo": " are made available to the public by Quentin HAETTEL",
+            "textThree": "The connection and the browsing on the website ",
+            "textFour": " by the user involve the complete unreserved acceptance of the present legal notice."
+        },
+        "partTwo": {
+            "subtitle": "Owner",
+            "text": "This website is the property of Quentin HAETTEL, who can be reached at "
+        },
+        "partThree": {
+            "subtitle": "Hosting",
+            "text": "The website is host by IONOS by 1&1 :"
+        },
+        "partFour": {
+            "subtitle": "Publication director",
+            "textOne": "The edition and the direction of publication of website ",
+            "textTwo": " is assume by Quentin HAETTEL."
+        },
+        "partFive": {
+            "subtitle": "Access to the website",
+            "text": "The website is open, 7d/7, 24h/24 except in case of a scheduled or not interruption that may result from a need for maintenance. In case of modification, interruption or suspension of the services, Quentin HAETTEL can't be held responsible."
+        },
+        "partSix": {
+            "subtitle": "Data collection",
+            "text": "The website is exempted from declaration to the CNIL, as far as it does not collect any data about users."
+        },
+        "partSeven": {
+            "subtitle": "Cookies",
+            "textOne": "The user is informed that during his visits on the website ",
+            "textTwo": ", cookies can be installed automatically on his browser. By browsing on the website, he accepts them. He Il has also the possibility to refuse this installation, which result in suppressing all cookies already installed.",
+            "textThree": "A type of cookie is required for the proper functioning of the website, it allow to keep in memory the choice of the user about the acceptance or not of other cookies. This type of cookies don't need the autorization of the user to be installed.",
+            "textFour": "You can edit here the cookies parameters for this website :"
+        },
+        "host": {
+            "name": "1&1 Internet SARL",
+            "address": "7 Place de la Gare",
+            "city": "57200 SARREGUEMINES - FRANCE",
+            "phone": "+33 (0)9 70 80 89 11",
+            "phoneTo": "0970808911",
+            "mail": "hostmaster [at] 1and1.fr",
+            "mailTo": "hostmaster@1and1.fr"
+        }
+    },
+
+    "sitemap": {
+        "title": "Sitemap"
+    },
+
+    "cookies": {
+        "description": "By continuing to browse on this website, you accept the use of cookies for audience measurement purposes",
+        "enable": "Activate cookies",
+        "disable": "Disable cookies"
+    },
+
+    "error": {
+        "400": "An error has occurred, please try again later or contact the website administrator",
+        "401": "An authentication is required to access to the requested page",
+        "403": "The access rights do not allow to access to the requested page",
+        "404": "The requested page does not exist",
+        "500": "An error has occurred, please try again later or contact the website administrator",
+        "502": "An error has occurred, please try again later or contact the website administrator",
+        "503": "The website is temporary unavailable or under maintenance, please try again or contact the website administrator",
+        "504": "The waiting time for the requested page is too long, please try again or contact the website administrator"
+    },
+
+    "settings": {
+        "parametersIcon": "Parameters Icon",
+        "changeTheme": "Change theme",
+        "changeLanguage": "Change language",
+        "englishIcon": "English flag",
+        "frenchIcon": "Drapeau français",
+        "colors": {
+            "lightgreen": "Light green",
+            "darkgreen": "Green",
+            "lightblue": "Light blue",
+            "darkblue": "Blue",
+            "brown": "Brown",
+            "orange": "Orange",
+            "yellow": "Yellow",
+            "purple": "Purple"
+        },
+        "languages": {
+            "french": "French",
+            "english": "English"
+        }
+    },
+
+    "footer": {
+        "copyrights": "Copyrights : Quentin HAETTEL"
+    }
+}

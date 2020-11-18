@@ -52,6 +52,30 @@ window.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+
+    // Script tot manage language of the website
+    const languageTogglers = document.querySelectorAll('[data-language]');
+
+    if (languageTogglers) {
+        languageTogglers.forEach(function (languageToggler) {
+            languageToggler.addEventListener('click', function () {
+                let language = this.getAttribute('data-language');
+
+                let xhrRequest = new XMLHttpRequest();
+                xhrRequest.onreadystatechange = function () {
+                    if (this.readyState === 4 && this.status === 200) {
+                        let response = JSON.parse(this.responseText);
+                        if (response) {
+                            document.location.reload();
+                        }
+                    }
+                };
+                xhrRequest.open('GET', BASE_URL+'src/handlers/translationHandler.php?lang='+language, true);
+                xhrRequest.send();
+            })
+        });
+    }
+
 });
 
 function changeColor(color) {

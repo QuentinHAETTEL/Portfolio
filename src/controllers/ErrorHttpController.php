@@ -1,13 +1,13 @@
 <?php
 
-require_once '../src/entities/ErrorHttp.php';
-
 class ErrorHttpController {
 
     public function getErrorDescription($code) {
-        $error = new ErrorHttp();
+        $translations = new TranslationController();
+        $lang = $translations->getLanguage();
+        $translation = $translations->getTranslations($lang);
 
-        return $error->getErrorHttp()[$code];
+        return $translation['error'][$code];
     }
 
 }

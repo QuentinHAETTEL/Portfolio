@@ -3,6 +3,7 @@
 
 <?php
 include('../config.php');
+require_once '../src/controllers/TranslationController.php';
 // Get the URL of the current page : testing the protocol and get the URL
 if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') {
     $protocol = 'https';
@@ -14,6 +15,9 @@ $globalUrl = $protocol . '://' . $_SERVER['HTTP_HOST'];
 $url = $protocol . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
 $page = '';
+$translations = new TranslationController();
+$lang = $translations->getLanguage();
+$translation = $translations->getTranslations($lang);
 ?>
 
 <head>
@@ -55,23 +59,23 @@ include('components/header.php');
     ?>
 
     <section class="legals">
-        <h1>Plan du site</h1>
+        <h1><?php echo $translation['sitemap']['title']; ?></h1>
         <div class="box">
             <div class="box__wrapper box__wrapper--columns">
                 <ul class="list">
-                    <li class="list__item"><a href="<?php echo BASE_URL; ?>">Présentation</a></li>
-                    <li class="list__item"><a href="<?php echo BASE_URL; ?>experiences">Expériences</a></li>
-                    <li class="list__item"><a href="<?php echo BASE_URL; ?>competences">Compétences</a></li>
+                    <li class="list__item"><a href="<?php echo BASE_URL; ?>"><?php echo $translation['presentation']['title']; ?></a></li>
+                    <li class="list__item"><a href="<?php echo BASE_URL; ?>experiences"><?php echo $translation['experiences']['title']; ?></a></li>
+                    <li class="list__item"><a href="<?php echo BASE_URL; ?>competences"><?php echo $translation['skills']['title']; ?></a></li>
                     <li class="list__item">
-                        <a href="<?php echo BASE_URL; ?>projets">Projets</a>
+                        <a href="<?php echo BASE_URL; ?>projets"><?php echo $translation['projects']['title']; ?></a>
                         <ul>
-                            <li class="list__item"><a href="https://projets.quentin-haettel.fr/start-from-scratch/">Start from Scratch</a></li>
-                            <li class="list__item"><a href="https://projets.quentin-haettel.fr/admin-panel/public">Admin panel</a></li>
-                            <li class="list__item"><a href="https://projets.quentin-haettel.fr/snake">Snake</a></li>
+                            <li class="list__item"><a href="https://projets.quentin-haettel.fr/start-from-scratch/"><?php echo $translation['projects']['projectOne']['name']; ?></a></li>
+                            <li class="list__item"><a href="https://projets.quentin-haettel.fr/admin-panel/public"><?php echo $translation['projects']['projectTwo']['name']; ?></a></li>
+                            <li class="list__item"><a href="https://projets.quentin-haettel.fr/snake"><?php echo $translation['projects']['projectThree']['name']; ?></a></li>
                         </ul>
                     </li>
-                    <li class="list__item"><a href="<?php echo BASE_URL; ?>contact">Contact</a></li>
-                    <li class="list__item"><a href="<?php echo BASE_URL; ?>mentions-legales">Mentions légales</a></li>
+                    <li class="list__item"><a href="<?php echo BASE_URL; ?>contact"><?php echo $translation['contact']['title']; ?></a></li>
+                    <li class="list__item"><a href="<?php echo BASE_URL; ?>mentions-legales"><?php echo $translation['legal']['title']; ?></a></li>
                 </ul>
             </div>
         </div>

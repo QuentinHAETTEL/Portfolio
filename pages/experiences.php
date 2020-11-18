@@ -3,6 +3,8 @@
 
 <?php
 include('../config.php');
+include '../src/controllers/TranslationController.php';
+
 // Get the URL of the current page : testing the protocol and get the URL
 if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') {
     $protocol = 'https';
@@ -14,6 +16,10 @@ $globalUrl = $protocol . '://' . $_SERVER['HTTP_HOST'];
 $url = $protocol . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
 $page = 'experiences';
+
+$translations = new TranslationController();
+$lang = $translations->getLanguage();
+$translation = $translations->getTranslations($lang);
 ?>
 
 <head>
@@ -77,54 +83,54 @@ $page = 'experiences';
         ?>
 
         <section>
-            <h1>Expériences</h1>
+            <h1><?php echo $translation['experiences']['title']; ?></h1>
             <div class="box">
                 <div class="box__wrapper box__wrapper--thirds">
                     <div>
-                        <h2 class="box__title">LP MI-DWEB</h2>
-                        <p class="box__subtitle">2019 - 2020</p>
+                        <h2 class="box__title"><?php echo $translation['experiences']['experienceThree']['name']; ?></h2>
+                        <p class="box__subtitle"><?php echo $translation['experiences']['experienceThree']['period']; ?></p>
                         <span class="separator">&nbsp;</span>
-                        <p class="box__text">Parcours en développement web front-end et back-end, compétences avancées en UI/UX design, CMS Prestashop et Drupal</p>
+                        <p class="box__text"><?php echo $translation['experiences']['experienceThree']['description']; ?></p>
                     </div>
                     <div>
                         <div class="embed-box__wrapper">
                             <div class="timeline">
                                 <div class="timeline__before"></div>
-                                <div class="timeline__dot">2020</div>
+                                <div class="timeline__dot"><?php echo $translation['experiences']['experienceThree']['stepOne']['year']; ?></div>
                                 <div class="timeline__after"></div>
                             </div>
                             <div class="embed-box embed-box--large">
-                                <h3 class="embed-box__title">Alternance - Développeur web front-end</h3>
+                                <h3 class="embed-box__title"><?php echo $translation['experiences']['experienceThree']['stepOne']['name']; ?></h3>
                                 <div class="text-caracteristics">
                                     <div>
                                         <p class="xsmall-text">
-                                            <img class="text-caracteristics__icon" src="<?php echo BASE_URL ?>assets/images/icons/duration.svg" alt="Icône durée" />
-                                            Septembre - Août
+                                            <img class="text-caracteristics__icon" src="<?php echo BASE_URL ?>assets/images/icons/duration.svg" alt="<?php echo $translation['experiences']['durationIcon']; ?>" />
+                                            <?php echo $translation['experiences']['experienceThree']['stepOne']['duration']; ?>
                                         </p>
                                         <p class="xsmall-text">
-                                            <img class="text-caracteristics__icon" src="<?php echo BASE_URL ?>assets/images/icons/location.svg" alt="Icône localisation" />
-                                            Mulhouse
+                                            <img class="text-caracteristics__icon" src="<?php echo BASE_URL ?>assets/images/icons/location.svg" alt="<?php echo $translation['experiences']['locationIcon']; ?>" />
+                                            <?php echo $translation['experiences']['experienceThree']['stepOne']['location']; ?>
                                         </p>
                                     </div>
-                                    <img class="text-caracteristics__image" src="<?php echo BASE_URL ?>assets/images/logo_2le.svg" alt="Logo 2LE" />
+                                    <img class="text-caracteristics__image" src="<?php echo BASE_URL ?>assets/images/logo_2le.svg" alt="<?php echo $translation['experiences']['experienceThree']['stepOne']['image']; ?>" />
                                 </div>
                                 <span class="embed-box__toggle" data-collapse="experience1">
                                     <?php include('../assets/images/icons/collapse.html'); ?>
                                 </span>
                                 <div class="embed-box__details hide" data-id="experience1">
                                     <div>
-                                        <h4>Missions confiées</h4>
-                                        <p class="embed-box__text">Développement et modifications front-end des différentes applications web créées. Ergonomie et design des pages grâce aux méthodes d'UX et d'UI pour s'adapter aux besoins des clients.</p>
+                                        <h4><?php echo $translation['experiences']['missionsTitle']; ?></h4>
+                                        <p class="embed-box__text"><?php echo $translation['experiences']['experienceThree']['stepOne']['missions']; ?></p>
                                     </div>
                                     <div>
-                                        <h4>Technologies utilisées</h4>
+                                        <h4><?php echo $translation['experiences']['technologiesTitle']; ?></h4>
                                         <p>
-                                            <span class="label">HTML</span>
-                                            <span class="label">CSS</span>
-                                            <span class="label">Bootstrap</span>
-                                            <span class="label">Symfony</span>
-                                            <span class="label">JavaScript</span>
-                                            <span class="label">Vue JS</span>
+                                            <span class="label"><?php echo $translation['languages']['HTML']; ?></span>
+                                            <span class="label"><?php echo $translation['languages']['CSS']; ?></span>
+                                            <span class="label"><?php echo $translation['languages']['Bootstrap']; ?></span>
+                                            <span class="label"><?php echo $translation['languages']['Symfony']; ?></span>
+                                            <span class="label"><?php echo $translation['languages']['JS']; ?></span>
+                                            <span class="label"><?php echo $translation['languages']['Vue']; ?></span>
                                         </p>
                                     </div>
                                 </div>
@@ -137,58 +143,58 @@ $page = 'experiences';
             <div class="box">
                 <div class="box__wrapper box__wrapper--thirds">
                     <div>
-                        <h2 class="box__title">DUT MMI</h2>
-                        <p class="box__subtitle">2017 - 2019</p>
+                        <h2 class="box__title"><?php echo $translation['experiences']['experienceTwo']['name']; ?></h2>
+                        <p class="box__subtitle"><?php echo $translation['experiences']['experienceTwo']['period']; ?></p>
                         <span class="separator">&nbsp;</span>
-                        <p class="box__text">Parcours en développement web front-end et back-end, graphisme et communication multimédia</p>
+                        <p class="box__text"><?php echo $translation['experiences']['experienceTwo']['description']; ?></p>
                     </div>
                     <div>
                         <div class="embed-box__wrapper">
                             <div class="timeline">
                                 <div class="timeline__before"></div>
-                                <div class="timeline__dot">2019</div>
+                                <div class="timeline__dot"><?php echo $translation['experiences']['experienceTwo']['stepTwo']['year']; ?></div>
                                 <div class="timeline__after"></div>
                             </div>
                             <div class="embed-box embed-box--large">
-                                Diplôme validé
+                                <?php echo $translation['experiences']['experienceTwo']['stepTwo']['description']; ?>
                             </div>
                         </div>
                         <div class="embed-box__wrapper">
                             <div class="timeline">
                                 <div class="timeline__before"></div>
-                                <div class="timeline__dot">2019</div>
+                                <div class="timeline__dot"><?php echo $translation['experiences']['experienceTwo']['stepOne']['year']; ?></div>
                                 <div class="timeline__after"></div>
                             </div>
                             <div class="embed-box embed-box--large">
-                                <h3 class="embed-box__title">Stage - UI/UX designer</h3>
+                                <h3 class="embed-box__title"><?php echo $translation['experiences']['experienceTwo']['stepOne']['name']; ?></h3>
                                 <div class="text-caracteristics">
                                     <div>
                                         <p class="xsmall-text">
-                                            <img class="text-caracteristics__icon" src="<?php echo BASE_URL ?>assets/images/icons/duration.svg" alt="Icône durée" />
-                                            Avril - Juin
+                                            <img class="text-caracteristics__icon" src="<?php echo BASE_URL ?>assets/images/icons/duration.svg" alt="<?php echo $translation['experiences']['durationIcon']; ?>" />
+                                            <?php echo $translation['experiences']['experienceTwo']['stepOne']['duration']; ?>
                                         </p>
                                         <p class="xsmall-text">
-                                            <img class="text-caracteristics__icon" src="<?php echo BASE_URL ?>assets/images/icons/location.svg" alt="Icône localisation" />
-                                            Saverne
+                                            <img class="text-caracteristics__icon" src="<?php echo BASE_URL ?>assets/images/icons/location.svg" alt="<?php echo $translation['experiences']['locationIcon']; ?>" />
+                                            <?php echo $translation['experiences']['experienceTwo']['stepOne']['location']; ?>
                                         </p>
                                     </div>
-                                    <img class="text-caracteristics__image" src="<?php echo BASE_URL ?>assets/images/logo_losypamo.svg" alt="Logo Losypamo" />
+                                    <img class="text-caracteristics__image" src="<?php echo BASE_URL ?>assets/images/logo_losypamo.svg" alt="<?php echo $translation['experiences']['experienceTwo']['stepOne']['image']; ?>" />
                                 </div>
                                 <span class="embed-box__toggle" data-collapse="experience2">
                                     <?php include '../assets/images/icons/collapse.html'; ?>
                                 </span>
                                 <div class="embed-box__details hide" data-id="experience2">
                                     <div>
-                                        <h4>Missions confiées</h4>
-                                        <p class="embed-box__text">Analyse et critique d'un système de gestion de cartes bancaires d'un point de vue ergonomique et graphique et mise en place de certaines améliorations.</p>
+                                        <h4><?php echo $translation['experiences']['missionsTitle']; ?></h4>
+                                        <p class="embed-box__text"><?php echo $translation['experiences']['experienceTwo']['stepOne']['missions']; ?></p>
                                     </div>
                                     <div>
-                                        <h4>Technologies utilisées</h4>
+                                        <h4><?php echo $translation['experiences']['technologiesTitle']; ?></h4>
                                         <p>
-                                            <span class="label">HTML</span>
-                                            <span class="label">CSS</span>
-                                            <span class="label">PrimeFaces</span>
-                                            <span class="label">Java J2EE</span>
+                                            <span class="label"><?php echo $translation['languages']['HTML'] ?></span>
+                                            <span class="label"><?php echo $translation['languages']['CSS'] ?></span>
+                                            <span class="label"><?php echo $translation['languages']['Primefaces'] ?></span>
+                                            <span class="label"><?php echo $translation['languages']['J2EE'] ?></span>
                                         </p>
                                     </div>
                                 </div>
@@ -201,20 +207,20 @@ $page = 'experiences';
             <div class="box">
                 <div class="box__wrapper box__wrapper--thirds">
                     <div>
-                        <h2 class="box__title">Bac S-SI</h2>
-                        <p class="box__subtitle">2014 - 2017</p>
+                        <h2 class="box__title"><?php echo $translation['experiences']['experienceOne']['name']; ?></h2>
+                        <p class="box__subtitle"><?php echo $translation['experiences']['experienceOne']['period']; ?></p>
                         <span class="separator">&nbsp;</span>
-                        <p class="box__text">Parcours général et scientifique, logique informatique et électronique</p>
+                        <p class="box__text"><?php echo $translation['experiences']['experienceOne']['description']; ?></p>
                     </div>
                     <div>
                         <div class="embed-box__wrapper">
                             <div class="timeline">
                                 <div class="timeline__before"></div>
-                                <div class="timeline__dot">2017</div>
+                                <div class="timeline__dot"><?php echo $translation['experiences']['experienceOne']['step']['year']; ?></div>
                                 <div class="timeline__after"></div>
                             </div>
                             <div class="embed-box embed-box--large">
-                                Diplôme obtenu - Mention Bien
+                                <?php echo $translation['experiences']['experienceOne']['step']['description']; ?>
                             </div>
                         </div>
                     </div>

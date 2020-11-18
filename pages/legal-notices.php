@@ -3,6 +3,7 @@
 
 <?php
 include('../config.php');
+require_once '../src/controllers/TranslationController.php';
 // Get the URL of the current page : testing the protocol and get the URL
 if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') {
     $protocol = 'https';
@@ -14,6 +15,9 @@ $globalUrl = $protocol . '://' . $_SERVER['HTTP_HOST'];
 $url = $protocol . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
 $page = '';
+$translations = new TranslationController();
+$lang = $translations->getLanguage();
+$translation = $translations->getTranslations($lang);
 ?>
 
 <head>
@@ -55,42 +59,42 @@ $page = '';
         ?>
 
         <section>
-            <h1>Mentions légales</h1>
+            <h1><?php echo $translation['legal']['title']; ?></h1>
             <div class="box">
                 <div class="box__wrapper box__wrapper--columns">
-                    <h2 class="box__title box__title--left">A propos du site</h2>
-                    <p>L’ensemble des données et les informations présentes sur le site <?php echo $_SERVER['HTTP_HOST']; ?> sont mises à disposition du public par Quentin HAETTEL</p>
-                    <p>La connexion et la navigation sur le site <?php echo $_SERVER['HTTP_HOST']; ?> par l’utilisateur implique l'acceptation intégrale et sans réserve des présentes mentions légales.</p>
+                    <h2 class="box__title box__title--left"><?php echo $translation['legal']['partOne']['subtitle']; ?></h2>
+                    <p><?php echo $translation['legal']['partOne']['textOne'] . $_SERVER['HTTP_HOST'] . $translation['legal']['partOne']['textTwo']; ?> </p>
+                    <p><?php echo $translation['legal']['partOne']['textThree'] . $_SERVER['HTTP_HOST'] . $translation['legal']['partOne']['textFour']; ?></p>
 
-                    <h2 class="box__title box__title--left">Propriétaire</h2>
-                    <p>Ce site est la propriété de Quentin HAETTEL, joignable à l'adresse : <a class="box__link" href="mailto:quentin.haettel@gmail.com">quentin.haettel [at] gmail.com</a>.</p>
+                    <h2 class="box__title box__title--left"><?php echo $translation['legal']['partTwo']['subtitle']; ?></h2>
+                    <p><?php echo $translation['legal']['partTwo']['text']; ?> : <a class="box__link" href="mailto:<?php echo $translation['generals']['contact']['mailTo']; ?>"><?php echo $translation['generals']['contact']['mail']; ?></a>.</p>
 
-                    <h2 class="box__title box__title--left">Hébergement</h2>
-                    <p>Ce site est hébergé par IONOS by 1&1 :</p>
+                    <h2 class="box__title box__title--left"><?php echo $translation['legal']['partThree']['subtitle']; ?></h2>
+                    <p><?php echo $translation['legal']['partThree']['text']; ?></p>
                     <div class="flex flex-column">
-                        <span>1&1 Internet SARL</span>
-                        <span>7 Place de la Gare</span>
-                        <span>57200 SARREGUEMINES</span>
-                        <a class="box__link" href="tel:0970808911">+33 (0)9 70 80 89 11</a>
-                        <a class="box__link" href="mailto:hostmaster@1and1.fr">hostmaster [at] 1and1.fr</a>
+                        <span><?php echo $translation['legal']['host']['name']; ?></span>
+                        <span><?php echo $translation['legal']['host']['address']; ?></span>
+                        <span><?php echo $translation['legal']['host']['city']; ?></span>
+                        <a class="box__link" href="tel:<?php echo $translation['legal']['host']['phoneTo']; ?>"><?php echo $translation['legal']['host']['phone']; ?></a>
+                        <a class="box__link" href="mailto:<?php echo $translation['legal']['host']['mailTo']; ?>"><?php echo $translation['legal']['host']['mail']; ?></a>
                     </div>
 
-                    <h2 class="box__title box__title--left">Directeur de publication</h2>
-                    <p>L’édition et la direction de la publication du site <?php echo $_SERVER['HTTP_HOST']; ?> est assurée par Quentin HAETTEL.</p>
+                    <h2 class="box__title box__title--left"><?php echo $translation['legal']['partFour']['subtitle']; ?></h2>
+                    <p><?php echo $translation['legal']['partOne']['textOne'] . $_SERVER['HTTP_HOST'] . $translation['legal']['partOne']['textTwo']; ?></p>
 
-                    <h2 class="box__title box__title--left">Accès au site</h2>
-                    <p>Le site est accessible, 7j/7, 24h/24 sauf cas d'interruption programmée ou non pouvant découler d’une nécessité de maintenance. En cas de modification, d'interruption ou de suspension des services, le site <?php echo $_SERVER['HTTP_HOST']; ?> ne saurait être tenu responsable.</p>
+                    <h2 class="box__title box__title--left"><?php echo $translation['legal']['partFive']['subtitle']; ?></h2>
+                    <p><?php echo $translation['legal']['partFive']['text']; ?></p>
 
-                    <h2 class="box__title box__title--left">Collecte de données</h2>
-                    <p>Le site est exempté de déclaration à la CNIL, dans la mesure où il ne collecte aucune donnée concernant les utilisateurs.</p>
+                    <h2 class="box__title box__title--left"><?php echo $translation['legal']['partSix']['subtitle']; ?></h2>
+                    <p><?php echo $translation['legal']['partSix']['text']; ?></p>
 
-                    <h2 class="box__title box__title--left">Cookies</h2>
-                    <p>L’utilisateur est informé que lors de ses visites sur le site <?php echo $_SERVER['HTTP_HOST']; ?>, des cookies peuvent s’installer automatiquement sur son navigateur. En naviguant sur le site, il les accepte. Il a également la possibilité de refuser cette installation, ce qui a pour effet de supprimer tous les cookies déjà installés.</p>
-                    <p>Un type de cookie est obligatoire au bon fonctionnement du site, il permet de garder en mémoire le choix de l'utilisateur concernant l'acceptation ou non de l'installations d'autres cookies. Ce type de cookie ne nécessite pas l'autorisation de l'utilisateur pour être installé.</p>
-                    <p>Vous pouvez modifier ici vos paramètres de cookies pour ce site :</p>
+                    <h2 class="box__title box__title--left"><?php echo $translation['legal']['partSeven']['subtitle']; ?></h2>
+                    <p><?php echo $translation['legal']['partSeven']['textOne'] . $_SERVER['HTTP_HOST'] . $translation['legal']['partSeven']['textTwo']; ?></p>
+                    <p><?php echo $translation['legal']['partSeven']['textThree']; ?></p>
+                    <p><?php echo $translation['legal']['partSeven']['textFour']; ?></p>
                     <p>
-                        <button id="cookies-accept" class="button">Activer les cookies</button>
-                        <button id="cookies-decline" class="button">Désactiver les cookies</button>
+                        <button id="cookies-accept" class="button"><?php echo $translation['cookies']['enable']; ?></button>
+                        <button id="cookies-decline" class="button"><?php echo $translation['cookies']['disable']; ?></button>
                     </p>
                 </div>
             </div>

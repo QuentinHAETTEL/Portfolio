@@ -1,7 +1,7 @@
 <?php
 
 define("BASE_URL", "/portfolio/");
-define("ROOT", $_SERVER['HTTP_HOST']);
+define("ROOT", $_SERVER["DOCUMENT_ROOT"]);
 
 define('GA', 'UA-171624113-1');
 

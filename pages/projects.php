@@ -3,6 +3,7 @@
 
 <?php
 include('../config.php');
+require_once '../src/controllers/TranslationController.php';
 // Get the URL of the current page : testing the protocol and get the URL
 if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') {
     $protocol = 'https';
@@ -14,6 +15,10 @@ $globalUrl = $protocol . '://' . $_SERVER['HTTP_HOST'];
 $url = $protocol . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
 $page = 'projects';
+
+$translations = new TranslationController();
+$lang = $translations->getLanguage();
+$translation = $translations->getTranslations($lang);
 ?>
 
 <head>
@@ -77,30 +82,30 @@ $page = 'projects';
         ?>
 
         <section>
-            <h1>Projets</h1>
+            <h1><?php echo $translation['projects']['title']; ?></h1>
             <div class="card__wrapper">
                 <div class="card" data-card>
                     <picture class="card__image">
                         <source srcset="<?php echo BASE_URL; ?>assets/images/project_start-from-scratch.webp">
-                        <img src="<?php echo BASE_URL; ?>assets/images/project_start-from-scratch.jpg" alt="Développement web - Start from Scratch">
+                        <img src="<?php echo BASE_URL; ?>assets/images/project_start-from-scratch.jpg" alt="<?php echo $translation['projects']['projectOne']['image']; ?>">
                     </picture>
                     <div class="card__description" data-card-details>
-                        <h3 class="card__title">Start from Scratch</h3>
+                        <h3 class="card__title"><?php echo $translation['projects']['projectOne']['name']; ?></h3>
                         <span class="separator"></span>
-                        <p class="card__category">Développement full-stack</p>
+                        <p class="card__category"><?php echo $translation['projects']['projectOne']['category']; ?></p>
 
                         <div class="card__details">
-                            <p class="card__text">Éditeur de composants HTML accessibles</p>
+                            <p class="card__text"><?php echo $translation['projects']['projectOne']['description']; ?></p>
                             <div>
-                                <span>HTML</span>
+                                <span><?php echo $translation['languages']['HTML']; ?></span>
                                 <span class="separator--vertical"></span>
-                                <span>PHP</span>
+                                <span><?php echo $translation['languages']['PHP']; ?></span>
                                 <span class="separator--vertical"></span>
-                                <span>SQL</span>
+                                <span><?php echo $translation['languages']['SQL']; ?></span>
                                 <span class="separator--vertical"></span>
-                                <span>JavaScript</span>
+                                <span><?php echo $translation['languages']['JS']; ?></span>
                             </div>
-                            <a class="button button--center" href="https://projets.quentin-haettel.fr/start-from-scratch" target="_blank">Voir le projet</a>
+                            <a class="button button--center" href="https://projets.quentin-haettel.fr/start-from-scratch" target="_blank"><?php echo $translation['projects']['showProject']; ?></a>
                         </div>
                     </div>
                 </div>
@@ -108,23 +113,23 @@ $page = 'projects';
                 <div class="card" data-card>
                     <picture class="project__image">
                         <source srcset="<?php echo BASE_URL; ?>assets/images/project_admin-panel.webp">
-                        <img src="<?php echo BASE_URL; ?>assets/images/project_admin-panel.jpg" alt="Développement web - Admin panel">
+                        <img src="<?php echo BASE_URL; ?>assets/images/project_admin-panel.jpg" alt="<?php echo $translation['projects']['projectTwo']['image']; ?>">
                     </picture>
                     <div class="card__description" data-card-details>
-                        <h3 class="card__title">Admin panel</h3>
+                        <h3 class="card__title"><?php echo $translation['projects']['projectTwo']['name']; ?></h3>
                         <span class="separator"></span>
-                        <p class="card__category">Développement front-end</p>
+                        <p class="card__category"><?php echo $translation['projects']['projectTwo']['category']; ?></p>
 
                         <div class="card__details">
-                            <p class="card__text">Intégration d'un panel administrateur statique</p>
+                            <p class="card__text"><?php echo $translation['projects']['projectTwo']['description']; ?></p>
                             <div>
-                                <span>HTML</span>
+                                <span><?php echo $translation['languages']['HTML']; ?></span>
                                 <span class="separator--vertical"></span>
-                                <span>CSS</span>
+                                <span><?php echo $translation['languages']['CSS']; ?></span>
                                 <span class="separator--vertical"></span>
-                                <span>JavaScript</span>
+                                <span><?php echo $translation['languages']['JS']; ?></span>
                             </div>
-                            <a class="button button--center" href="https://projets.quentin-haettel.fr/admin-panel/public" target="_blank">Voir le projet</a>
+                            <a class="button button--center" href="https://projets.quentin-haettel.fr/admin-panel/public" target="_blank"><?php echo $translation['projects']['showProject']; ?></a>
                         </div>
                     </div>
                 </div>
@@ -132,23 +137,23 @@ $page = 'projects';
                 <div class="card" data-card>
                     <picture class="project__image">
                         <source srcset="<?php echo BASE_URL; ?>assets/images/project_snake.webp">
-                        <img src="<?php echo BASE_URL; ?>assets/images/project_snake.jpg" alt="Développement web - Snake">
+                        <img src="<?php echo BASE_URL; ?>assets/images/project_snake.jpg" alt="<?php echo $translation['projects']['projectThree']['image']; ?>">
                     </picture>
                     <div class="card__description" data-card-details>
-                        <h3 class="card__title">Jeu Snake</h3>
+                        <h3 class="card__title"><?php echo $translation['projects']['projectThree']['name']; ?></h3>
                         <span class="separator"></span>
-                        <p class="card__category">Développement front-end</p>
+                        <p class="card__category"><?php echo $translation['projects']['projectThree']['category']; ?></p>
 
                         <div class="card__details">
-                            <p class="card__text">Célèbre jeu Snake avec modes de difficulté</p>
+                            <p class="card__text"><?php echo $translation['projects']['projectThree']['description']; ?></p>
                             <div>
-                                <span>HTML</span>
+                                <span><?php echo $translation['languages']['HTML']; ?></span>
                                 <span class="separator--vertical"></span>
-                                <span>CSS</span>
+                                <span><?php echo $translation['languages']['CSS']; ?></span>
                                 <span class="separator--vertical"></span>
-                                <span>JavaScript</span>
+                                <span><?php echo $translation['languages']['JS']; ?></span>
                             </div>
-                            <a class="button button--center" href="https://projets.quentin-haettel.fr/snake" target="_blank">Voir le projet</a>
+                            <a class="button button--center" href="https://projets.quentin-haettel.fr/snake" target="_blank"><?php echo $translation['projects']['showProject']; ?></a>
                         </div>
                     </div>
                 </div>

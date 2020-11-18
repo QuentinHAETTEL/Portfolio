@@ -597,6 +597,7 @@ header {
   height: 60px;
   padding: 40px 0 0 0;
   font-size: 0.9em;
+  text-transform: uppercase;
   border: none;
   background-image: url("../../assets/images/icons/menu.svg");
   background-repeat: no-repeat;
@@ -1054,12 +1055,13 @@ header {
   background-color: white;
   border: 2px solid var(--main-color);
   border-radius: 5px;
+  text-align: center;
   box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
 .button--center {
   display: block;
-  width: 120px;
+  width: 125px;
   margin: 10px auto;
   padding: 3px 10px;
 }
@@ -1358,6 +1360,9 @@ footer {
   justify-content: space-between;
   padding: 0;
   list-style-type: none;
+}
+.colorpicker--center {
+  justify-content: center;
 }
 .colorpicker__item {
   width: 40px;

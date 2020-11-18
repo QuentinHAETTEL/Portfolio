@@ -3,6 +3,8 @@
 
 <?php
 include('config.php');
+require_once 'src/controllers/TranslationController.php';
+
 // Get the URL of the current page : testing the protocol and get the URL
 if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') {
     $protocol = 'https';
@@ -14,6 +16,10 @@ $globalUrl = $protocol . '://' . $_SERVER['HTTP_HOST'];
 $url = $protocol . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
 $page = 'presentation';
+
+$translations = new TranslationController();
+$lang = $translations->getLanguage();
+$translation = $translations->getTranslations($lang);
 ?>
 
 <head>
@@ -78,22 +84,22 @@ $page = 'presentation';
 
         <section class="banner">
             <div class="banner__content">
-                <p class="banner__title">Quentin HAETTEL</p>
+                <p class="banner__title"><?php echo $translation['presentation']['name']; ?></p>
                 <span class="separator">&nbsp;</span>
-                <h1 class="banner__text">Développeur web<br />full-stack</h1>
+                <h1 class="banner__text"><?php echo $translation['presentation']['jobPartOne']; ?><br /><?php echo $translation['presentation']['jobPartTwo']; ?></h1>
             </div>
         </section>
 
         <section id="presentation" class="presentation">
-            <h2 class="h1">Présentation</h2>
+            <h2 class="h1"><?php echo $translation['presentation']['title']; ?></h2>
             <div class="box">
                 <div class="box__wrapper box__wrapper--between">
-                    <p class="box__text box__text--small">Bonjour, je m'appelle Quentin HAETTEL, je suis <strong class="normal-text">développeur web full-stack à Strasbourg</strong> et dans sa région</p>
+                    <p class="box__text box__text--small"><?php echo $translation['presentation']['descriptionPartOne']; ?><strong class="normal-text"><?php echo $translation['presentation']['descriptionPartTwo']; ?></strong><?php echo $translation['presentation']['descriptionPartThree']; ?></p>
                     <picture class="box__image">
                         <source srcset="assets/images/photo_presentation.webp" type="image/webp">
-                        <img src="assets/images/photo_presentation.jpg" alt="Photo Quentin HAETTEL - Développeur web full-stack">
+                        <img src="assets/images/photo_presentation.jpg" alt="<?php echo $translation['presentation']['picture']; ?>">
                     </picture>
-                    <p class="box__text box__text--small">Je suis actuellement apprenti en Licence Professionnelle DWEB à l'IUT de Haguenau</p>
+                    <p class="box__text box__text--small"><?php echo $translation['presentation']['descriptionPartFour']; ?></p>
                 </div>
             </div>
         </section>

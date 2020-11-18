@@ -4,6 +4,7 @@
 <?php
 include('../config.php');
 require_once '../src/controllers/ErrorHttpController.php';
+require_once '../src/controllers/TranslationController.php';
 
 // Get the URL of the current page : testing the protocol and get the URL
 if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') {
@@ -20,6 +21,9 @@ $error = new ErrorHttpController();
 if (!isset($_GET['error']) || empty($_GET['error'])) {
     $_GET['error'] = '404';
 }
+$translations = new TranslationController();
+$lang = $translations->getLanguage();
+$translation = $translations->getTranslations($lang);
 ?>
 
 <head>
@@ -62,10 +66,10 @@ if (!isset($_GET['error']) || empty($_GET['error'])) {
 
         <section class="banner">
             <div class="banner__content">
-                <p class="banner__title">Erreur <?php echo $_GET['error']; ?></p>
+                <p class="banner__title"><?php echo $translation['generals']['error']; ?> <?php echo $_GET['error']; ?></p>
                 <span class="separator">&nbsp;</span>
                 <h1 class="banner__text"><?php echo $error->getErrorDescription($_GET['error']) ?></h1>
-                <a class="banner__link" href="<?php echo BASE_URL; ?>">Retourner à la page d'accueil</a>
+                <a class="banner__link" href="<?php echo BASE_URL; ?>"><?php echo $translation['generals']['backToHome']; ?></a>
             </div>
         </section>
     </main>

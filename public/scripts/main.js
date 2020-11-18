@@ -527,6 +527,31 @@ window.addEventListener('DOMContentLoaded', function () {
         xhrRequest.send();
       });
     });
+  } // Script tot manage language of the website
+
+
+  var languageTogglers = document.querySelectorAll('[data-language]');
+
+  if (languageTogglers) {
+    languageTogglers.forEach(function (languageToggler) {
+      languageToggler.addEventListener('click', function () {
+        var language = this.getAttribute('data-language');
+        var xhrRequest = new XMLHttpRequest();
+
+        xhrRequest.onreadystatechange = function () {
+          if (this.readyState === 4 && this.status === 200) {
+            var response = JSON.parse(this.responseText);
+
+            if (response) {
+              document.location.reload();
+            }
+          }
+        };
+
+        xhrRequest.open('GET', _main__WEBPACK_IMPORTED_MODULE_0__["BASE_URL"] + 'src/handlers/translationHandler.php?lang=' + language, true);
+        xhrRequest.send();
+      });
+    });
   }
 });
 

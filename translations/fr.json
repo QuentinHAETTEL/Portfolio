@@ -14,6 +14,13 @@
         "backToHome": "Retourner à la page d'accueil"
     },
 
+    "meta": {
+        "title": "Développement web full-stack Strasbourg",
+        "description": "Développeur web full-stack à Strasbourg (Bas-Rhin). Création ou refonte de sites web, intégration front-end et développement back-end.",
+        "socialDescription": "Création ou refonte de sites web, intégration front-end et développement back-end.",
+        "socialImage": "Logo Quentin HAETTEL - Développeur web full-stack"
+    },
+
     "header": {
         "logoTitle": "Logo",
         "menu": "Menu",

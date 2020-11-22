@@ -12,7 +12,7 @@ $translation = $translations->getTranslations($lang);
 <html lang="<?php echo $lang; ?>">
 
 <!-- ***** Copyright Quentin HAETTEL <?php echo date('Y'); ?> ***** -->
-<!-- ***** Version 1.3.2 ***** -->
+<!-- ***** Version 1.3.1 ***** -->
 <!-- ***** Licensed under CC BY-NC-ND 4.0 license - https://creativecommons.org/licenses/by-nc-nd/4.0/deed.fr ***** -->
 
 <head>

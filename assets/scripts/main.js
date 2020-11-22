@@ -1,6 +1,6 @@
 import { webpSupport } from "./compatibility";
 
-export let BASE_URL = '/portfolio/';
+export let BASE_URL = '/';
 
 export let colors = {
     'lightgreen': 'rgb(101, 153, 46)',

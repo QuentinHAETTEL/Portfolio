@@ -29,7 +29,8 @@
 }
 
 .mobile-hide {
+    display: none;
     @include media('>tablet') {
-        display: none;
+        display: initial;
     }
 }

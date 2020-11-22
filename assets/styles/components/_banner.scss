@@ -9,10 +9,16 @@
 .banner {
     @include flex($justify:center, $align:center);
     height: calc(100vh - 87px);
-    background-image: url('../../assets/images/code_background.webp');
+    background-image: url('../../assets/images/code_background-mobile.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 25% 50%;
+    @include media('>mobile') {
+        background-image: url('../../assets/images/code_background-tablet.webp');
+    }
+    @include media('>tablet') {
+        background-image: url('../../assets/images/code_background-desktop.webp');
+    }
 
     &__content {
         position: relative;
@@ -58,5 +64,11 @@
 
 
 .no-webp .banner {
-    background-image: url('../../assets/images/code_background.jpg');
+    background-image: url('../../assets/images/code_background-mobile.jpg');
+    @include media('>mobile') {
+        background-image: url('../../assets/images/code_background-tablet.jpg');
+    }
+    @include media('>tablet') {
+        background-image: url('../../assets/images/code_background-desktop.jpg');
+    }
 }
